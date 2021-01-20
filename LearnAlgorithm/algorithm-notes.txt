@@ -1,0 +1,137 @@
+####################
+## Variable Types ##
+####################
+
+# the differences between var and let
+
+# this will work:
+var a = 10
+var a = 20
+
+# this will break
+let b = 10
+let b = 20
+
+# const variable must initialized within declaration
+
+# this will work:
+const pi = 3.14
+
+# this will break:
+const BG_COLOR
+BG_COLOR = "#FFFFFF"
+
+###########
+## Loops ##
+###########
+
+# example of traditional for loop
+
+let priceList = [5000, 6000, 9000]
+
+for (let index = 0; index < priceList.length; index++) {
+    const element = priceList[index];
+    console.log("value of element:", element);
+}
+
+# example of while loop
+
+let i = 0
+while (i < priceList.length) {
+    const element = priceList[i]
+    console.log("value of element:", element);
+    i++    
+}
+
+# example of for in loop (looping an object)
+
+let product = {
+    name: "Sabun",
+    photoUrl: "https://...",
+    ratingCount: 0,
+    price: 0
+}
+
+for (const property in product) {
+    const value = product[property]
+    console.log("value of property:", value);
+}
+
+# example for of loop (looping an array)
+
+const temperatures = [32, 33, 31, 29, 18]
+for (const temperature of temperatures) {
+    console.log("array looping with for of loop:", temperature);
+}
+
+###############
+## Functions ##
+###############
+
+# functions is a set of instruction to accomplish one or more business logics
+
+# example of how to declare a function:
+
+function functionName(parameter) {
+    let process = "this is the result"
+    return process    
+}
+
+# another example:
+
+function tambahImbuhanRupiah(number) {
+    const output = `Rp ${number}`
+    return output
+}
+
+let hargaBarang = tambahImbuhanRupiah(5000)
+console.log(hargaBarang);
+
+# function without return statement:
+
+function sayHello() {
+    console.log("Hello");
+}
+sayHello()
+
+#####################
+## Arrow Functions ##
+#####################
+
+# if we use an anonymous function as a value for a variable,
+# then the variable will become a function
+
+# example of variable function with anonymous function
+let variableFunction = function () {
+    return "this is variable function"
+}
+
+console.log(variableFunction());
+
+# example of variable function with arrow function
+let variableArrowFunction = ()=> {
+    return "this is a variable with arrow function"
+}
+console.log(variableArrowFunction());
+
+
+############
+## Method ##
+############
+
+
+# method is a function inside an object
+# example of method:
+
+let user = {
+    name: "Upi",
+    age: 19,
+    greet() {
+        return `Hi, my name is ${this.name} and I'am ${this.age} old`
+    }
+}
+
+# example of built in javascript method in string:
+
+let words = "this is a string"
+console.log(words.toLocaleLowerCase());
