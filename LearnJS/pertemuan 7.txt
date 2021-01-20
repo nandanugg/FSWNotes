@@ -1,0 +1,178 @@
+CSS untuk embantu strukturnya
+JS lebih sulit, bisa semua yg dilakukan CSS, bisa bikin bot, aplikasi dlll
+
+STATEMENT
+console log --> memeberi sesuatu ke terminal
+
+console.log("Hello World");
+
+/*
+ada 2 cara menulis komen,
+untuk satu line deangan souble slash (//)
+untuk multi line deangan slash bintang (/* komen kita *
+*/
+console.log("Hello World"); console.log("Hello World")
+// jika ingin satu baris ada 2 statement maka pisah dengan titik koma (;)
+// jika tidak ingin menggunakan titik koma maka pisahkan dengan new line
+/* 
+satu baris satu statement tapi jika statement belum selesai maka terminal
+akan membaca baris selanjutnya dan seterusnya
+*/
+console.log(
+    "Hello World"
+)
+/*
+namun jika statement terdiri dari beberapa baris jangan ditutup dengan
+titikkoma pada masing2 baris
+*/
+
+
+VARIABLE
+// Variabel --> ember, bebas mau diisi apa
+
+let pesan;
+pesan = "halo"
+console.log(pesan) //mengambil nilai variabel
+pesan = "bandung"
+console.log(pesan) //mengambil nilai variabel
+//pemrograman berjalan secara singkronus atau linier dari atas kebawah
+
+// pembuatan variabel disimpan divariabel, jadi sistem sinkronus dibuat agar
+// mempermudah penggunaan ram
+
+/* penulisan variabel ada 2
+let satu = "satu"
+let satu;
+satu = "satu"
+*/
+
+let satu = "1"
+let nilai = satu
+console.log(nilai)
+// outputnya satu
+/* 
+var nilai tidak mereferensikan satu. namun variabel nilai akan diisi 
+dengan value dari variabel satu
+*/
+
+// membuat banyak variabel
+// dengan koma
+let nama = "ilyas",
+    umur = "20",
+    kota = "Surakarta"
+
+// aturan pembuatan nama variabel
+/*
+nama bebas
+tidak boleh nama diawal
+karakter awal yg bsia hanya _ dan $
+*/
+
+// camelcase
+
+// konstanta, dideklarasikan saat pertama dan tidak boleh berubah
+// umumnya ditulis denga huruf besar
+const MAIN_COLOR = "#f0f0f0"
+
+TipeData --> string, number, boolean, array
+
+STRING
+// tipe data string
+// data string bisa dengan petik satu('isi') atau petik dua("isi")
+let name = 'budi'
+let kota = "solo"
+
+let quote = '"Rajin pangkal pintar"-guru SD'
+console.log(quote)
+
+let testSingleQuote = "ini adalah string dengan singlequote ('')"
+console.log(testSingleQuote)
+
+let backtickString = `ini adalah bakctick yg bisa dimasukin doublequote("") dan singlequote('')`
+console.log(backtickString);
+
+let firstname = "ilyas"
+let lastname = "mahfud"
+
+let fullname = firstname + lastname //tidak ada spasi
+console.log(fullname);
+
+let fullNameLiteral = `Mr.${firstname} ${lastname}`
+console.log(fullNameLiteral);
+
+let paragraf = `ini adalah sebuah paragraf
+yang ada new line(enter) nya`
+console.log(paragraf);
+
+
+NUMBER
+let age = 17
+
+let a = 2
+let b = 3
+
+let sumScore = a + b
+console.log(sumScore);
+
+// Aritmatika
+console.log("pengurangan: ", 10 - 5);
+console.log("times: ", 10 * 5);
+console.log("divide: ", 10 / 5);
+console.log("modulo: ", 10 % 5);//bisa % atau ^
+console.log("exponential: ", 10 ** 5);
+
+
+// string ditambah number akan menjadi string
+let c = 5
+let d = "5"
+console.log("number+string = ", c + d);
+
+let increment = 1
+increment++
+console.log("increment: ", increment);
+
+let incrementByTwo = 1
+incrementByTwo +=
+    console.log("increment bby two: ", incrementByTwo);
+
+
+BOOLEAN
+let isRaining = true//isi bolean bisa false atau true
+let isSunny = false
+
+if (isRaining) {
+    console.log("it's raining today");
+} else {
+    console.log("it's not raining");
+}
+
+// operator2 boolean biasanya untuk kondisi2
+
+
+ARRAY
+// array=kumpulan list
+// bertugas menyimimpan variabel
+
+
+OBJECT
+// variabel yg menyimpan variabel lain 
+// dimulai denga kuru g kurawa
+
+let user = {
+    name: "ilyas",   // name = properti
+    age: 20,
+    address: {
+        city: "surakarta",
+        province: "Jawa Tengah",
+    },
+    friends: ['A', 'B']
+}
+console.log('Acces object property:', user.name);
+console.log('Acces object sub property:', user.address.city);
+console.log('Avves object sub array property:', user.friends[2]);
+
+user.catName = "meng"
+console.log('Add new property:', user.catName);
+
+delete user.catName
+console.log('Delete new property:', user.catName)
