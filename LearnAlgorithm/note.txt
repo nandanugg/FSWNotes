@@ -1,0 +1,144 @@
+1. Variable Types
+ a. var : tipe variable lama, bisa mendeklarasikan variable dengan nama yang sama walaupun sebelumnya sudah didefinisikan
+ b. let : tidak bisa mendeklarasikan variable dengan nama variable yang telah di definisikan
+ c. const : variable yang nilainya tidak bisa diubah
+
+2. Looping : Looping adalah iterasi/pengulangan sampai memenuhi kriteria tertentu
+
+ a. for, contoh :
+    let numbers = [1,2,3,4,5]
+    for (let i = 0; i < numbers.length; i++) {
+        console.log(numbers[i])
+    }
+
+ b. while, contoh :
+    let numbers = [1,2,3,4,5]
+    let i = 0
+    while (i < numbers.length) {
+        console.log(numbers[i])
+        i++
+    }
+
+c. for of
+    let numbers = [1,2,3,4,5]
+    for (for number of numbers) {
+        console.log(number)
+    }
+
+ d. for in
+    let biographs = {
+        'name': "Me",
+        'gender: "L",
+        'age' : "20"
+    }
+
+    for (const property in biographs) {
+        console.log(`{property} : {biographs[property]}`)
+    }
+
+3. Function : digunakan untuk membungkus potonga kode agar bisa dipanggil berkali-kali
+   a. dengan pengembalian & dengan parameter
+   function callMyName(name) {
+       return `Hello, my name is {name}`;
+   }
+   
+
+   b. dengan pengembalian & tanpa parameter 
+   function callMyName() {
+       return `Hello, my name is Dipsy`
+   }
+
+   c. tanpa pengembalian
+   function callMyName(name) {
+       console.log(`Hello, my name is {name}`);
+   }
+
+4. Arrow / Anonymous Function : variable tidak memiliki nama dan bisa dipasangkan ke variable
+    
+    a. tanpa parameter
+    let variableFunction = function () {
+        return "this is an anonymous function;
+    }
+    console.log(variableFunction())
+
+    b. dengan parameter 
+    let variableFunction = (params) => {
+        return `params: {params}`
+    }
+    console.log('dengan parameter:', variableFunction('parameter'))
+
+    c. Penggunaan callback
+    function getMessageWithCallback(callback) {
+        setTimeout(() => {     
+            callback('this is a string from getMessageWithCallback()')
+        }, 3000);
+        
+        console.log("getMessageWithCallback() has finished reading all of it's codes!");
+    }
+    
+    getMessageWithCallback((result) => {
+        console.log('from getMessageWithCallback():', result); // successfull!
+    })
+
+5. Penggunaan Method
+    a. menggunakan method bawaan primitive data
+        -  method string
+        let string = "this is a string"
+        console.log("method toUpperCase:", string.toUpperCase())
+
+        - method number (int/float/double)
+        let number = 3.143
+        console.log("method toFixed:', number.toFixed())
+
+        - method array
+        let friends = ['Akbar', 'Siti', 'Winda']
+        console.log("method join:", friends.join())
+        
+        let mappedFriends = friends.map((friend) => {
+            return `abang ${friends}`
+        })
+        console.log("mapped data : ", mappedFriends.join())
+
+    b. membuat method pada object
+    let user = {
+        name: "Test",
+        age: 20,
+        greet() {
+            Return `Hi, my name is ${this.name} and my age is ${this.age} years old`
+        }
+    }
+
+    console.log('user greeting:' user.greet())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
