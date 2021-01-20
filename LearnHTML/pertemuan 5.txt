@@ -1,0 +1,74 @@
+pertemuan 5, Learn HTML
+
+open folder via vscode> make folder name "learnHTML" > open terminal > "git init"
+
+Komponen website --> HTML, CSS, JS
+
+HTML (HyperText Markup Language) --> struktur website
+CSS (Cascading Sytle Sheet) --> pemberi style/tampilan, karakter, warna, variasi,dll. Memperindah website
+JS (JavaScript) --> membuat website lebih interaktif. Soal aksi
+
+HTML adalah bahasa markup untuk membuat web pages. bahasa markup adalah bahsa yg mengurung sebuah teks untuk ditampilkan dg cara tertentu
+
+tag HTML
+semacam kode yg dibungkus dengan karakter enclosing tag (<>)
+
+--- tag ---
+h1 = menampilkan header. biasanya untuk judul
+h2 menampilkan header. ada h1,h2,h3,h4,h5,h6
+p menampilkan paragraf
+strong = bolet
+i =italic
+img = gambar
+ul = daftar
+li = daftar pakai nomor
+-----------
+
+Memakai GAMBAR
+download gambar > simpan pada file HTML > buka vscode > comand"<img src="nama file"(ctrl+spasi) alt="">
+
+Hyperlink = memperlihatkan halaman websitelain
+<a href="web lain"(ctrl+spasi)>klik init</a>
+
+ANATOMI/Struktur HTML
+- Doctype --> menunjukkan tipe file. tradisi yg dilakukan sebelum menulis HTML
+- cara cepat menuliskan struktur html:
+  ketik tanda seru(!), klik enter
+
+HEAD
+- dalam struktur html ada antribut lang="en"
+  menunjukkan struktur yg kita buat dalam struktur bahasa inggris
+- chartset="utf-8"
+  "utf-8" adlah teks encoding. chartset mengkonversi bahasa program ke bahasa manusia
+- lang = bahasa, charset = memberitahu komputer, karakter2 itu harus diubah ke bahasa manusia
+- <title> = judul web yg ditampilkan dalam tab
+- 1 html untuk satu bahasa
+- <meta> --> menunjukan seberapa lebar konter 
+- content="width=device-width --> sesuai dengan lebar website
+
+BODY
+semua yg muncul dalam browser
+
+agar tanda2 ini dapat ditampilkan di web
+< --> &lt;
+> --> &gt;
+" --> &quot;
+' --> &apos;
+& --> &amo;
+
+misal
+<p>menampilkan<p></p>, maka
+<p>menampilkan &lt;p&gt; </p>
+
+note:
+- merapikan STRUKTUR
+setting (ctrl+,) > search "format". ceklis format on paste dan format on save
+- KOMEN
+ctrl+/ --> membuat comen pada baris kosong
+jika disamping kode maka ditulis manual
+- inspect elemen
+f12 atau klik kanan>inspect --> untuk melihat komen pada web dan mengetahui dimana letak koding kita pada web
+
+referensi belajar : 
+- w3schools.com 
+- search "html profect ideas"
