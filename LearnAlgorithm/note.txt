@@ -1,0 +1,48 @@
+=== tipe variable ===
+deskripsi : mengenal cara2 dalam mendeklarasikan variable
+
+1. var
+    var nama;
+    nama = 'dwiky';
+
+    var nama = 'loki';
+    console.log('nama :', nama);
+//kode diatas berjalan tanpa eror
+
+2. let 
+    let nama;
+    nama = 'dwiky';
+
+    let nama = 'loki';
+    console.log('nama :', nama);
+//kode diatas tidak berjalan, krn let aturannya lebih ketat
+//tidak boleh dideklarasikan 2 kali dengan nama variable yg sama
+
+3. const
+    const pi = 3.14
+//const digunakan untuk membuat variable yg nilai nya bersifat tetap
+
+
+
+=== looping ===
+deskripsi : mengenal cara membuat loop/perulangan/iterasi 
+            berdasarkan kriteria tertentu
+
+1. for 
+    let total = 0
+    const itemPrice = [5000, 6000, 3000]
+    for (let i = 0; i < itemPrice'length; i++) {
+        const item = itemPrice[i]
+        total += item
+    }
+    console.log(''total :', total);
+
+2. while
+    let loopTimes = 0
+    const isIMpostorList = [false, false, true, false]
+    while (loopTimes < isIMpostorList.length) {
+        const item = isIMpostorList[loopTimes]
+        if (item) {
+            console.log(`impostor is found, it's user number ${loopTimes + 1}`);
+        }
+    }
