@@ -1,0 +1,228 @@
+-- --Variabel types-- --
+
+let a;
+a = 10
+a = 20
+
+// selain menggunakan let bisa juga dengan var
+// var tidak perlu menuliskan "var"
+var b
+b = 10
+b = 20
+
+c = 10 // ini var
+
+/*
+var = 40
+console.log("b = ", b);
+
+let a = 50 //ini tidak bisa karena a sudah dideklarasikan
+
+// cons
+cons pi = 3.14
+pi = 5 //ini tidak bisa
+
+const z;
+z = 10 //ini tidak bisa, cons z harus diberi nilai dulu
+*/
+
+
+
+
+-- -- Loops-- --
+
+// loopingc conth = checkout belanjaano
+
+let total = 0
+let pricelist = [5000, 6000, 7000]
+//looping for
+for (let index = 0; index < pricelist.length; index++) {  //leghth dimulai dari 1,2,3....
+    const element = pricelist[index];
+    total += element
+}
+//karena array ada 3 maka akan looping 3 kali
+
+console.log('index: ', index);
+
+let totalWhile = 0
+let i = 0
+while (i < pricelist.length) {
+    const element = pricelist[i];
+    totalWhile += element
+    i++
+
+}
+console.log(totalWhile);
+
+let product = {
+    name: "sabun ajaib",
+    photoUrl: "http://...",
+
+    ratingCount = 4, //tidak ada
+    price = 0//tidak ada
+}
+
+for (const property in product) {
+    const value = product[property];
+
+    if (typeof value = 'number' && value < 1) {
+        product[property = 'tidak ada']
+
+    }
+}
+console.log('product :', product);
+
+const temperature = [32, 31, 29, 18]
+for (const temperature of temperature) {
+    console.log(temperature);
+
+}
+
+
+
+
+-- --Function-- --
+
+function functionName(parameter) {
+    //nama parameter bebas, bisa number bisa string bisa boolean
+    //tidak bisa dikosongkan karena akan undefined
+    let process = 'this is result'
+    return process
+}
+
+function addDollarSign(berapa) {
+    const output = `$${berapa}`
+    return output
+}
+
+let itemPrice = addDollarSign(500)//menggunakan ffunction
+console.log('item price:', itemPrice);
+// ketika dolarsign dipanggil maka node akan mencari fungsinya
+// lalu parameter akan dimasukkan ke fungsi
+// lalu akan dicari hasilnya
+// lalu akan direturn hasilnya
+
+
+//sebuah function bisa tidak memilki parameter
+function GetHello() {
+    return 'hello'
+}
+console.log('get hello:', GetHello());
+
+
+//bias membuat function tanpa 'return'
+//untuk menampilkan output tinggal tulis functionname()
+function sayHello() {
+    console.log('from sayHello()', 'hello');
+}
+sayHello()
+
+
+
+
+-- --ArrowFunction-- --
+
+//anonymous function
+let variabelfunction = function () { //nilainya seperti variabel biasa
+    //sebuah variabel juka valuenya adalah anonymous function maka 
+    //variabel itu akan berubah menjadi function
+    return 'this is an anonymous function'
+}
+console.log('variabelFunction:', variabelfunction);
+
+//arrowfunction -> cara singkat dari anonymous function
+let variabelArrowfunction = (parameter) => { //bisa dimasukkan parameter
+    return 'this is an arrow function' + parameter
+}
+console.log('variabelArrowFunction:', variabelArrowfunction);
+
+//set timeout fungsi dengan 2 parameter, arrow function
+//set timeout --> untuk mendelay eksekusi anonymous function sebanyak 300 milidetik
+
+function getMessage() {
+    setTimeout(() => {
+        return 'this is a string from getMessage()'
+    }, 3000);
+    console.log("getMessage() has finished reading all of it's codes!");
+}
+console.log('from getMessage():', getMessage()); // undefined
+
+//penjelasan diatas
+
+//cara kerja pemrograman : singkronous -->pengkodingan yg ga mau menunggu
+
+// ketika get message dipanggil, maka akan memangil set timeout. ketika set timeout masih Delay,
+// program akan melewati settime out karena sifat dari pemrograman adalah sinkonous yaitu linier 
+// pengerjaannya urut dari atas dan tidak mau menunggu. 
+
+// setTimeout ->   tugsanya adalah mendelay eksekusi anonimus function 
+//                 yg dimasukin di parameter pertamanya
+
+
+function getMessageCallback(callback) {
+    setTimeout(() => {
+        callback('this is a string from getMessageCallback()')
+    }, 3000);
+    console.log("getMessage() has finished reading all of it's codes!");
+}
+
+const callbackResult = getMessageCallback(
+    (result) => {
+        console.log('from getMessageCallback():', result);
+    }
+)
+console.log('callbackResul():', callbackResult);
+
+// penjelasan diatas
+
+// parameterpertama yg dipanggil akan masuk ke paramaeter callback. 
+// jika parameter pertama anonimous function 
+// maka variabel tersebut akan beribah menajdi function .
+
+// {callback bukan syntax khusus, bisa diganti atau bebas}
+
+// ketika program berjalan, berlaku sinkronus, kita lihat setTimeout delay dan skip ke consollog
+// callback berubah menjadi function karena variabel pertama anonimus. 
+// function callback dipanggil oleh variabel result, dan ditampilkan
+
+
+
+
+-- --Method-- --
+
+// method  adalah sebuah fungsi yg berada dalam sebuah objek
+let user = {
+    nama: 'ilyas',
+    umur: 20,
+    greet() {
+        return 'Hi! my name is ${this.name} my age is ${this.age} years old'
+        // dengan method kita bisa menggunakan variabel "this" untuk emmanggil 
+        // objek dalam user
+    }
+}
+
+console.log('great():', user.greet());
+
+
+// sebuah value dalam JS itu adalah objek
+
+
+// Guna Method
+//Sekumpulan fungsi  yg hanya diletakkan dalam objek
+// melakukan modif pada variabel asli
+let string = 'this is method'
+console.log(string.toUpperCase()); //menjadi kapital semua hurufnya
+
+let number = 3.1334
+console.log(number.toFixed(2)); //komanya dikurangi 2 digit
+
+let friends = ['aaa', 'bbb', 'ccc']
+console.log();
+
+// Methods dalam array
+let friends = ['Akbar', "Siti", "Winda"]
+console.log(friends.join());
+console.log(friends.includes("Siti"));
+console.log(friends.map((friend) => {
+    return ${ friend } mah bro
+}));
