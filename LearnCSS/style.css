@@ -1,0 +1,74 @@
+/* AT RULES */
+
+@charset "UTF-8";
+/* charset "hei broswer bahasa ini ditulis pakai ini loo" */
+@import "bootstrap.css";
+@import "main.css" ;
+/* mengimport file CSS lain */
+@font-face {
+    font-family: "MyFont";
+    src: url(WalterTurncoat-Regular.ttf);
+}
+/* 
+@media {
+
+} */
+/* media membuat website lebih responsif */
+
+@media print {
+
+}
+/* mengkonversi tampilan web menjadi dokumen yg bisa di print */
+
+/* css-trick.com/the-at-rules/ */
+
+
+h1{                        
+    color: blue;
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+h4{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* jika segoe UI tidak ada maka browser akan mengecek font dibelakangnya dan seterusnya dan seterusnnya */
+
+h3{
+    font-family: MyFont;
+    padding: 6px 10px;
+}
+
+/* 
+- color = memberi warna pada teks
+- border = memberi garis batas konten
+- padding = jarak konten ke border pada semua sudut.
+- padding apx bpx. maka a untuk padding atas dan bawah, b untuk padding kanan-kiri
+- padding apx bpx cpx dpx. a=atas b=kanan c=bawah d=kiri.
+- margin = jarak margin ke batas web
+*/
+.intro{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* . = class */
+/* agar tidak semua h3 mendapatkan font yg sama maka perlu elemen class */
+/* elemen class untuk membantu menstyle web secara pesifik */
+
+/* atribut selector */
+input[type="text"]{
+    padding: 6px;
+}
+/* hanya untuk atribut yg bervalue text */
+/* memperlebar kolom input teks */
+
+/* pseudo class */
+.button:hover{
+    background-color: black;
+    color: red;
+}
+
+/* pseudo elemen */
+.first-paragraph::first-letter{
+    font-size: xx-large;
+}
+/* membuat huruf awal paragraf besar*/

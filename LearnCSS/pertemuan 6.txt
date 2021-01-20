@@ -1,0 +1,94 @@
+buat buat HTML dan CSS
+
+HTML
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelloWorld</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Hello World</h1>
+    <p>This is my firts paragraph</p>
+</body>
+
+</html>
+
+CSS
+h1{
+    color: blue;
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+
+Dibalik Layar
+
+   load
+  HTML
+      |
+      |
+     \./
+   Parse
+   HTML   ---->  load
+      |                CSS
+	  |                   |
+	  |                  \./
+     \./               parse
+ dometree  <---- CSS
+      |
+	  |
+	 \./
+   Web
+   
+   
+Cara2 penulisan CSS   
+Internal Sylesheet ---> CSSlangsung ditulis di file HTML. not recomended karena code akan menajdi panjang
+Inline Style ---> langusng diketik dengan <style>. not recomended. rekomended jika hanya unutuk mengecek
+
+Struktur penulisan
+
+CSS
+h1{                                                             ----> selector
+    color: blue;
+    background-color: yellow;                         ----> atribut
+    border: 1px solid black;
+}
+
+atribut dibuka dengan kurung kurawa ({)
+atribut memiliki nama atribut dan value. color itu atribut dan blue adlah value.
+jika menggunakan atribut lebih dari satu wajib menggunakan semi-colom (;)
+jika atribut salah, browser akan menskip nya
+jumlah atribtu sanagt banyak dan tidak semua browser memiliki atribut yg sama
+
+website untuk mengecek atribut CSS : caniuse.com
+
+atribut CSS harus sesuai dengan target market
+aplikasi untuk petani atau anak2 desa atau orang2 menengah kebawah maka pilih atribut CSS yg mendukung perangkat mereka
+
+class = untuk mereferinsikan ini untuk apa sih
+class boleh pakai bahasa apa aja
+
+
+Cooding Time
+
+
+bootstrap adalah framework/kerangka kerja. kumpulan2 CSS yg banyak
+cara download
+- manual = tinggal makai
+- CDN=memasukkan link ke head html. namun haarus ada koneksi internet
+
+PR :
+- grid layout bootstrap
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+
+/* hanya untuk atribut yg bervalue text */
+/* memperlebar kolom input teks */
