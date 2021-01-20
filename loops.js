@@ -21,7 +21,7 @@ const isImpospostorList = [false, false, true, false]
 let loopTimes = 0
 while (loopTimes < isImpospostorList.length) {
     loopTimes++
-    const item = 
+
 
 }
 console.log('\n'); // perintah console.log biar rapih 
