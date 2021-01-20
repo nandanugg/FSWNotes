@@ -1,0 +1,125 @@
+Dalam file js juga ada comment tentang materi hari ini
+
+Variable types
+Variable types dapat berupa let atau var
+Var bisa dideklarasikan tanpa var dengan langsung menyebutkan namanya
+var b;
+b = 10
+b = 20
+//var bisa dideklarasikan tanpa var dengan langsung b=10
+Contoh:
+var b = 50
+lalu untuk const
+const harus selalu diisi dengan valuenya
+tidak boleh seperti:
+const q;
+q = 50 
+ini tidak boleh. yg benar const q = 50
+
+Looping
+looping itu untuk memproses setiap data yg diterima
+1. for loop --> memproses setiap data yang diterima
+2. while loop --> untuk melakukan looping untuk mencari dan sampai dapat true baru berakhir
+3. for in loop --> digunakan untuk looping menampilkan value object dengan valuenya
+4. for of loop --> digunakan untuk merubah atau menampilkan yg tadinya array jadi satu list satu persatu
+
+Function
+function functionName(parameter) {
+    const process = "this is a process"
+    return process
+} //bentukan dasar function
+
+function addDollarSign(number) {
+    const output = `$${number}`
+    return output //tulisnya return dulu baru apa yg mau direturn disini variable output yg di return
+    //nanti hasil output lah yang dimasukin di output
+}
+
+let amount = addDollarSign(200) //amount ini manggil/call function addDollarSign yang sudah dibuat
+// 200 dimasukan ke function (number) kemudian dimasukan ke output, dan output tersebut di return ke let
+// (200) bisa juga string ("ayam") sesuai yg dimau
+console.log("amount:", amount);
+
+function bisa tidak memakai parameter
+function juga bisa tidak memakai return, dengan langsung panggil functionnya
+
+Arrow Function
+arrowfunction itu bukan function tapi value
+anonymous function dan arrow function bisa diisi param
+
+let variableFunction = function () { //anonymous function atau function tanpa nama yg sifatnya seperti value
+    return "this is an anonymous function"
+}
+console.log('variableFunction():', variableFunction());
+//variable apabila diisi dengan anonymous function akan berubah jadi function
+
+//penulisan diatas bisa dipersingkat jadi kaya penulisan dibawah
+
+//arrow function
+let variableArrowFunction = () => {
+    return "this is an arrow function"
+}
+console.log('variableArrowFunction():', variableArrowFunction());
+
+Callback Function
+-callback menghubungi ketika siap, saat ada atau tidak ada
+-setTimeout memiliki 2 parameter, parameter pertama arrow function lalu parameter kedua dilanjutkan pake , setelah }
+-setTimeout tugasnya mendelay arrowfunction selama beberapa ms milisecond yang dimasukkan dalam parameter kedua
+
+setTimeout(() => {
+    console.log('setTimeout()', 'this log is from ');
+}, 3000)
+
+function getMessage() {
+    setTimeout(() => {
+        return 'This is the message from getMessage()'
+    }, 3000)
+    console.log('inside getMessage()', "getMessage() has completed it's task");
+}
+console.log('outside getMessage()', getMessage()); //hasilnya undefined karna callback function ini tidak mau menunggu selama 3000 ms karena synchronus
+
+//untuk menggunakan callback pattern perlu menggunakan anonymous function
+//jika variable diisi dengan anonymous function maka variabel tsb berubah jadi function
+
+function getMessageWithCallback(callback) {
+    setTimeout(() => {
+        callback('This is the message from getMessage()')
+    }, 3000)
+    console.log('inside getMessageWithCallback()', "getMessage() has completed it's task");
+}
+
+getMessageWithCallback((result) => {
+    console.log('outside getMessageWithCallback()', result);
+})
+//getMessageWithCallback ini membuat parameter yg diisi dengan 'callback' dan kemudian dijadikan function karna sifat syncronus dan menggunakan anonymous function
+//kemudian parameter callback dapat dipanggil menjadi function yang mana hal ini membuat callback yg dilakukan outside getMessageWithCallback dapat menampilkan hasil dari function callback yang sudah disimpan
+//tidak seperti callback awal yg tidak memakai parameter dan function dari parameter tersebut tidak dipanggil juga menyebabkan hasil outside getMessage menjadi undefined
+//undefined juga disebabkan oleh callback yg tidak bisa menunggu selama 3000 ms yang membuat callback function langsung melakukan log dari inside getMessage
+
+Methods
+//method adalah sodara dari property
+//method adalah fungsi yg ada di dalam object
+
+let user = {
+    name: "Nanda",
+    age: 21,
+    greet() {
+        return `Hai, nama saya adalah ${this.name}, saya berumur ${this.age}`
+    } //this merepresentasikan object dimana dia berada yaitu kalo disini object user atau bisa pake nama objectnya jadi user.name dari yg tadinya this.name
+} //this dipakai dalam object saja
+console.log('.greet()', user.greet());
+        dalam console log nama object tetap dipanggil, tidak memakai this karna tidak didalam object, lalu dilanjutkan .methods yg mau dipakai
+
+//method digunakan untuk memodifikasi value dari variabel tersebut, meyimpan banyak fungsi didalam satu objek
+
+let string = "this is string"
+console.log(".toUpperCase()", string.toUpperCase()); //untuk uppercase string jadi kapital semua
+
+let number = 6.674
+console.log('.toFixed()', number.toFixed(1)); //untuk membuat desimal menjadi berapa angka dibelakang koma seperti yg dimau
+
+let friends = ['Akbar', 'Siti', 'Winda']
+console.log(".includes()", friends.includes('Siti')); //boolean untuk liat bener atau tidak
+console.log(".map()", friends.map((friend) => { //untuk memodifikasi item disetiap array
+    return `${friend} ma bro` //.map butuh return
+}));
