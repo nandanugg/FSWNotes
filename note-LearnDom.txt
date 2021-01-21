@@ -1,0 +1,43 @@
+Notes By 
+Siski Elvini - FSW Pagi 
+21 Januari 2021
+===LearnDOM====
+
+--Markdown-- 
+
+- Markdown disimpan mengunakan extenxi .md
+- Markdown mirip dengan MS.Word, 
+tetapi digunakan unutuk menambah keterangan di github awal agar lebih mudah dan lebih rapi 
+- untuk memlihat priview markdown di VSC dengan cara ctrl+shfit+p> pilih warkdown priview
+atau shotcutnya dengan crtl+shift+v
+- untuk membuat format html atau js atau css dan sebagainya bisa menggunakan Backtip (```)
+contohnya 
+``` HTML
+ <h1
+``` 
+maka akan muncul format yang mirip dengan yang ada di kode editor 
+- instal extensions markdown dari yu zhang atau dari developer lain untuk membuat tampilan dan shotcut lebih banyak 
+
+tips 
+instal live server untuk membuat website langsung mengeksekusi code tanpa perlu merefresh 
+- untuk menginstal live server bisa di terminal dengan mengetikan npm instal -g live - server
+
+
+--DOM-- 
+
+Document Object Model 
+
+yang mana DOM merupakan tampilan interface pemrogrman yang berbasis object 
+Document merupakan object yang terdiri dari beberapan method dan property 
+
+untuk mengimplentasikannya bisa membuat file js dan HTML 
+yang mana file HTML harus terkoneksi dengan js 
+dengan cara <script src="namafile.js"></script>
+
+untuk mempermudah melihat perubahan dan perintah yang di eksekusi di console
+buat file HTML yang di dalamnya berisi tag yang berisi id dan juga class 
+
+penjelasan dan contoh kodingan dari DOM ada di file script.js
+
+
+
