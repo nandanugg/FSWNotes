@@ -1,0 +1,45 @@
+@charset "UTF-8";
+@import 'base.css';
+@import 'bootstrap.css';
+@font-face {
+    font-family: "myFont";
+    src:url(Roboto-Black.ttf)
+}
+
+.paragraph::first-letter{
+    font-size:  50pt;
+}
+
+input[type="sumbit"]:hover {
+    color: white;
+    background-color: black;
+}
+input[type="sumbit"]{
+    padding: 8px;
+
+    .blog-title{
+        font-family: myfont;
+    }
+    .quote{
+        font-size: 14pt;
+        color: black;
+    }
+}
+h1{
+    border: 15px solid black;
+    padding: 15px 5px 15px 5px;
+    background-color: burlywood;
+    font-family: myFont;
+    color: gray;
+    .blog-title{
+        font-family: myFont;
+    }
+    .quote{
+        font-size: 14pt;
+        color: grey
+    }
+}
+
+p{
+    text-align: center;
+}
