@@ -1,0 +1,8 @@
+ClemensFerryanto
+Hobby saya adalah menggambar dan belajar bahasa. saya juga suka bermain kartu di toko hobby.
+alasan saya masuk ke bootcamp adalah saya ingin menjadi backend yang handal dan mengerti permasalahan mengenai pemograman, selain itu saya ingin mendapat pengalaman belajar menggunakan software sofware programing lainnya.
+git config --global user.email "clemens.ganteng@gmail.com"   
+git config --global user.name "clemensferryanto"
+Tester
+coba
+logat
