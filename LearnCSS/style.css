@@ -1,0 +1,43 @@
+@charset 'UTF-8';
+@import 'base.css';
+@import 'bootstrap.css';
+/* Import font from other source, and can call it with "myFont */
+@font-face{
+    font-family: "myFont";
+    src:url('YuseiMagic-Regular.ttf');
+
+}
+.pharagraph::first-letter{
+    font-size: 25pt;
+}
+
+input[type="button"]:hover{
+    color: white;
+    background-color: black;
+}
+
+input[type="button"]{
+    padding: 7px;
+}
+
+input[type="text"]{
+    padding: 7px;
+}
+
+.header-title{
+    font-family: "myFont";
+}
+
+.Content{
+    background-color:tomato;
+}
+
+.quote{
+    text-align: center;
+}
+
+
+/* p { */
+    /* font-family: "myFont"; */
+    /* text-align: center; */
+/* } */

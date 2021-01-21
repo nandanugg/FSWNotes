@@ -1,0 +1,17 @@
+
+Browser read from HTML style
+HTML ussually has rel that connect to the code
+rel can be CSS that give the "suit" of the HTML.
+
+DOM Family Tree:
+-> Tree that has many branch, and the branch ussually has the child too.
+
+There are many way to write CSS in HTML, 
+and the most recomended is <link rel="stylesheet" href="style.css">
+
+There are a selector and attributes in css. 
+h1 {color: blue}
+h1 : selector
+{color : blue} : attributes
+
+Test attribute css in browser, access link "caniuse.com"
