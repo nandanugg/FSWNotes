@@ -15,7 +15,7 @@ button.onclick = () => {
 
 console.log(input);
 input.value;
-button onclick = () => {
+button.onclick = () => {
     console.log('button pressed', input.value);
     input.value = ""
 }
@@ -35,7 +35,7 @@ button.onclick = () => {
 
 // looping in more than 1 <p> tag
 button.onclick = () => {
-    for (console element of p) {
+    for (element of p) {
         element.style.backgroundColor = "grey";
     }
 }
