@@ -1,17 +1,36 @@
-Catatan juga ada di file script.js
+Author : Faisal Juliandra (Kelas Pagi)
+Tanggal : Kamis, 21 Januari 2021
+
+1. Method .getElementsByClassName
+        digunakan untuk mengambil elemen yang ada dalam html dengan nama kelas yang dimau
+    Contoh:
 
 const button = document.getElementsByClassName('button')[0] //kenapa kasih [0] karena defaultnya bentuk array jadi harus panggil array ke 1 dengan index 0
-// console.log(button);
+console.log(button); //untuk menampilkannya button ke console javascript
 const input = document.getElementsByClassName('input')[0]
 const h1 = document.getElementsByClassName('heading')[0]
 const p = document.getElementsByClassName('paragraph')
+
+
+2. Method .getElementById
+        digunakan untuk mengambil elemen yang ada di html dengan id yang mana hanya bisa diambil satu elemen di setiap id
+    Contoh:
+
 const inputId = document.getElementById('input-id') //ambil id
 const paragraphId = document.getElementById('paragraph-id') //ambil id
+
+3. Method .querySelector
+        digunakan untuk mengambil elemen yang menggunakan id atau class
+    Contoh:
+
 const buttonQuery = document.querySelector('button') //queryselector bisa ambil id atau class
 const pQueryAll = document.querySelectorAll('p') //queryselectorall ambil semua elemen yg sama
 
 console.log(buttonQuery);
 console.log(pQueryAll);
+
+4. .onclick
+        onclick merupakan listener yang dapat membuat perintah apabila mengklik tombol
 
 button.onclick = () => { //.onclick itu listener
     console.log('button pressed', input.value, h1.innerHTML); //input value untuk bisa mengambil input yang dimasukkan
