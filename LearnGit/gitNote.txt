@@ -1,0 +1,55 @@
+git init
+-> menginisiasi folder/directory dimana sekarang berada untuk diinisiasi ke git
+
+git add "folder name"
+-> menambahkan atau memberi tahu git untuk menyimpan suatu file
+
+git status
+-> melihat status dalam suatu branch apa saja yang telah di simpan atau di trak pada git
+
+git commit -m "name file"
+-> mengkomitkan atau menpublish file yang di add pada git
+
+git commit juga dapat dilakukan di ekstensi git
+dengan + disebelah file untuk git add dan
+untuk git commit dilakukan di message dengan accept ctrl+enter
+
+git log
+-> melihat versi yang telah kita commit
+note: HEAD menunjukkan commit terakhir
+        commit ebca07081e56e4989813417817aed6a6c73cf60e hal ini merupakan commit hash(penanda unik pada commit)
+
+git log -3
+-> melihat 3 versi commit terakhir
+
+git log -- "nama file"
+-> melihat log commit perubahan suatu file
+
+git reset "commit hash"
+-> mereset atau mengembalikan ke commit sebelumnya
+note : mengembalikan ke versi sebelumnya dengan git extension, klik tanda undo untuk discard change,
+        sehingga kembali ke commit awal
+
+git reset --hard "commit hash"
+-> otomatis kembali ke versi sebelumnya tanpa mengklik discard di git extension
+
+git checkout "commit hash" -- "nama file"
+-> mengambil file yang sudah hilang di versi sebelumnya
+
+git log --all --decorate --oneline --graph
+->melihat seluruh branch serta commit yang ada.
+
+alias (nama ganti command)="command"
+-> memberi nama ganti untuk command, dapat mempersingkat command
+
+git branch "nama branch"
+-> membuat cabang pada line master
+
+git checkout "nama branch"
+-> memindah head ke cabang
+
+git merge "nama file"
+-> merge file ke master
+
+git --help / git "suatu command" --help
+-> melihat argumen apa saja yang dapat di cari
