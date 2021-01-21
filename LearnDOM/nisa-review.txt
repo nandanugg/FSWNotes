@@ -1,7 +1,0 @@
---Variabel Type-- 
-
-Variabel dalam js ada let, const, var yang mana 
-let merupakan type variabel yang dapat di refilling value, tetapi jika nama variablenya tisak boleh sama 
-const merupakan type data yang valuenya tidak dapat di ubah sesuka hati, karena cont bernilai tetap 
-var jua merupakan type variabel yang dapat di refilling, tetapi di dalam penamaaan variabel var dapat menggunakan nama yang sama 
-yang mana jika nama tersebut sama dapat meyebabkan kebingungan 
