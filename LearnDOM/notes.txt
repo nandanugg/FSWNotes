@@ -1,0 +1,39 @@
+Markdown : 
+- Markdown digunakan untuk menulis sebuah dokumen terformat dengan sederhana
+- Format file markdown menggunakan ekstensi markdown
+- Terdapat ekstensi all in one untuk markdown pada visual studio code bernama Markdown All In One dari Yu Zhang
+- Terdapat banyak web untuk mengedit markdown, contohnya : https://stackedit.io/app# 
+
+Live Server : 
+ 1. Cara install : npm install -g live-server di terminal
+ 2. Cara menggunakan : live-server di terminal
+    Keterangan : 
+    a. Setiap perubahan file di tampilan di browser otomatis terefresh
+    b. Menggunakan Port 8080
+
+DOM Selector :
+ a. getElementsByClassName(className) : digunakan untuk mencari berdasarkan nama class, result array
+    contoh : const header = document.getElementsByClassName('header')
+ b. getElementById : digunakan mencari berdasarkan id, result object DOM dan mengambil data paling awal jika ada lebih dari 1 data memiliki id yang sama
+    contoh : const submitButton = document.getElementById('button-submit')
+ c. querySelector : bisa digunakan berdasarkan tag name, id, atau class, hanya mengambil data paling awal
+    keterangan tambahan : - mengambil berdasarkan id tambahkan # sebelum nama id
+                          - mengambil berdasarkan class tambahkan . sebelum nama class
+                          - mengambil berdasarkan tag name langsung tulis tag namenya
+    contoh : a. const submitButton = document.querySelector('#button-submit') // mencari berdasarkan id
+             b. const header = document.querySelector('.header') // mencari berdasarkan class
+             c. const paragraph = document.querySelector('p') // mencari berdasarkan tag name
+ d. querySelectorAll : sama seperti querySelector hanya saja data yang diambil lebih dari satu.
+    contoh : const paragraph = document.querySelectorAll('p')
+
+Listener : 
+  a. onclick : melakukan aksi ketika elemen yang diberi listener diklik. menggunakan anonymous function
+  contoh : reference.onclick = () => {
+      // do something
+  }
+
+Manipulasi DOM
+  a. mengubah value pada inputan
+  contoh : reference.value = value
+  b. mengubah styling
+  contoh : reference.style.namaStyleDalamCamelCase = value
