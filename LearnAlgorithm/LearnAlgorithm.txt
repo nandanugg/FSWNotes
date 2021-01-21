@@ -1,4 +1,11 @@
-Dalam file js juga ada comment tentang materi hari ini
+Author : Faisal Juliandra (Kelas Pagi)
+Tanggal : Rabu, 20 Januari 2021
+
+1. Variable types
+        variable adalah wadah atau tempat untuk menyimpan data
+        dalam javascript terdapat variable types diantaranya let, var, const
+        let dan var dapat diubah isinya
+        const merupakan nilai yang ga berubah dan harus memiliki value
 
 Variable types
 Variable types dapat berupa let atau var
@@ -16,14 +23,14 @@ const q;
 q = 50 
 ini tidak boleh. yg benar const q = 50
 
-Looping
-looping itu untuk memproses setiap data yg diterima
+2. Looping
+        looping itu untuk memproses setiap data yg diterima
 1. for loop --> memproses setiap data yang diterima
 2. while loop --> untuk melakukan looping untuk mencari dan sampai dapat true baru berakhir
 3. for in loop --> digunakan untuk looping menampilkan value object dengan valuenya
 4. for of loop --> digunakan untuk merubah atau menampilkan yg tadinya array jadi satu list satu persatu
 
-Function
+3. Function
 function functionName(parameter) {
     const process = "this is a process"
     return process
@@ -43,6 +50,7 @@ console.log("amount:", amount);
 function bisa tidak memakai parameter
 function juga bisa tidak memakai return, dengan langsung panggil functionnya
 
+4. Anonymous function dan arrow function
 Arrow Function
 arrowfunction itu bukan function tapi value
 anonymous function dan arrow function bisa diisi param
@@ -61,7 +69,7 @@ let variableArrowFunction = () => {
 }
 console.log('variableArrowFunction():', variableArrowFunction());
 
-Callback Function
+5. Callback Function
 -callback menghubungi ketika siap, saat ada atau tidak ada
 -setTimeout memiliki 2 parameter, parameter pertama arrow function lalu parameter kedua dilanjutkan pake , setelah }
 -setTimeout tugasnya mendelay arrowfunction selama beberapa ms milisecond yang dimasukkan dalam parameter kedua
@@ -96,7 +104,7 @@ getMessageWithCallback((result) => {
 //tidak seperti callback awal yg tidak memakai parameter dan function dari parameter tersebut tidak dipanggil juga menyebabkan hasil outside getMessage menjadi undefined
 //undefined juga disebabkan oleh callback yg tidak bisa menunggu selama 3000 ms yang membuat callback function langsung melakukan log dari inside getMessage
 
-Methods
+6. Methods
 //method adalah sodara dari property
 //method adalah fungsi yg ada di dalam object
 
