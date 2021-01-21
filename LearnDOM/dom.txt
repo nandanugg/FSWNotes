@@ -1,0 +1,24 @@
+// install 
+nvm install -g live-server
+
+// DOM
+const header = document.getElementsByClassName('header')[0]
+
+document.getElementById = untuk memilih elemen berdasarkan atribut id
+document.getElementsByClassName = untuk memilih elemen berdasarkan atribut class
+document.querySelector = untuk memilih elemen pertama sesuai selektor yg diberikan
+document.querySelectorAll = untuk memilih semua elemen
+
+// menampilkan header
+console.log(header);
+
+// menambahkan perintah pada button saat diklik
+<button class="button" id="button-id">Click me</button>     <== button pada html
+const firstButton = document.getElementById('button-id')
+// id 
+firstButton.onclick = () => {
+    console.log('Button Clicked', input.value)
+    input.value = ""
+    header.style.backgroundColor = "gray"
+}
+// jadi saat button pada halaman web (yang elemen nya ada di variabel firstButton) diklik akan menjalankan perintah didalam arrow function

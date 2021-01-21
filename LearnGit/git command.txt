@@ -1,0 +1,126 @@
+git init
+untuk menginisiasi repository git baru di direktori terminal yang aktif
+
+git add <nama file>
+menambahkan file ke staging area
+
+git add .
+menambahkan semua ke staging area
+
+git rm <nama file>
+menghapus file tersebut dari staging area
+
+git rm .
+menghapus semua file direktori tersebut dari staging area
+
+git status
+melihat status repository
+
+git commit -m "pesan commit"
+melakukan simpan perubahan file yang berada di staging area
+
+git commit -a -m "pesan commit"
+melakukan simpan perubahan semua file yang berada di staging area atau tidak berada staging area
+
+git log
+melihat log commit
+
+git log --all --decorate --oneline --graph
+melihat log commit dalam bentuk graph
+
+git reset
+Mengembalikan ke commit
+
+git restore
+mengembalikan ke commit yang diinginkan
+
+git checkout
+mengembalikan ke sebelum perubahan
+kok kayaknya sama git restore dan git checkout
+
+git checkout <nama branch>
+memilih branch aktif
+
+git branch
+menampilkan nama branch lokal yang ada
+
+git branch -a
+menampilkan nama branch lokal dan branch di repo
+
+git branch <nama branch>
+membuat branch baru
+
+git branch -d <nama branch>
+menghapus branch tersebut
+
+git branch --merged
+melihat branch yang sudah di merge
+
+git branch -m <nama branch lama> <nama branch baru>
+mengganti nama branch
+
+git merge <nama branch>
+menggabungkan perubahan pada branch saat ini dan branch tujuan
+
+git remote add origin <alamat repository github>
+untuk meremot alamat tersebut, origin adalah alias
+
+git remote -v
+menampilkan daftar remote
+
+git remote remove <alias>
+menghapus remote
+
+git remote rename <alias lama> <alias baru>
+mengganti nama alias
+
+git push origin <nama branch>
+menyimpan lokal branch tersebut ke repository, origin adalah alias
+
+git push -u remote origin <nama branch>
+menyimpan lokal branch tersebut ke repository sekaligus memilih default upstream remote
+
+git push -d origin <nama branch>
+menghapus branch di repo
+
+git push --tag
+upload tag ke repo
+
+git push -d origin <nama tag>
+menghapus tag di repo
+
+git pull
+mengunduh perubahan dari repo ke lokal
+
+git tag v1.0.0
+menambahkan tag ke commit, v1.0.0 adalah nama tag
+
+git tag --list
+melihat tag di direktori lokal kita
+
+git tag -d
+menghapus tag di lokal
+
+git clone <alamat http repo>
+menyalin repo ke lokal
+
+git fetch
+memperbarui daftar branch jika ada branch baru
+
+git fetch --prune
+memperbarui daftar branch jika ada branch baru atau branch dihapus
+
+git stash
+menambahkan perubahan ke stash
+
+git stash -m "pesan stash"
+menambahkan pesan stash
+
+git stash list
+menampilkan daftar stash
+
+git stash pop
+menambahkan perubahan yang berada di stash ke file yang sama di branch aktif saat ini
+
+git stash apply <nama stash>
+menerapkan perubahan sesuai nama stash

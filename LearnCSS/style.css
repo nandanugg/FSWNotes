@@ -1,0 +1,31 @@
+@charset "UTF-8"; /* memberi keterangan bahasa untuk css yang digunakan */
+@import "main.css"; /* menambahkan file css lain */
+@font-face {
+    font-family: "MyFont";
+    src: url(PottaOne-Regular.ttf);
+}
+
+h3 {
+    font-family: MyFont; /* menggunakan font yang diatas */
+    background-color: darkcyan; /* memberi warna latar belakang pada atribut */
+    /* membuat spasi disekitar atribut */
+    /* padding: 6px; membuat spasi sama semua atas kanan bawah kiri */
+    padding: 6px 7px 8px 9px; /* membuat spasi disekitar atribut, padding masih terkena background color */
+}
+
+.intro {
+    font-family: MyFont;
+}
+
+.first-paragraph::first-letter { /* pseudo element */
+    font-size: xx-large;
+}
+
+.button:hover { /* pseudo class */
+    background-color: black;
+    color: white;
+}
+
+input[type="text"]{
+    padding: 6px;
+}

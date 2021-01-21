@@ -1,0 +1,49 @@
+Function digunakan untuk mendeskripsikan sebuah fungsi
+Function dapat dengan parameter
+
+function functionName(parameter) {
+    return 
+}
+console.log(functionName(parameter))
+
+atau tanpa parameter
+
+function functionName() {
+    return 
+}
+
+atau bisa juga tanpa return, atau bisa juga diberi console.log
+
+function functionName(parameter) {
+    console.log()
+}
+
+
+
+
+function getMessage() {
+  setTimeout(() => {
+    return 'this is a string from getMessage()'
+  }, 3000);
+  console.log("getMessage() has finished reading all of it's codes!");
+}
+console.log('from getMessage():', getMessage()); // undefined
+
+function getMessageWithCallback(callback) {
+  setTimeout(() => {
+    callback('this is a string from getMessageWithCallback()')
+    /**
+     * 👆 panah setelah setTimeout merupakan anonymous function
+     * parameter callback menjadi fungsi
+     * 
+     * setelah set timeout selesai menunggu 3 detik akan memanggil fungsi callback
+     * dapat dibuat seperti ini atau langsung saja return yg diatas diganti dengan console.log
+     */
+  }, 3000);
+  console.log("getMessageWithCallback() has finished reading all of it's codes!");
+}
+
+getMessageWithCallback((result) => {
+  // parameter result akan diganti dengan callback diatas sono
+  console.log('from getMessageWithCallback():', result); // successfull!
+})
