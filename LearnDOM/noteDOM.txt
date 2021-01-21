@@ -1,0 +1,76 @@
+-- -- MarkDown -- --
+digunakan untuk penulisan dg format sederhana
+
+Membuat header 
+# -> h1 
+## -> h2
+   |
+  \./
+hingga
+###### -> h6
+
+ - bulet 
+ - bulet
+tanda (-) akan menajdi bulat
+
+bisa semua bahasa pemrograman
+backpik 3 untuk menuliskan fungsi
+
+contoh penulisan fungsi 
+ ```javascript
+ function namaFunction {
+
+ }
+```
+
+```CSS
+.content{
+    background-color : black;
+}
+```
+
+command untuk ememasukkan gambar :
+
+![code](download.jpeg)
+
+-- -- LiveServer -- --
+Setiap perubahan akan langsung ditampilkan di browser
+
+installasi, ketik command di terminal -> npm install -g live-server di terminal
+penggunaan, ketik command di terminal -> live-server di terminal
+
+-- -- DOM Selector -- --
+const header = document.getElementsByClassName('header')    	// get.. adalah selector
+const paragaph = document.getElementsByClassName('paragraph')
+const firstButton = document.getElementById('button-id')
+const paragraph = document.getElementById('input-id')
+const input = document.getElementById('button-id')     					//hasilnya bukan aray, kecuali jika memiliki 2 tombol dan id nya sama. menselect elemen pertama
+const pQuery = document.querySelector('p')             					//query selector -> menselect p, class, id. menselec elemen pertama
+const pQueryAll = document.querySelectorAll('p')       					//query slector all -> menselect semua elemen
+const inputById = document.querySelector('#input-id')
+const buttonId = document.querySelectorAll('.button')   				//mereferinsikan kelas
+
+-- -- Listener -- --
+
+onclick -> melakukan perintah setelah tombol di klik
+
+buttonId.onclick = () => { 		
+    perintah   								//bisa disi dengan apapun yg kita inginkan ketika tombol ini diklik
+}
+
+-- -- Manipulasi -- -- 
+Mengubah nilai/value
+contoh -> 	console.log ('button clicked:', input.value);  	//valuenya bisa diganti
+					input.value = "value"
+
+Mengubah style 
+contoh -> 	header.style.bakcgroundColor = "grey"		//referensi dalam javascript dalam menambahkan style
+
+next topics
+
+OOP
+Jquery
+NodeJs
+PosgreSQL
+API
+Database
