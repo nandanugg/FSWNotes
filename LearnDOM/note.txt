@@ -1,0 +1,34 @@
+.md ->
+to check -> open preview
+for image you can ![text](link)
+to install live server -> npm install -g live-server
+write live-server
+the difference between live server extention and
+npm is in npm there are display we may be need like
+GET/favicon~
+click listener -> special for javascript
+getElementsByClassName -> collection, means its array
+so when its array, we can indexing like array[0]
+getElementsByClassName('class') -> class name matter
+to get the value -> input.value
+if make a script html, declaration must be place 
+first, then logic, and parameter
+we can also get and set the value
+button onclick = () => {
+   console.log('button pressed', input.value);
+   input.value =""
+} 
+if we doesnt include index[] will not works ->
+uncaught typeerror
+alway sremember getElementBy is array that we can
+always loop
+instead we can loop this if there are 2 p
+id will go reference to element
+if there are 2 element with 2 same id, it will 
+reference to first id
+id is more specific than class
+tomorrow -> oop js 2 days 
+using jquery 2 days
+using node js 2 days
+database, postgresql, implement nodejs to postgresql
+ci/cd, assessment

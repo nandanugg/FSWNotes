@@ -1,0 +1,40 @@
+when pushing to github 
+make sure to commit, and refresh github
+software gui = to check apa aja branch as visual
+e.g. gitkraken = commit is where branch is where
+e.g. sourcetree 
+git pull 
+lets say delete one of file, commit message
+push to click cloud icon
+git branch development
+git checkout development
+git fetch
+git pull to update changes in github
+git fetch to update changes from github
+before delete branch in local we must delete first 
+in github
+to delete in github git push -d branch name
+there are master and origin
+origin still on remote
+or not on local directory
+git makes new branch local automatically
+when checkout branch origin which is github
+git fetch one way -> is there are any update new
+in github or not?
+git fetch prune two way -> update two remote and 
+git tag like versioning
+makes commit of branches to give for ex tag 1.1.2
+tag for tagging each version
+git tag usually do in branch master
+last commit -> git tag v.1.1.2
+to push tag in github -> git push --tags
+tag hotfix, feature add for example
+to delete git push
+branch -> -D, if feature just -> -d
+how to collaborate:
+1 qa responsible of some developers
+point for developers: if revision is lesser than 5
+point for qa: if revision is more than 5
+git push -u origin branch_name
+learning html and css!
+

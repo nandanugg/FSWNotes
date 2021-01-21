@@ -1,0 +1,37 @@
+layouting in css 
+search for inspiration in other person web -> ss
+if we structuring as lego this website what shld be?
+radius is use in the corner of square of picture
+for dark mode etc using javascript
+js -> statement
+shortcut for calling file js in node -> in terminal
+using up and down to automatically see history 
+enter statement in line is ok in js
+comment in js -> //
+multi comment /* */
+variabele -> makes value
+programming language is synchronous way
+when making apps dont using too much variable 
+because it makes cost ram too much
+make a name variable can be at first use _ or $
+camelcase when writing a variable
+let is like defining example 
+const -> constant variable, if change variable will
+get typeerror
+const -> variable that save constant like font color
+black
+uppercase constants with _
+`single quote(') and double quote(")`
+have power of string literal
+print format like in python f"{}"
+in js is `${}`
+in js when we enter to break another line like
+"we want
+to do 
+something"
+it will not print we want to do something but
+literally in each line
+11:17 AM 1/19/2021
+false in js
+null is value that null 
+false , 0, "", null, undefined

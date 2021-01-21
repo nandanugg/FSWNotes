@@ -1,0 +1,59 @@
+difference between var and let is
+var can be write without var and just variable name
+e.g. c = 30
+let cant be initiate more than 1 times, will take
+syntaxerror -> cant be declare more than 1
+let safer than var 
+remember const is stand for constant and cant be
+change, if we first define const variable like
+const bi; -> then will be error
+loop -> iteration 
+while loop will run until condition is false
+usually to find data of array and filter
+to input something like rating in seller of 
+ecommerce should have input it in string because
+when using int conversion seems complicated
+for of to display item 1 by 1
+word + s/es -> to ez spot the detail of difference
+we definitely not console log every problem
+instead we save a data to variable and using 
+similar with print format with back tick `
+to split the file for example js in vscode we can
+use split right
+for example we want to define new variable = old
+variable. then the concept is returning value from
+old variable to new variable
+funtion is like above but just a bit complicated
+function call - function execute - function use
+will find where is this functionname(parameter)
+and if the function is called then will be input
+to parameter so function can process as function
+rule
+-> addDollarSign(200) -> calling function
+-> will be $200 as function rule we define before
+const will be write only if we sure we dont want
+to change the value of variable
+arrow function is not function, its value 
+like string
+function can be have more than 1 parameter
+synchronous and asynchrounous is very different
+when synchronous is waiting code to be executed
+in order
+asynchronous is not waiting instead will be executed
+as needed
+for example in last code will be execute after
+3000 ms so when we call function to get value
+we cant because the function get delayed so 
+get undefined
+method is like siblings of property
+remember property have value
+method is function that inside object  
+when knowing method, in js every value is object
+when using string there are method that we can be
+modified object/value from variable, store many 
+function in one object()
+learn how to use something like callback or method
+because its really important no need to make
+use method when needed
+tomorrow will be implement js to website
+to practice more -> javascript project ideas

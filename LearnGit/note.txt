@@ -1,0 +1,45 @@
+install node with nvm
+click installing and editing 
+copy curl~ to windows terminal and ubuntu
+after install reboot (close ubuntu, open again)
+nvm install node
+check node -v
+
+time to branch 
+master - first commit - commit#2
+master (app release) new branching, dev (beta)
+release (no bug), beta (some bug)
+when implementing branch there are feature branch
+alpha app is more lower than beta
+master - dev - feature 
+branch feature for the first time (login feature)
+login feature branch from branch
+merge = to take the other branch and take to ours
+if feature is done, we must merge it 
+-> e.g. merge login [UAT/testing]
+memantau if feature is success/jalan or not
+after merge login merge dev
+so far this is git flow
+landing feature = slide slide information
+version 1.1.15 to 2.1.15 => 
+if there a lot changes
+version 2.1.15 to 2.2.15 =>
+if there are update feature, hotfix
+version 2.2.15 to 2.2.16 =>
+bug fix, mini update
+if 12.12 was done, do the version decrease? no
+we are always changed even feature done
+still cannot commit to our new branch
+to move another branch = git checkout
+as dev , diminta yg berisi biography deddy corbuzier
+shortcut click pojok kiri bawah
+ctrl shift p -> checkout ... to shortcut to branch
+ctrl shift p -> merge branch
+if using cut will get conflict in each line
+stash take changes that not yet commit 
+it is when we forget which branch we must have
+make repository via github
+git is on our pc (local)
+to connect to github 
+git remote add (alias)origin ...url...
+git remote menunjukkan alias and remote apa aja

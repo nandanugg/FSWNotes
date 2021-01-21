@@ -1,0 +1,9 @@
+git init
+for initiate current directory now for initiate by git
+git init -> git add -> git status -> git commit (to save)
+on branch master
+git help -> to check every argument what it is 
+and q for exit for reading
+head -> we are in the branch 
+git add then git commit 
+we are change here, 

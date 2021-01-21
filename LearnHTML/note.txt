@@ -1,0 +1,72 @@
+git flow = the way git works
+js like adding feature when click like tokopedia
+js responsible for if button clicked -> pop up
+html can be modified in first and last sentence 
+if there are not img in copy link address we cant
+include it in html img
+to include it in img src =
+properties -> link address
+ctrl+ space
+inside element is attribute
+inside img is src
+"" -> more save, always start with it
+disabled -> boolean, without = same as true
+doctype html -> means this is file html
+tradition from past until now
+<html> for browser accesibility like lang
+opening in search engine is based on ip address
+country if you use id then indonesia, sg is singapore
+and so on
+so search engine can read that
+head is like attachment like includig css style etc
+meta charset -> text encoding
+so computer can convert data bits to text we can see
+there several text encoding for example japanese is
+unicode for japanese, utf-8 if its ordinary lang
+so when writing for meta charset look at your lang
+you wanna use in html tag meta
+shortcut for vscode -> ! -> voila all html structure
+viewport -> to tell the width so can adjust auto
+in smartphone etc
+inspect element -> f12
+we always use this when layouting
+more references: w3schools.com/html
+like emoji etc
+learn way:
+set goals like make a new file goal.txt
+before learning programming lang
+seach this html is what used for
+make website for introduce cat
+and imagine through it
+in website what inside it?
+what website bisa apa aja
+look at tutorial back to goal
+and try to penuhin goal from criterioa
+after praktekin, let imagination liar
+like adding more emoji
+dont ever think about result, just process
+at least you learn
+ask colleague to ask like golang is backend how
+googling html project ideas -> what goal is
+backend project ideas
+tips for backend:
+grit is important -> never give up 
+masochist -> the punch is much harder than fe
+creative is bonus but logist is must
+pseudocode for example
+prepare for memory display in monitor etc
+java is easier in mobile than be
+mental goku is fuckin needed
+backend reponsible is really big
+like data, user etc
+responsible> work< like make system and API
+in fe try in local it is just same 
+in be try in local but when in internet not same
+security we learn encrypt decrypt salt
+zero day exploit berapa yang crack dan hack
+security is need to be consider
+python have performance level not that fast but ez
+why we need learn java first before kotlin?
+kotlin dibalik layar seperti java
+so need to understand first dibalik layar java
+the way thinking is same java -> daya pikir
