@@ -1,0 +1,124 @@
+Learn Algorithm
+
+
+1. Loops
+
+Loops pada javascript adalah algoritma yang digunakan untuk melakukan suatu perulangan.
+Terdapat beberapa jenis loops pada javascript, yaitu:
+  - for loop
+  - while loop
+  - for in loop
+  - for of loop
+
+for loop adalah jenis loop traditional yang ada di javascript, contoh:
+
+let priceList = [5000, 6000, 9000]
+
+for (let index = 0; index < priceList.length; index++) {
+    const element = priceList[index];
+    console.log("value of element:", element);
+}
+
+Kode di atas akan menampilkan seluruh value dari array "priceList" dengan cara menampilkan value
+secara berulang kali sebanyak jumlah value dari array tersebut.
+
+while loop adalah jenis loop traditional yang ada di javascript, contoh:
+
+let priceList = [5000, 6000, 9000]
+let i = 0
+while (i < priceList.length) {
+    const element = priceList[i]
+    console.log("value of element:", element);
+    i++    
+}
+
+Kode di atas akan menampilkan seluruh value dari array "priceList" dengan cara menampilkan value
+secara berulang kali sebanyak jumlah value dari array tersebut.
+
+for in loop digunakan untuk melakukan perulangan pada sebuah object, contoh:
+
+let product = {
+    name: "Sabun",
+    photoUrl: "https://...",
+    ratingCount: 0,
+    price: 0
+}
+
+for (const property in product) {
+    const value = product[property]
+    console.log("value of property:", value);
+}
+
+Kode di atas akan menampilkan seluruh value dari property yang ada pada object "product"
+
+for of loop digunakan untuk melakukan perulangan pada sebuah array, for of lebih modern dibandingkan
+dengan for traditional, contoh:
+
+const temperatures = [32, 33, 31, 29, 18]
+for (const temperature of temperatures) {
+    console.log("array looping with for of loop:", temperature);
+}
+
+Kode di atas akan menampilkan seluruh value dari array "temperatures"
+
+
+2. Functions
+
+Functions adalah sekumpulan instruksi untuk menyelesaikan tugas tertentu
+
+Contoh penggunaan function:
+
+function tambahImbuhanRupiah(number) {
+    const output = `Rp${number}`
+    return output
+}
+
+let hargaBarang = tambahImbuhanRupiah(5000)
+console.log(hargaBarang);
+
+Kode di atas ketika dijalankan akan menampilkan output "Rp5000" 
+dengan cara memanggil function "tambahImbuhanRupiah" yang di dalam function tersebut
+sudah dilakukan operasi penggabungan string
+
+
+3. Arrow Functions
+
+Arrow function digunakan untuk mempersingkat penulisan dari sebuah anonymous function, contohnya:
+
+terdapat anonymous function seperti berikut:
+hello = function() {
+    return "Hello world"
+}
+
+Kode di atas akan membuat sebuah function yang akan memberikan output return berupa teks "hello world"
+
+Dengan arrow function, kita dapat mempersingkat penulisan function tersebut menjadi seperti berikut:
+hello = () => "Hello world"
+
+
+4. Methods
+
+Methods adalah sebuah function yang berada di dalam sebuah object, contoh:
+
+let user = {
+    name: "Upi",
+    age: 5,
+    greet() {
+        return `Hi, my name is ${this.name} and I'am ${this.age} years old`
+    }
+}
+
+console.log(user.greet())
+
+Kode di atas akan mendeklarasikan sebuah object "user" dan memiliki sebuah method "greet()"
+yang ketika dijalankan akan menampilkan output teks berupa 
+"Hi, my name is upi and I'am 5 years old"
+
+Contoh lainnya kita juga dapat menggunakan method built in atau bawaan dari javascript
+
+let words = "HELLO"
+console.log(words.toLowerCase())
+
+Kode di atas akan mendeklarasikan sebuah variable string "words" dengan value "HELLO",
+ketika dijalankan maka akan memberikan output berupa teks "hello" yang sudah menjadi huruf kecil
+dengan bantuan method "toLowerCase()"

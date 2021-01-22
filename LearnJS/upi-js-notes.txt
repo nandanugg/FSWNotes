@@ -1,0 +1,143 @@
+LearnJS
+
+
+1. Apa itu Javascript?
+
+Javascript adalah bahasa pemrograman yang perlu kita pelajari jika ingin mendalami dunia web development.
+Saat ini javascript tidak hanya digunakan di sisi client (browser) saja. 
+Javascript juga digunakan pada server, console, program desktop, mobile, dan lain-lain.
+
+Peralatan yang harus disiapkan untuk belajar Javascript adalah seperti berikut:
+  - Web Browser (Google Chrome)
+  - Teks Editor (VS Code)
+  - Javascript Runtime (NodeJs)
+  - Terminal (WSL di Windows atau native Linux & macOS)
+
+Contoh kode sederhana dari javascript adalah seperti berikut:
+
+console.log("hello world")
+
+Kode di atas akan memunculkan teks "hello world" pada terminal atau console browser kita.
+
+
+2. Javascript variable
+
+Variable diibaratkan seperti sebuah wadah yang menampung sebuah data pada javascript.
+Sehingga ketika kita ingin menampilkan sebuah data tertentu, 
+kita dapat memanggil nama variable tersebut.
+
+Contoh variable pada javascript:
+
+let nama = "upi"
+
+Kode di atas adalah sebuah deklarasi variable "nama" dengan value "upi"
+
+Terdapat 3 buah tipe variable dalam javascript, yaitu:
+  - let
+  - var
+  - const
+
+Variable let adalah tipe standar yang sering kita gunakan ketika membuat sebuah variable
+yang dapat dimanipulasi value-nya.
+
+Variable var adalah tipe variable yang sama dengan let, perbedaannya adalah jika menggunakan var
+kita dapat mendeklarasikan variable tersebut berulang kali, contoh:
+
+var nama = "upi"
+var nama = "azemoning"
+
+Kode di atas adalah pendeklarasian variable "nama" dengan tipe var
+
+Variable const adalah tipe variable yang gunanya untuk membuat sebuah variable yang valuenya
+tidak dapat dirubah kembali (immutable)
+
+3. Javascript string
+
+String adalah tipe data value yang berupa sebuah kata atau kalimat.
+Untuk menuliskan sebuah string pada variable, kita dapat menggunakan double quote (""), single quote (''),
+atau backtick (``)
+
+Contoh deklarasi variable string:
+
+let nickName = "upi"
+
+Kode di atas adalah deklarasi variable "nickName" dengan value berupa string "upi"
+
+Kita dapat menggabungkan beberapa string menjadi satu buah string, contohnya seperti berikut:
+
+var firstName = "Mark"
+var lastName = "Sudrajat"
+console.log('String plus string:', firstName + " " + lastName)
+
+Kode di atas ketika dijalankan akan memberikan output "Mark Sudrajat"
+
+Selain itu, kita juga dapat menggunakan template literal pada string untuk mempermudah
+penulisan output string, contohnya seperti berikut:
+
+var firstName = "Mark"
+var lastName = "Sudrajat"
+console.log(`${firstName} ${lastName}`)
+
+Kode di atas ketika dijalankan akan memberikan output "Mark Sudrajat"
+
+
+4. Javascript number
+
+Number adalah tipe data dengan value berupa angka, selain itu kita juga bisa menjalankan
+operasi aritmatika pada tipe data number
+
+Contohh penulisan variable number:
+
+let age = 17
+
+Kode di atas akan mendeklarasikan satu variable "age" dengan value number "17"
+
+Untuk operasi aritmatika, contohnya seperti berikut:
+
+console.log('substract:', 10 - 5); -> untuk operasi penjumlahan
+console.log('times:', 10 * 5); -> untuk operasi perkalian
+console.log('divide:', 10 / 5); -> untuk operasi pembagian
+console.log('modulo:', 10 % 5); -> untuk operasi modulus
+console.log('exponential:', 10 ** 5); -> untuk operasi perpangkatan
+
+Selain itu, ada operasi assignment yang biasanya digunakan pada logika loop seperti berikut:
+
+let increment = 1
+increment++
+console.log('increment:', increment)
+
+Kode di atas akan membuat value dari variable "increment" akan bertambah sejumlah 1 kali
+dengan menggunakan operator (++)
+
+
+5. Javascript boolean
+
+Boolean adalah tipe data dengan value berupa logika berupa true dan false,
+yang biasanya digunakan untuk operasi conditional seperti if-else
+
+Contoh:
+
+let isRaining = false
+
+Kode di atas adalah deklarasi variable "isRaining" dengan value berupa boolean "false"
+
+
+6. Javascript array
+
+Array adalah sebuah value yang berisi sekumpulan value, contoh:
+
+let namaHari = ["Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu", "Minggu"]
+
+Kode di atas adalah deklarasi variable "namaHari" dengan value berupa sebuah array
+yang memiliki sekumpulan value berupa nama-nama hari
+
+Dalam array, urutan pertama selalu dimulai dari angka 0, dan urutan ini biasanya disebut
+dengan "index"
+
+Untuk mengakses isi dari array, kita dapat melakukannya seperti contoh berikut:
+
+let namaHari = ["Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu", "Minggu"]
+console.log(namaHari[1])
+
+Kode tersebut akan mengakses variable array "namaHari" dengan urutan index ke-1, 
+maka ketika dijalankan akan memberikan output berupa teks "Selasa"

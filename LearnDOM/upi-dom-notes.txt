@@ -1,0 +1,70 @@
+LearnDOM
+
+
+1. Persiapan
+
+Pada terminal, masukkan perintah berikut untuk melakukan instalasi tool "live-server":
+
+$ npm install -g live-server
+
+Setelah itu jalankan tool tersebut dengan perintah berikut:
+
+$ live-server
+
+live-server digunakan untuk mempermudah kita dalam membuat halaman HTML, sehingga kita tidak perlu
+melakukan refresh terus menerus ketika kita selesai melakukan save pada file kita.
+
+2. Javascript DOM
+
+Kita dapat memanipulasi element HTML pada Javascript dengan menggunakan DOM (Document Object Model).
+Untuk memanipulasi DOM, kita perlu menggunakan selector pada Javascript untuk mereferensikan element HTML
+yang ingin kita manipulasi.
+
+Ada 3 jenis selector, yaitu:
+  - Class selector
+  - Id selector
+  - Query selector
+
+Untuk menggunakan class selector, contohnya seperti berikut:
+
+const classSelector = document.getElementsByClass('classname')
+classSelector[0].value = "text"
+
+Kode di atas akan mendeklarasi variable "classSelector" dengan referensi DOM menggunakan class selector,
+setelah itu DOM tersebut diubah value nya menjadi text
+
+Untuk menggunakan id selector, contohnya seperti berikut:
+
+const idSelector = document.getElementById('idname')
+idSelector.value = "text"
+
+Kode di atas akan mendeklarasi variable "idSelector" dengan referensi DOM menggunakan id selector,
+setelah itu DOM tersebut diubah value nya menjadi text
+
+Untuk menggunakan query selector, contohnya seperti berikut:
+
+const querySelector = document.querySelector('h1')
+querySelector.value = "text"
+
+Kode di atas akan mendeklarasi variable "querySelector" dengan referensi DOM menggunakan query selector,
+setelah itu DOM tersebut diubah value nya menjadi text
+
+
+3. Javascript event listener
+
+Setelah kita mereferensikan DOM ke dalam variable Javascript, kita dapat membuat sebuah 
+event listener. Dengan event listener, kita dapat melakukan sesuatu ketika sebuah event sedang terjadi
+
+Contohnya:
+
+const button = document.getElementById('button-id')
+
+button.onclick = ()=> {
+    console.log('Button clicked')
+}
+
+Kode di atas akan mendeklarasi sebuah variable "button" dengan mereferensikan DOM menggunakan id selector
+"button-id". Kemudian, variable "button" akan membuat sebuah event listener "onclick" yang dimana ketika
+dijalankan, maka button yang memiliki id "button-id" ketika di click akan memunculkan output pada console
+browser berupa teks "Button clicked"
+

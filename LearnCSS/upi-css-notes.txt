@@ -1,0 +1,92 @@
+LearnCSS
+
+
+1. Apa itu CSS?
+
+CSS (Cascade Style Sheet) meruapakan sebuah bahasa untuk mengatur tampilan web 
+sehingga terlihat lebih menarik dan indah. Dengan CSS, kita dapat mengatur layout (tata letak), 
+warna, font, garis, dan lain-lain.
+
+Contoh sederhana kode CSS untuk membuat warna teks pada paragraf HTML menjadi warna merah:
+
+p {
+    color: red
+}
+
+
+2. Struktur kode CSS
+
+Struktur kode CSS terdiri dari tiga bagian, yaitu:
+  - Selektor;
+  - Blok Deklarasi;
+  - Properti dan nilanya
+
+Selektor adalah kata kunci untuk memilih elemen HTML yang akan kita atur, contoh:
+
+h1 {
+    color: red;
+}
+
+Kode di atas berarti kita memilih semua tag element <h1> pada HTML, dan memberikan warna merah
+pada teksnya.
+
+Selektor juga dapat menggunakan class, id, attribute, dan pseudo-class pada element HTML, contoh:
+
+Selektor dengan class
+.bg-yellow {
+    backgound-color: yellow;
+}
+
+Selektor dengan id element
+#header {
+    background: grey;
+}
+
+Selektor dengan attribute
+input[type=text]{
+    background: yellow;
+}
+
+Selektor dengan pseudo-class
+.button:hover {
+  background-color: cyan;
+  color: white;
+}
+
+Blok deklarasi adalah tempat kita menuliskan atribut-atibut CSS yang akan diberikan ke pada selektor.
+Blok deklarasi dimulai atau dibuka dengan tanda kurung { lalu ditutup dengan }.
+
+Contohnya:
+
+p {
+    font-size: 18px;
+}
+
+Kode di atas berarti kita akan mengatur ukuran font dari tag <p> sebesar 18px.
+
+
+Properti merupakan atribut atau sekumpulan aturan yang akan diberikan kepada elemen yang dipilih.
+Properti harus ditulis di dalam blok deklarasi.
+
+Setiap properti harus diakhiri dengan titik koma (;). 
+Apabila hanya terdapat satu properti, boleh tidak menggunakan titik koma.
+
+
+3. Menerapkan CSS dalam HTML
+
+Untuk menerapkan kode CSS di HTML dapat dilakukan di dalam tag <link>. 
+Tag tersebut dapat ditulis di dalam tag <head>, contoh:
+
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+Kode di atas memberitahukan kepada HTML bahwa kita akan menggunakan file CSS dengan nama "style.css"
+
+Kita juga dapat mereferensikan file CSS yang lain, contohnya seperti berikut:
+
+Pada file style.css:
+@import "bootstrap.css";
+
+Kode di atas memberitahukan HTML bahwa kita juga akan menggunakan 
+file "bootstrap.css" sebagai CSS tambahan

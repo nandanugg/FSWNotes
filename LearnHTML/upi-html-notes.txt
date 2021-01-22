@@ -1,0 +1,48 @@
+LearnHTML
+
+
+1. Apa itu HTML?
+
+HTML (Hypertext Markup Language) merupakan gabungan dari dua istilah: 
+Hypertext dan Markup Language. Hypertext yaitu dokumen berisi tautan 
+yang memungkinkan pengguna terhubung ke halaman lain. Sedangkan markup language 
+merupakan bahasa komputer yang terdiri dari sekumpulan kode 
+untuk mengatur struktur dan menyajikan informasi.
+
+Jadi, HTML adalah bahasa markup untuk membuat sebuah struktur halaman website.
+
+Contoh dokumen HTML sederhana untuk membuat sebuah paragraf:
+
+<p> Ini adalah paragraf </p>
+
+
+2. Tag, element, dan attribute pada HTML
+
+Untuk membuat sebuah dokumen HTML, kita perlu memahami mengenai tag, element, dan attribute
+
+  - Tag, digunakan sebagai awalan instruksi atau perintah yang akan dibaca web browser. 
+    Misalnya: tag <bold>. Tag ini akan meminta browser menampilkan teks dalam format tebal
+  - Element, merupakan keseluruhan kode yang terdiri dari tag pembuka (<>) hingga tag penutup (</>). 
+    Contohnya: <h1> Contoh header </h1>. Meski demikian, tidak semua tag HTML memiliki pasangan penutup
+  - Attribute, yaitu informasi atau perintah tambahan yang berada di dalam elemen. 
+    Misalnya: <img src=”pantai.jpg” alt=”Pantai Baron.”> 
+    Elemen ini menggunakan tag <img> dengan atribut sumber gambar (src) dan alt text (alt).
+
+
+3. Anatomi dari HTML
+
+Pada HTML, ada struktur standar yang perlu kita pahami, yaitu:
+
+<!DOCTYPE html>
+<html>
+<head></head>
+<body></body>
+</html>
+
+  - <!DOCTYPE html> berfungsi untuk mendeklarasikan kepada komputer bahwa kita
+    akan menuliskan perintah dalam kode HTML
+  - <html></html> merupakan tag yang menandakan bahwa kita memulai 
+    dan mengakhiri dokumen dalam kode HTML
+  - <head><head> diisi dengan metadata dari dokumen HTML. 
+    Seperti judul tab (title), deskripsi, dan lain-lain
+  - <body></body> diisi dengan konten halaman website.
