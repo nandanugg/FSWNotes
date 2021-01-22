@@ -1,0 +1,12 @@
+Judul Materi : LearnDOM
+1. Reverse String
+    Mengubah susunan sebuah string dengan memutarbalikkan susunan katanya
+    
+    function reverseString(words) {
+        let splitString = words.split("") // memisah per huruf menjadi array
+        let reverseArray = splitString.reverse(); // Membalikkan urutan array
+        let joinArray = reverseArray.join(""); // Menggabungkan array
+        return joinArray;
+    }
+
+2. 
