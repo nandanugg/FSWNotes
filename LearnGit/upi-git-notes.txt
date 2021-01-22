@@ -1,0 +1,107 @@
+LearnGIT
+
+
+1. Apa itu git?
+
+Git adalah salah satu tool management source code untuk mengontrol versi dari source code aplikasi
+milik kita. Ketika terdapat suatu error pada versi source code saat ini, kita bisa kembali ke versi
+sebelumnya di mana source code aplikasi masih bisa berjalan dengan normal.
+
+Git pada sistem operasi Linux dan macOS sudah terinstall secara default, sehingga kita cukup melakukan
+perintah berikut pada direktori project yang ingin kita track versi-nya
+
+$ git init .
+
+
+2. Menyimpan perubahan pada repository lokal (Saving)
+
+Kita dapat menyimpan seluruh perubahan pada source code aplikasi kita ke dalam repository lokal.
+Jika sebelumnya kita sudah melakukan perintah "git init" pada direktori project, maka kita sudah membuat
+sebuah repository git lokal.
+
+Setelah melakukan perubahan pada file source code, masukkan perintah berikut pada terminal
+untuk memberitahukan git bahwa file tersebut akan di track perubahannya
+
+Untuk semua file
+$ git add . 
+
+Untuk file tertentu
+$ git add <nama file>
+
+Jika sudah, kita bisa menyimpan perubahan pada file-file tersebut ke repository lokal dengan menggunakan
+perintah berikut:
+
+$ git commit -m "pesan commit"
+
+
+3. Manajemen cabang pada repository lokal (Branching)
+
+Kita dapat membuat sebuah cabang (branch) pada repository git lokal kita untuk mempermudah melakukan
+pengembangan terhadap suatu fitur dalam aplikasi kita.
+
+Untuk melihat daftar branch yang ada di repository, kita dapat menggunakan perintah berikut:
+
+$ git branch -a
+
+Untuk membuat sebuah branch baru, kita dapat menggunakan perintah berikut:
+
+$ git branch <nama branch baru>
+
+Untuk berpindah ke branch yang baru saja dibuat, kita dapat menggunakan perintah berikut:
+
+$ git checkout <nama branch>
+
+Untuk menghapus branch, kita dapat menggunakan perintah berikut:
+
+$ git branch -d <nama branch>
+
+
+4. Menggabungkan branch satu dengan branch lainnya (Merging)
+
+Setelah selesai melakukan pembuatan fitur pada branch tertentu, kita dapat menggabungkan branch
+tersebut ke branch utama kita.
+
+Untuk melakukan merge, pertama kita harus berada pada branch utama terlebih dahulu.
+Setelah itu, kita dapat jalankan perintah berikut:
+
+$ git merge <nama branch yang ingin di merge>
+
+
+5. Kembali ke perubahan sebelumnya (Resetting)
+
+Kita dapat berpindah ke versi source code sebelumnya jika terjadi error pada versi source code saat ini
+dengan menggunakan metode resetting.
+
+Untuk melakukan resetting, pertama kita jalankan perintah berikut untuk melihat daftar commit yang
+sudah dilakukan:
+
+$ git log
+
+Kemudian, setelah memilih ke commit mana kita akan kembali, jalankan perintah berikut:
+
+$ git reset <commit hash>
+
+
+6. Manajemen remote repository
+
+Selain membuat repository lokal, kita dapat membuat sebuah repository remote di internet 
+seperti pada situs Github.com untuk menyimpan hasil perubahan kita.
+
+Untuk melihat daftar repository remote mana saja yang sudah kita tambahkan, kita dapat menggunakan
+perintah berikut:
+
+$ git remote -v
+
+Untuk menambahkan repository remote baru, kita dapat menggunakan perintah berikut:
+
+$ git remote add <nama remote repository> <alamat url remote repository>
+
+Untuk menyimpan perubahan yang ada di repository lokal ke repository remote, 
+kita dapat menggunakan perintah berikut:
+
+$ git push <nama remote repository> <nama branch saat ini>
+
+Untuk menerima perubahan yang ada di repository remote ke dalam repository lokal, 
+kita dapat menggunakan perintah berikut:
+
+$ git pull
