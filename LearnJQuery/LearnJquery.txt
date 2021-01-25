@@ -1,0 +1,205 @@
+PROBLEM SOLVING
+
+
+/**
+ * Create a function that takes two numbers as arguments and return their sum.
+ *
+ * addition(3, 2) ➞ 5
+ * addition(-3, -6) ➞ -9
+ * addition(7, 3) ➞ 10
+ *
+ * Don't forget to return the result.
+ */
+
+
+
+function sum(a, b) {
+    return a + b;
+}
+console.log(sum(3, 2))
+
+
+function sum2(c,d){
+    return c+d  
+}
+console.log(sum2(-3,-6))
+
+function sum3(e,f){
+    return e+f  
+}
+console.log(sum3(7,3))
+
+
+
+/**
+ * Create a function that takes the age and return the age in days.
+ *
+ * calcAge(65) ➞ 23725
+ * calcAge(0) ➞ 0
+ * calcAge(20) ➞ 7300
+ *
+ * Use 365 days as the length of a year for this challenge.
+ */
+
+
+
+function calcAge (a){
+    return a*365
+}
+
+console.log(calcAge(65))
+
+
+function calcAge (b){
+    return b*365
+}
+
+console.log(calcAge(0))
+
+
+function calcAge (c){
+    return c*365
+}
+
+console.log(calcAge(20))
+
+
+
+/**
+ * Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false.
+ *
+ * lessThan100(22, 15) ➞ true
+ * // 22 + 15 = 37
+ *
+ * lessThan100(83, 34) ➞ false
+ * // 83 + 34 = 117
+ *
+ * lessThan100(3, 77) ➞ true
+ */
+
+
+
+function lessThan100(a,b){
+  var c = a + b;
+  if ( c <  100) {
+      return "True";
+  } 
+  else {
+      return  "False";
+  } 
+}
+console.log(lessThan100(22, 15))
+
+
+
+function lessThan100B (x,y){
+  var z=x+y;
+  if ( z <  100) {
+      return "True";
+  } 
+  else {
+      return  "False";
+  } 
+}
+
+console.log(lessThan100(83,34))
+
+function lessThan100C(n,m){
+  var l = n + m;
+  if ( l <  100) {
+      return "True";
+  } 
+  else {
+      return  "False";
+  } 
+}
+console.log(lessThan100C(3, 77))
+
+
+
+
+
+
+
+Jquery
+
+buat html dengan judul perusahaan, heading perusahaan, 2 paragraf, button.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilyas news</title>
+</head>
+
+<body>
+    <h1>Ilyas news</h1>
+
+    <p>Veniam iste minima ducimus iste. Maiores deserunt autem labore molestiae quasi. Vitae odio praesentium magni
+        eligendi repellendus voluptatibus sed est. Ut natus ea consectetur necessitatibus et. Deleniti quasi voluptatum
+        quos distinctio eum quae. Dolorem molestiae quidem enim perspiciatis omnis corporis.</p>
+
+    <p>Similique at recusandae dolores qui aperiam debitis. Aliquid eum odio. Dicta mollitia ipsum incidunt excepturi
+        et. Minima qui accusamus eos qui ut facilis nostrum voluptatibus ipsa. Ipsum est nisi qui dolorem ipsum
+        doloremque incidunt quis laudantium.</p>
+
+    <input class="comment-input" type="text" id="" placeholder="Masukan Komentar">
+    <button class="kirim-btn">Komentar</button>
+
+
+    <div class="comments">
+
+    </div>
+
+    <!-- jquery ada dulu baru script js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+lalu buka jquery.com
+
+productiton -> tidak perlu spasi untuk meminimalkan size
+development -> perlu spasi, untuk memperjelas kegunaan tiap elemen
+
+npm install jquery --> untuk frontend 
+yarn add jquery --> npm juga buatan fb
+bower install jquery --> sma fungsi, tapi beda server dengan npm
+
+CDN --> bank insfrastruktur network
+jasa yg menawarkan pada pembuat2 domain
+tugasnya mendestribusikan data kita 
+
+klik google cdn -> copaskan di html
+
+
+perbandingan vanilla js dan jquery
+
+
+// vanilla js --> untuk program simpel
+const kirimBtn = document.querySelector('.kirim-btn')
+const commentInput = document.querySelector('.comment-input')
+const comments = document.querySelector('.comments')
+kirimBtn.onclick = () => {
+    const input = commentInput.value
+    const p = document.createElement('p')
+    p.innerHTML = input
+    comments.append(p)
+    commentInput.value
+}
+
+// jquery --> untuk program kompleks
+const kirimBtnJq = $('.kirim-btn')
+const commentInputJq = $('.comment-input')
+const commentsJq = $('.comments')
+kirimBtnJq.click(() => {
+    const input = commentInputJq.val()
+    const p = $('<p></p>')
+    p.html(input)
+    commentsJq.append(p)
+    commentInputJq.val("")
+
+})
