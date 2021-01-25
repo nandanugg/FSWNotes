@@ -1,0 +1,64 @@
+1. Apa itu jQuery?
+
+jQuery adalah library javascript yang mempunyai fitur cukup lengkap. 
+
+Library ini membuat pemrosesan di HTML seperti perubahan dan manipulasi dokumen, event handling, animasi, dan Ajax dapat menjadi lebih sederhana.
+
+jQuery mempunyai beberapa fitur:
+
+- Manipulasi HTML/DOM
+- Manipulasi CSS
+- HTML Event Methods
+- Efek dan Animasi
+- AJAX
+- CSS3 Compliant
+- Cross-Browser
+
+Contoh penggunaan jquery:
+
+let button = $('#btn')
+
+Kode di atas akan mereferensikan sebuah dom dengan id 'btn', lebih singkat ketimbang melakukan referensi javascript secara manual.
+
+2. Menambahkan jQuery ke direktori project
+
+Untuk menambahkan jquery, pertama buka web browser terlebih dahulu.
+
+Setelah itu akses link berikut:
+
+https://developers.google.com/speed/libraries#jquery
+
+Kemudian copy tag html <script> pada bagian 3.x.snippet
+
+Jika sudah, paste kan ke dalam file html di atas tutup tag body dan tag script javascript utama kita, contoh:
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+<script src="script.js"></script>
+</body>
+
+3. Menggunakan jQuery pada project
+
+Untuk menggunakan jquery, kita dapat menuliskannya seperti contoh berikut:
+
+const submitButton = $('.submit-btn').click(() => {
+  console.log('button clicked')
+})
+
+Kode di atas akan membuat sebuah tombol ketika di click akan memunculkan pesan 'button clicked'.
+
+Dibandingkan dengan mereferensikan dom secara manual, menggunakan jquery akan mempersingkat penulisan kode kita, contoh:
+
+Jika menggunakan kode manual
+
+const submitButtonManual = document.querySelector('.submit-btn')
+submitButtonManual.onclick = ()=> {
+  console.log('button clicked with manual reference')
+}
+
+Sedangkan, jika menggunakan jquery
+
+const submitButtonJquery = $('.submit-btn')
+submitButtonJquery.click(() => {
+  console.log('button clicked with jquery')
+})
