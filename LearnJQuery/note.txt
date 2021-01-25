@@ -1,0 +1,30 @@
+
+CDN : Sebuah data di mirror pada banyak lokasi agar bisa lebih cepat diakses
+
+JQuery : Frameworks dalam bahasa javascript yang penulisannya lebih singkat, contoh :
+ a. DOM Selector
+    vanilla : document.querySelector('.class-html') 
+    JQuery : $('.class-html')
+
+ b. Event Listener
+    vanilla : reference.onclick = () => // do something
+    jquery = reference.click(() => // do something)
+
+ c. Manipulasi DOM
+    vanilla : 
+    - reference.innerHTML = /* input the html element */
+    - reference.appendChild(/* input the html element */)
+    - reference.value = // value
+
+    jquery : 
+    - reference.html(/* input the html element */)
+    - reference.append(/* input the html element */)
+    - reference.val(/* value */)
+
+
+
+
+
+
+
+
