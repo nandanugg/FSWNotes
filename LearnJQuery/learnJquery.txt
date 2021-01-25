@@ -1,0 +1,123 @@
+Author : Faisal Juliandra (Kelas Pagi)
+Tanggal : Senin, 25 Januari 2021
+
+Judul Materi : LearnAlgorithm & LearnJquery
+Sub judul:
+1. Group task Algorithm task1
+        membuat function untuk menambahkan 2 nomor sebagai argumen dan menjumlahkannya
+
+/**
+ * Create a function that takes two numbers as arguments and return their sum.
+ *
+ * addition(3, 2) ➞ 5
+ * addition(-3, -6) ➞ -9
+ * addition(7, 3) ➞ 10
+ *
+ * Don't forget to return the result.
+ */
+
+function addition(a, b) {
+    return a + b;
+}
+console.log(addition(3,2));
+console.log(addition(-3,-6));
+console.log(addition(7,3));
+
+2. Group task Algorithm task2
+        membuat function untuk mengubah umur dari tahun ke hari
+
+/**
+ * Create a function that takes the age and return the age in days.
+ *
+ * calcAge(65) ➞ 23725
+ * calcAge(0) ➞ 0
+ * calcAge(20) ➞ 7300
+ *
+ * Use 365 days as the length of a year for this challenge.
+ */
+
+function calcAge (age) {
+    return age * 365;
+}
+console.log(calcAge(65));
+console.log(calcAge(0));
+console.log(calcAge(20));
+
+console.log(calcAge(65) + ` ` + `days`) //apabila mau menambahkan days setelah angka
+
+3. Group task Algorithm task3
+        membuat function yang menjumlahkan 2 nomor kemudian memverifikasi apakah benar hasil penjumlahan tersebut kurang dari 100 atau tidak
+
+/**
+ * Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false.
+ *
+ * lessThan100(22, 15) ➞ true
+ * // 22 + 15 = 37
+ *
+ * lessThan100(83, 34) ➞ false
+ * // 83 + 34 = 117
+ *
+ * lessThan100(3, 77) ➞ true
+ */
+function lessThan100(a, b) {
+    if (a + b < 100) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(lessThan100(22, 15));
+console.log(lessThan100(83, 34));
+console.log(lessThan100(3, 77));
+
+4. Group task Algorithm task4
+        membuat function yang mendeteksi jumlah kata yang diinginkan terdapat dalam string
+
+/**
+ * Create a function to return the amount of potatoes there are in a string.
+ *
+ * potatoes("potato") ➞ 1
+ *
+ * potatoes("potatopotato") ➞ 2
+ *
+ * potatoes("potatoapple") ➞ 1
+ */
+
+
+//detect word occurence in javascript
+
+const words ="potatoapplepotato potato potato potato potato"
+
+const splittedWord  = words.split("potato").length-1
+console.log(splittedWord);
+
+5. JQuery
+        - menggunakan CDN server untuk ditambahkan ke script html
+        - menambahkan script.js yang kita buat sendiri ditempatkan dibawah script dari CDN server
+        - JQuery memiliki fungsi untuk meringkas kode yang biasanya sangat panjang ketika menggunakan vanilla js
+        - mempelajari perbedaan penulisan dalam vanilla js dan jquery
+    Contoh:
+//vanilla js
+const commentInput = document.querySelector('#comment-input')
+const submitBtn = document.querySelector(".submit-btn") //cara biasa atau vanilla js
+const comments = document.querySelector('.comments')
+submitBtn.onclick = () => {
+    const input = commentInput.value //value mengambil value yang ada di dalam elemen
+    const p = document.createElement('p') //create element untuk membuat tag atau elemen baru
+    p.innerHTML = input
+    comments.appendChild(p) //memberikan "anak" atau element baru
+    commentInput.value = ""
+}
+
+//jquery
+const commentInputJq = $('#comment-input')
+const submitBtnJq = $('.submit-btn') //meringkas kode dengan jquery jadi seperti ini
+const commentsJq = $('.comments')
+submitBtnJq.click(() => {
+    const input = commentInputJq.val()
+    const p = $('<p></p>') //digunakan seperti createElement tetapi penulisannya seperti ini
+    p.html(input) //innerHTML di vanilla js diganti jadi .html saja di jquery
+    commentsJq.append(p) //appendChild diganti jadi .append saja di jquery
+    commentInputJq.val("") //val digunakan untuk hilangin value dari input yang dimasukan
+})
