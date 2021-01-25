@@ -1,0 +1,75 @@
+Extra Class
+
+1. Mereferensikan / Menggunakan Function 
+
+let friends = ['Dipsy', 'Lala', 'Poo']
+
+function greet(name) {
+    return `hello ${name}`
+}
+
+// mereferensikan
+console.log(greet) // output : [function : greet]
+
+friends.map(greet)
+console.log(friends) // output : ['Hello Dipsy', 'Hello Lala', 'Hello Poo']
+
+function terpisah() {
+    console.log('aku terpisah')
+}
+
+setTimeout(terpisah(), 3000) // error
+setTimeout(terpisah, 3000) // aku terpisah
+
+// menggunakan
+console.log(greet('Joko')) // output : hello Joko
+
+2. Contoh penggunaan Arrow Function
+
+let days = ['sunday', 'monday', 'tuesday']
+
+let daysIsHappyOne = days.map(
+    () => {
+        console.log(day) // undefined
+        return day + ' happy day' // undefined happy day
+    }
+)
+
+let daysIsHappyTwo = days.map(
+    (day) => {
+        console.log(day) // output iterate array one by one
+        return day + ' happy day' // sunday happy day, monday happy day, tuesday happy day
+    }
+)
+
+let daysIsHappyThree = days.map(
+    (day, index) => {
+        console.log(day) // output iterate array one by one
+        console.log(index) // output 0, 1, 2
+        return day + ' happy day' // sunday happy day, monday happy day, tuesday happy day
+    }
+)
+
+catatan tambahan : 
+- nama variable yang akan dimasukan ke parameter pada baris 32, 39 bebas tidak ada aturan harus day/index
+- pada kasus ini kita menggunakan map dimana parameter pertama pasti value dari array yang di mapping dan parameter kedua adalah indexnya
+
+Logical Operators :
+
+1. Ternary
+
+const isRaining = true
+const isGoodDay = isRaining ? "Yes" : "No"
+console.log(isGoodDay) // output : Yes
+
+Hasil sama kayak :
+if (isRaining) {
+    isGoodDay = "Yes"
+} else {
+    isGoodDay = "No"
+}
+
+2. && ||
+a. &&   
+
+lemah di logical operator
