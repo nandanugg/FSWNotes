@@ -1,0 +1,66 @@
+Judul Materi : Quiz
+Sub Judul :
+
+1. simple function sum two number
+
+membuat fungsi sederhana menjumlahkan 2 buah variabel angka
+
+function addition(num1, num2) {
+    return num1 + num2
+}
+console.log(addition(-3,-2))
+
+
+2. Simple function calc age
+
+membuat fungsi sederhana yang mengembalikan usia(tahun) menjadi usia(hari)
+
+function calcAge(age){
+    return age * 365
+}
+console.log(calcAge(65))
+
+
+3. Simple function return boolean
+
+membuat fungsi sederhana mengembalikan nilai true jika 2 angka dijumlahkan tidak lebih besar dari 100
+
+function lessThan(num1, num2) {
+    const sum = num1 + num2
+    if (sum < 100) {
+        return true
+    } else {
+        return false
+    }
+}
+console.log(lessThan(202, 15))
+
+
+4. simple function match word
+
+membuat fungsi mengembalikan banyaknya kata "potato" pada string
+
+function potatoes(words) {
+    return words.match(/potato/g).length
+}
+
+5. simple jquery add comment and delete comment
+
+membuat jquery untuk menambahkan dan menghapus komentar pada halaman website
+
+const input = $('.input')
+const buttonKirim = $('.btn-kirim')
+const buttonHapus = $('.btn-hapus')
+const comment = $('.comment')
+buttonKirim.click(() => {
+    const p = $('<p></p>')
+    p.html(input.val())
+    comment.append(p)
+    input.val("")
+})
+
+// menghapus seluruh elemen p didalam class "comment"
+buttonHapus.click(() => {
+    $('.comment>p').remove(":contains('" + comment.val() + "')")
+})
+
