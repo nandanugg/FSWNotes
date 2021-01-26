@@ -1,26 +1,30 @@
-//  getElementsByClassName berbentuk array maka dari itu tulis index
-const button = document.getElementsByClassName('button')[0]
-const input = document.getElementsByClassName('input')[0]
-const h1 = document.getElementsByClassName('heading')[0]
-const p = document.getElementsByClassName('paragraph')
-const inputId = document.getElementById('input-id')
-const paragraphId = document.getElementById('paragraph-id')
-const buttonQuery = document.querySelector('button')
-const pQueryAll = document.querySelectorAll('p')
-// querySelectorAll digunakan untuk membuat akasi di seluruh selector 
-// querySelector digunakan untuk membuat aksi di salah satu selector saja
-
-
-// masukan anonymous function
-button.onclick = () => {
-    console.log('Button Presed', input.value, h1.innerHTML);
-    // set value 
-    // untuk menampilkan yang di isi kedalam js dalam menghapus inputan di dalam HTML
-    input.value = ""
-    // set css class
-    // membuat bacgroud color
-    for (const element of p) {
-        element.getElementsByClassName.backgroundColor = "gray"
-    }
-
+// ini file LearnJquery
+//vanila js
+const commentInput = document.querySelector('#comment-input')
+const submitBtn = document.querySelector('.submit-btn')
+const comments = document.querySelector('.comments')
+submitBtn.onclick = () => {
+    const input = commentInput.value
+    const p = document.createElement('p')
+    p.innerHTML = input
+    comments.appendChild(p)
+    // console.log(commentInput.value); diguanakan untuk mengambi value dari commentInput
+    commentInput.value = ""
 }
+
+//jquery 
+const commentInputJq = $('#comment-input')
+const submitBtnJq = $('.submit-btn')
+const commentsJq = $('comments')
+submitBtnJq.click(() => {
+    // console.log(commentInputJq.val()); 
+    // commentInputJq.val("")
+    // code di atas di gunakan untuk memyimpan data dari input , tetapi tidak menampilkannya 
+
+    const input = commentInputJq.val()
+    const p = $('<p></p>') // variabel menampilkan paragraf
+    p.html(input)
+    commentsJq.append(p)  // method append merupakan metode untuk membah
+    commentsInputJq.val("")
+    // code di atas di gunakan untuk memyimpan data dari input , dan menampilkannya dalam bentuk paragraph 
+})

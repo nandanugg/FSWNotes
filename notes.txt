@@ -1,0 +1,16 @@
+ini file LearnJquery
+j query = freamwork dari javascript
+cdn = jasa yang digunkan oleh publisher atau yang memproduksi domain website,
+cdn disarankan menngunakan yang milik google
+posisi penulisan tag script di atas tag </body>, lalu di bawahnya bisa dibuat dengan membuat tag script dari js manual
+event = kejadian yang terjadi, bisa juga digunkan unruk merespon 
+untuk melihat lebih jelas tentang event bisa gunakan website j query di bagian event
+kode yang digunakan $('selectionName').method(fuction){ isi fuction}
+
+=== event ===
+append = di dalam class besar bagian bawah 
+prepend = di dalam class besar bagian atas 
+after = di luar class besar bagian bawah 
+before = di luar class besar bagian atas
+remove = mengahapus semua termasuk tag nya 
+empty = hanya mengosongkan content
