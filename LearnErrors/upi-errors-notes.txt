@@ -1,0 +1,85 @@
+LearnErrors
+
+1. Apa itu Errors dalam Javascript?
+
+Error adalah sebuah object yang diberikan ketika kita mengalami sebuah runtime error.
+Error tersebut juga bisa dijadikan sebagai dasar untuk membuat
+pesan error kita sendiri.
+
+Contoh error pada javscript
+
+let biodata = {
+  nama: "Kevin",
+  umur = 12
+}
+
+Kode di atas ketika dijalankan akan memunculkan error SyntaxError, biasanya SyntaxError adalah
+peringatan error yang muncul ketika kita melakukan kesalahan pengetikan
+
+2. Tipe Error
+
+Ada beberapa tipe error yang biasanya muncul ketika kita membuat sebuah project, seperti:
+
+- SyntaxError
+- ReferenceError
+- TypeError
+
+SyntaxError biasanya adalah peringatan error yang muncul ketika kita melakukan kesalahan pengetikan, contoh:
+
+let biodata = {
+  nama: "Kevin",
+  umur = 12
+}
+
+Kode di atas memunculkan error karena kita seharusnya menggunakan sebuah colon (:) pada pengisian data
+sebuah variable object
+
+ReferenceError biasanya adalah peringatan error yang muncul ketika kita mereferensikan sesuatu yang tidak ada
+atau belum ada pada javascript, contoh:
+
+let firstName = "Jack"
+let fullName = firstName + lastName
+
+Kode di atas jika kita jalankan akan memunculkan error karena kita belum mendefinisikan variable lastName
+
+TypeError biasanya adalah perinngatan error yang muncul ketika ada variable atau parameter yang tidak sesuai
+dengan type yang diminta, contoh:
+
+setTimout(null, 100)
+
+Kode di atas jika kita jalankan akan memunculkan error karena function setTimeout membutuhkan sebuah
+fungsi, sedangkan kita malah memberikan sebuah null
+
+
+3. Mengatasi Error
+
+Jika kita mengalami error, cara terbaik untuk mengatasinya adalah dengan memahami error tersebut.
+Misalnya terjadi error pada website yang kita buat, maka kita bisa cek dengan menggunakan Developer Tools
+pada browser kita dan pada tab console akan terlihat error apa saja yang terjadi pada website kita.
+
+Jika kita menggunakan node, maka ketika kita menjalankan file javascript node akan memunculkan pesan error
+langsung pada terminal kita.
+
+Contoh:
+
+let firstName = "Jack"
+let fullName = firstName + lastName
+console.log(fullName)
+
+Jika kita menjalankan kode di atas, maka akan muncul pesan error seperti berikut:
+
+let fullName = firstName + lastName
+                           ^
+ReferenceError: lastName is not defined
+
+Error tersebut menandakan bahwa lastName belum di definisikan, berarti cara mengatasinya adalah
+kita perlu mendefinisikan terlebih dahulu variable lastName, misalnya:
+
+let firstName = "Jack"
+let lastName = "Brown"
+let fullName = firstName + lastName
+console.log(fullName)
+
+Jika kode sudah kita perbaiki seperti diatas, maka ketika kita jalankan akan memberikan output seperti:
+"JackBrown"
+yang artinya kode kita sudah bebas dari error
