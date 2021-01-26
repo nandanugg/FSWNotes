@@ -1,0 +1,35 @@
+Pertemuan 12
+
+1. Flowchart
+-> Merupakan alur logika bagaimana menyelesaikan suatu permasalahan. Terdapat 3 proses pembagian : Preparation, Action, serta Post-Action.
+Preparation berisi alur hal apa saja yang harus disiapkan. Action menjadi logika pengerjaan untuk penyelesaian suatu masalah. Post-action adalah 
+bagaimana permasalahan itu saat diselesaikan. 
+Flowchart dapat membantu menvisualisasikan alur berpikir dalam penyelesaian masalah. Aplikasi yang dapat digunakan untuk hal ini adalah excalidraw 
+yang berbasis web
+
+2. Error 
+
+// deal with error
+const user = {
+    name: Giova,
+    age: 21,
+    Address: "Karangjati"
+}
+
+function sum(first, second) {
+    return first + second;
+}
+
+setTimeout(() => {
+    console.log("This is from setTimeout()");
+}, 100)
+
+//syntax error, terkait dengan tulisan
+
+//type error, salah memasukkan parameter dengan suatu fungsi atau variabel
+// parameter dimasukkan tipe data yang salah, seperti parameter minta function,
+// tapi dimasukkan malah variable, atau minta variable number malah diisi string.
+
+//Reference error, suatu variable tidak mereferensi apapun
+// Kedepan reference erro juga bakal sering terjadi jika berhubungan dengan
+// data dari internet, karena data dari internet kadang bergantung pada koneksi
