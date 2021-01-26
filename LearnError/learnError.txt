@@ -1,0 +1,28 @@
+Author : Faisal Juliandra (Kelas Pagi)
+Tanggal : Selasa, 26 Januari 2021
+
+Judul Materi : Learn Flowchart dan Learn Error
+Sub judul:
+1. Flowchart dengan whiteboard coding
+        mempelajari bagaimana impementasi proses pengembangan suatu web page dari pre-action, action, sampai post-action ke dalam flowchart menggunakan whiteboard coding
+
+2. Syntax Error
+        mempelajari mengenai syntax error yang muncul dikarenakan adanya salah penulisan seperti kurangnya kurung atau koma dan lain sebaginya
+Contoh:
+const biodata = {
+    name = "Faisal", // terjadi syntax error karena seharusnya : tetapi yang dimasukkan yaitu =
+    age: 21,
+    address: "Purwakarta",
+} //syntax error jika kurungnya dihapus
+
+3. Type Error
+        terjadi ketika kita salah memasukkan variable, dimana function meminta variable function tetapi yang dimasukkan malah string atau yang lainnya
+Contoh:
+setTimeout(null, 100); //type error
+getName() //type error
+
+4. Reference Error
+        terjadi ketika salah memakai funnction atau variable name yang kita panggil salah ketik atau belum terdefinisi,serta bisa juga terjadi ketika kita berhubungan dengan data dari internet yang terkadang ada dan tidak
+Contoh:
+const pet = dataDariInternet //reference error belum terdefinisikan
+console.log(pet); //dataDariInternet belum didefinisikan sebagai variable
