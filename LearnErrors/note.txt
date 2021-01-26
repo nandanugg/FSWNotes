@@ -1,0 +1,11 @@
+Macam2 Error
+
+1. TypeError : Ketika salah memasukan tipe data kedalam sebuah argument
+contoh : setTimeout(null, 1000)
+
+2. ReferenceError : Ketika memanggil fungsi/variable yang belum dideklarasikan
+contoh : const pet = checkMyPet() // fungsi checkMyPet tidak dideklarasikan di codebase
+
+3. SyntaxError : Ketika salah dalam penulisan syntax kode
+contoh : user = {
+    name= "Else"
