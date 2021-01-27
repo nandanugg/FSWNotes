@@ -1,0 +1,98 @@
+Author : Faisal Juliandra (Kelas Pagi)
+Tanggal : Rabu, 27 Januari 2021
+
+Judul Materi : LearnES6
+Sub judul:
+1. ES6
+        merupakan singkatan dari ECMA Script yang merupakan standar untuk bahasa Javascript yang ditetapkan oleh perusahaan ECMA. ES6 atau ES 2015 merupakan update dari ES5 yang menambahkan fitur variable seperti let dan const, kemudian arrowFunction, dan lainnya.
+Contoh:
+let namaDepan = "Faisal"
+let namaBelakang = "Juliandra"
+
+const pi = 3.14
+
+let arrowFunction = () => {
+    return "this is an arrow function"
+}
+console.log('arrowFunction():', arrowFunction());
+
+//digunakan untuk prefix name Mr Mrs
+function getName(firstName, lastName, prefix = "Mr. ") { //prefix = Mr. itu adalah default parameter
+    return `${prefix} ${firstName} ${lastName}`
+}
+console.log(getName("Faisal", "Juliandra", "Mr. "));
+
+//.find() & .findIndex() methods
+const numbers = [4, 9, 16, 25, 29];
+function myFunction(value) {
+    return value > 18
+}
+//find() method
+const findResult = numbers.find((value) => {
+    return value > 8
+});
+console.log(findResult);
+
+//findIndex() method
+const findIndexResult = numbers.findIndex(myFunction);
+console.log(findIndexResult);
+
+//minimum & maximum number
+var minInteger = Number.MIN_SAFE_INTEGER;
+console.log(minInteger);
+
+var maxInteger = Number.MAX_SAFE_INTEGER
+console.log(maxInteger);
+
+console.log(Number.isInteger(10));
+console.log(Number.isInteger(10.5));
+console.log(typeof 10.5);
+
+let number = 5
+let stringNumber = "nama"
+stringNumber = Number(stringNumber)
+console.log(stringNumber);
+
+if (isNaN(stringNumber)) {
+    console.log('masukkan karakter aritmatik');
+}
+
+let infinity = 10 / 0
+console.log(infinity);
+
+if (isFinite(infinity)) {
+    console.log('Aritmatikanya normal'); //berarti bukan infinite
+}
+
+
+2. Promise
+        promise memiliki fungsi yang mirip dengan callback dimana callback harus menampilkan hasil dan harus mencarikan perintah yang diberikan sedangkan promise sama juga harus menampilkan hasil tetapi dapat ditepati atau tidak ditepati
+Contoh:
+function getDataFromInternet(url) {
+    return new Promise((resolve, reject) => {
+        if (url) {
+            resolve(url) //promise kalau ditepati pake resolve
+        } else {
+            //kalau menolak janji pake reject, reject ini hasilnya kalau di console berupa error
+            reject('url nya ga ada') // reject('pesan') //promise kalo ga ditepati pake reject //kalo pake 2 2nya yg awal keluar yg atas
+        }
+    })
+}
+
+3. API
+        sebuah interface yang digunakan ketika aplikasi yang dibuat membutuhkan hal-hal yang berasal dari eksternal yang bisa berasal dari codingan atau library dan route untuk digunakan ke dalam aplikasi atau web yang kita buat
+Contoh:
+const img = document.querySelector('#image') //memanipulasi dom html dengan mengambil id
+//mengambil data dari internet dan memunculkannya ke website kita
+fetch('https://api.thecatapi.com/v1/images/search?limit=5&page=10&order=Desc', { //url api dari web api
+    headers: {
+        'x-api-key': 'b40ac33e-6286-4977-8415-d30b20fb439f' //nomor api didapat dari api cat setelah registrasi
+    }
+})
+    .then(result => {
+        result.json()
+            .then(res => {
+                const catImg = res[0].url //res[0] mengakses array index 0 dan kemudian mengambil url yang ada dalam array tsb
+                img.src = catImg //.src memanggil atau menambahkan hasil dari akses array
+            })
+    })
