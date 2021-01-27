@@ -1,7 +1,17 @@
-API
+Pertemuan 13
+
+1. Mempelajari fitur ES6
+-> kodingan pada es6.js
+
+2. Penggunaan new Promise
+-> mirip dengan fungsi callback dengan opsi penolakan, beserta keluaran saat terjadi penolakan
+penggunaan pada script.js
+
+3. API
 -> saat menmpunyai aplikasi, API dapat menconnectkan dengan hal diluar aplikasi, seperti internet, camera, bluetooth. 
 terdapat API yang menggunakan rute, ada yang menggunakan codingan
 contoh yang pakai rute: di webcatAPI
 contoh kodingan : day.js.org
+penghubungan api dilihat di source code: index.html, serta api.js
 
 callback func sering dgunakan untuk ambil data di internet

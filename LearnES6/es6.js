@@ -1,5 +1,5 @@
-let a = 10;
-const z = 10;
+let a = 10; //definisi variable
+const z = 10; //definisi variable
 
 // arrow function
 let arrowFunction = () => {
@@ -29,14 +29,14 @@ console.log(findResult);
 const findIndexResult = numbers.findIndex(myFunction);
 console.log(findIndexResult);
 
-var minInteger = Number.MIN_SAFE_INTEGER
+var minInteger = Number.MIN_SAFE_INTEGER //melihat angka integer terkecil yang bisa digunakan
 console.log(minInteger);
-var maxInteger = Number.MAX_SAFE_INTEGER
+var maxInteger = Number.MAX_SAFE_INTEGER //melihat angka integer terbesar yang bisa digunakan
 console.log(maxInteger);
 
-console.log(Number.isInteger(10));
+console.log(Number.isInteger(10)); //cek integer atau bukan
 console.log(Number.isInteger(10.5));
-console.log(typeof 10.5);
+console.log(typeof 10.5); //cek tipe data
 
 let number = 5
 let stringNumber = "nama"

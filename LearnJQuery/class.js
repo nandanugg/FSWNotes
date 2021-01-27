@@ -10,12 +10,19 @@ button.click(() => {
 
 function addComment(comment) {
     const div = $('<div></div')
+    const p = $('<p></p>')
+    const button = $('<button></button>')
 
 }
 
-package.html(comment)
+p.html(comment)
 
 button.html("Hapus")
 button.click(() => {
-
+    button.parent().remove()
 })
+
+div.append(p)
+    .append(button)
+
+return div
