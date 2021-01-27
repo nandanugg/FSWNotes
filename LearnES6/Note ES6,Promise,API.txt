@@ -1,0 +1,116 @@
+-- --ES6-- --
+
+ES adalah standarisasi bahasa javascript
+
+file HTML
+<div>
+    <script src="script.js"></script>
+</div>
+
+File JS
+// update fitur-fitur dalam ES6
+// let dan const
+let a = 10;
+const z = 10;
+
+// arrow function
+lat arrowFunction = () = => {
+    return 'this is arrow function'
+}
+console.log('arrow function () : ', arrowFunction);
+
+// find index, mencari index dengan looping. namun 
+// bedanya jika udah ketemu maka tidak akan lanjut looping lagi
+const number = [4, 9, 16, 25, 29];
+function myFunction(value) {
+    console.log(value);
+    return value > 15
+}
+
+const findResult = number.find(myFunction); // menampilkan 4, 9, 16
+console.log(findResult); //hasil 16
+
+const findIndexResult = number.findIndex(myFunction);
+console.log(findIndexResult); // 16 adalah index ke 2, index dimulai dari 0
+
+var minInteger = Number.MIN_SAFE_INTEGER;
+console.log(minInteger);
+var maxInteger = Number.MAX_SAFE_INTEGER;
+console.log(maxInteger);
+Number.MAX_SAFE_INTEGER = 999999999999 //mengedit nilai max di javascript
+
+//mengecek deta type
+const g = 4
+console.log(Number.isInteger(g));
+console.log(typeof 4);      // number
+console.log(typeof 4.5);    // number juga
+
+// karena number jika di perjelas ada integer (contoh 1) dan double (contoh 1.24)
+// javascript ga ada double adanya 'bigint' -> untuk penilauan yg besar dan yg ada desimalnya
+
+// mengecek
+const userInput = 'mark'
+const convertToNumber = Number(userInput)
+console.log(convertToNumber);   //NaN atau not a number terjadi jika stringnya kalimat/kata
+//jika stringnya angka akan berubah menjadi number
+
+if (convertToNumber) {
+    console.log('user input is number');
+} else {
+    console.log('user input is not number');
+}
+
+if (isNaN(userInput)) {
+    console.log('masukin nomor yg bener dong');
+}
+
+// mengecek tak terhingga
+console.log(isFinite(10 / 0));
+
+
+-- --Promise dan API-- -- 
+
+// promise adalah sebuah class yg harus ada imbuhan 'new' diawalnya
+function requestDataFromInternet(url, cb) {
+    return new Promise((resolve, reject) => { //reject adalah variabel yg menjadi fungsi
+        if (url) {
+            resolve(url)
+        } else {
+            reject('url ga ada')
+        }
+    });
+}
+
+requestDataFromInternet('youtube.com')
+console.log(res);
+    .then((res) => {// untuk menttriger resolve
+    console.log(res);
+})
+    .catch((res){ // untuk mentriger reject, menampilkan alasan-alsan
+        console.log();
+    })
+
+
+// API adalah alat untuk menghubungkan 2 bagian perangkat lunak
+
+// API webGL untuk membuat animasi3d dalam website
+
+// fetch adalah API dari broser biar kita bisa memanggil API dari luar
+// method json untuk menampilkan hasil pencarian
+const image = document.querySelector('.image')
+
+fetch('https://api.thecatapi.com/v1/images/search', {
+    headers: {
+        'x-api-key': '441f2331-1fd8-450b-b9cb-8c9db8dc3102'
+    }
+
+}).then((result) => {
+    result
+        .json()
+        .then(resultJson => {
+            const imgUrl = resultJson[0].url
+            image.src = imgUrl
+        })
+})
+
+
