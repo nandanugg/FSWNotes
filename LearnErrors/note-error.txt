@@ -1,0 +1,30 @@
+Judul Materi : Errors
+Sub Judul :
+1. Syntax Error
+
+Biasanya terjadi karena salah tulis
+
+let user = [
+    name : "yanuar", // syntax eror, salah tulis, lihat titik 2 harusnya samadengan
+    age = "22",
+    address = "Solo"
+]
+
+
+2. Reference Error
+
+Bisa terjadi karena salah tulis nama variabel atau variabel tidak ada
+bisa juga kita memasukkan alamat web yg salah atau lagi gangguan koneksi
+
+const pet = dataDariInternet // Reference Error
+console.log(pet);
+// data dari internet tidak pasti tersedia karena bisa juga masalah koneksi
+
+
+3. Type Error
+
+Bisa terjadi karena salah memasukkan variabel yang tipe datanya tidak sesuai
+
+setTimeout(null, 100) // Type Error
+// salah masukkan variabel dengan type data yg salah
+// harusnya minta function tapi dikasi string
