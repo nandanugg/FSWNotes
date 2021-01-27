@@ -1,0 +1,101 @@
+1. Apa itu ES6
+
+ES6 atau ECMAScript 6 adalah versi standar dari javascript yang diatur oleh ecma international.
+
+Sampai saat ini, sudah ada versi ES11. Namun, yang sering kita gunakan adalah ES6 karena
+
+masih banyak browser yang belum mendukung versi standar dari ES terbaru.
+
+Salah satu standarisasi ES6 adalah penggunaan `let` dan `const`, contoh:
+
+`const days = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ]`
+
+`let favoriteDay = days[5]`
+
+Kode di atas adalah salah satu standarisasi dari ES6 dengan menggunakan let dan const
+
+Apa saja yang berubah pada ES6?
+
+- `let` dan `const`
+- arrow function
+- default parameter values
+- method `find()` dan `findIndex()`
+- `MIN_SAFE_INTEGER`
+- `MAX_SAFE_INTEGER`
+- Not a number atau `NaN`
+
+Dan masih banyak lagi
+
+2. Javascript Promise
+
+Promise pada javascript adalah sebuah class yang digunakan untuk operasi asingkron dan menghasilkan sebuah value
+
+Contoh penggunaan promise:
+
+function getDataFromInternet(url) {
+
+  return new Promise((resolve, reject) ⇒ {
+
+    if (url) {
+
+    resolve(url)
+
+   } else {
+
+    reject('Tidak ada url')
+
+  }
+
+  }
+
+}
+
+getDataFromInternet('youtube.com')
+
+  .then(result ⇒ {
+
+  console.log(result)
+
+  })
+
+  .catch(err ⇒ {
+
+  console.log(err)
+
+  })
+
+Kode di atas akan menampilkan sebuah output 'youtube.com' dari method .then() karena sesuai dengan parameter yang diberikan, sedangkan jika kita tidak memberikan parameter, maka method .catch() akan memberikan output 'Tidak ada url'
+
+ 
+
+3. Apa itu API?
+
+API atau Application Programming Interface adalah cara kita berkomunikasi dengan aplikasi diluar dari aplikasi kita sendiri.
+
+Misalnya ketika kita ingin menggunakan perangkat webcam pada aplikasi kita, maka kita perlu sebuah API untuk menghubungkan aplikasi kita dengan perangkat webcam.
+
+Contoh penggunaan API pada javascript:
+
+const image = document.querySelector('.image')
+
+fetch('https://api.thecatapi.com/v1/images/search', {
+
+headers: {
+
+'x-api-key': '3d5008b6-3044-49f6-8629-c1eb28ef6f68'
+
+}
+
+}).then((result) => {
+
+result.json()
+
+.then(resultJson => {
+
+console.log(resultJson)
+
+})
+
+})
+
+Kode di atas akan mengambil sebuah API dari situs thecatapi.com berupa gambar kucing yang diberikan secara acak, data yang didapat berbentuk sebuah array.
