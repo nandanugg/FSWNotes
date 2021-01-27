@@ -1,0 +1,7 @@
+API
+-> saat menmpunyai aplikasi, API dapat menconnectkan dengan hal diluar aplikasi, seperti internet, camera, bluetooth. 
+terdapat API yang menggunakan rute, ada yang menggunakan codingan
+contoh yang pakai rute: di webcatAPI
+contoh kodingan : day.js.org
+
+callback func sering dgunakan untuk ambil data di internet

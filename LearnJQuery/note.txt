@@ -1,0 +1,4 @@
+Jquery = framework javascript
+
+CDN = content delivery network
+mempercepat access ke web, karena berusaha mencari server terdekat
