@@ -1,0 +1,46 @@
+Judul Materi : ES
+Sub Judul :
+1. ES (ECMAScript) merupakan standar bahasa pemrograman Javascript yang di standarisasi oleh ECMA International. JavaScript ditemukan oleh Brendan Eich pada tahun 1995, dan menjadi standar ECMA pada tahun 1997.
+ES6 merupakan ECMAScript versi 6 atau ECMAScript 2015. ES6 merupakan standar bahasa Javascript yang dirilis pada tahun 2015. ES6 menambahkan beberapa update antara lain :
+	a. Added let and const
+	b. Added default parameter values
+	c. Added Array.find()
+	d. Added Array.findIndex()
+Dimulai dari :
+Tahun 1997 yaitu ES1
+Tahun 1998 yaitu ES2
+Tahun 1999 yaitu ES3
+Tahun 2009 yaitu ES5
+Tahun 2015 yaitu ES6 / ES 2015
+kemudian dilanjutkan dengan nama ES 2016, ES 2017, ES 2018, ES 2019, dan terbaru yaitu ES 2020
+
+2. API merupakan kumpulan fungsi-fungsi untuk menggunakan sistem yang bersifat eksternal
+api ada yang route route dan ada yg pakek codingan
+day.js.org => pakek codingan
+thecatapi.com => route route
+
+3. Framework dan Library
+Library merupakan kumpulan kodingan
+Framework merupakan kerangka kerja
+Framework = Library
+Library != framework
+
+4. Promise
+mengembalikan nilai tapi bisa diselesaikan atau ditolak
+
+function getDataFromInternet() {
+	return new Promise((resolve, reject) => {
+		if (url) {
+			resolve(url)
+		} else {
+			reject('url nya gaada oy')
+		}
+	})	
+}
+getDataFromInternet()
+	.then(result =>{
+		console.log(result)
+	})
+	.catch(err => {
+		console.log(err)
+	})
