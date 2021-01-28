@@ -1,0 +1,5 @@
+ES6
+
+1. Promise : Seperti Callback, digunakan untuk menghindari kerumitan dari callback hell, memiliki 2 arguments resolve dan reject, resolve ketika promise terpenuhi dan reject ketika tidak terpenuhi
+
+Referensi ES6 : https://github.com/lukehoban/es6features
