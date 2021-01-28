@@ -1,0 +1,33 @@
+Author : Faisal Juliandra (Kelas Pagi)
+Tanggal : Kamis, 28 Januari 2021
+
+Judul Materi : Learn Node Webserver
+Sub judul:
+1. Node JS
+        merupakan runtime javascript untuk bisa menjalankan pada sisi server yang digunakan untuk mengeksekusi script dari javascript sebelum ditampilkan ke web
+
+2. Express
+        library yang membantu kita membuat web server
+Di terminal:
+npm init //untuk membuat sebuah npm modul
+npm install express //untuk menginstall atau mendownload library dari express, saat instalasi selesai muncul dependencies dalam package.json
+.gitignore : untuk mencegah node-modules dan package-lock.json ikut tercommit
+npm install : untuk menginstall package yang sebelumnya sudah ada, hal ini juga berlaku ketika kita mengclone repository orang lain yang menggunakan express js
+
+3. Method .get dan .listen
+        .get untuk mengambil route yang diinginkan
+        .listen untuk mendengar
+Contoh:
+app.get('/', (req, res) => {  // '/' adalah router route, kedua parameter req res diisi oleh express
+    res.send('Hello Babang!') //apapun yg dimasukkan dalam res.send akan terkirim ke web dengan cara keluar dari npm start dan memulai lagi npm start
+})
+
+app.listen(port, () => { //port adalah sebuah pintu yang ada di setiap komputer, tanpa port browser tidak dapat mengakses express kita
+    console.log(`Example app listening at http://localhost:${port}`) //localhost merupakan domain yang ada di komputer kita sendiri
+})
+
+4. View Engine atau template Engine
+        memungkinkan untuk membuat file template statis dalam web. Melakukan perubahan ekstensi dari html ke ejs.
+Cara set:
+app.use(express.static('views'))
+app.set('view engine', 'ejs')
