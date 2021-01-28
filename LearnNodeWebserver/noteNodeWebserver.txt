@@ -1,0 +1,48 @@
+Judul Materi : LearnNodeWebserver
+Sub Judul (min. 3) : 
+1. install expressjs
+install expressjs pada folder projek
+#npm install express
+
+
+2. mengecualikan file commit
+untuk mengecualikan node-modules dan package-lock.json agar tidak di commit oleh git kita membuat file bernama .gitignore yang berisi :
+node-modules
+package-lock.json
+
+
+3. install dependencies
+jika node-modules dan package-lock.json terhapus kita bisa melakukan install kembali dengan perintah :
+#npm install
+
+
+4. running projek
+untuk running file bisa ditambahkan perintahnya pada package.json
+"scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+},
+kemudian pada terminal bisa langsung mengetikkan perintah
+#npm start
+
+
+5. simple web service
+simple web service dengan expressjs
+const express = require('express') // mengakses folder express pada folder node-modules
+const app = express()
+const port = 3000 // port digunakan untuk membedakan yang didengarkan/yang dilayani
+
+app.get('/', (req, res) => { // res = response, req = request
+    res.send('Hello World!') // mengirim 'Hello World!' ke browser
+})
+
+// menjalankan service pada port tertentu, disini 3000
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`)
+})
+
+
+6. akses static folder
+Untuk melakukan akses file didalam folder tambahkan
+app.use(express.static('nama folder'))
+static melakukan akses secara langsung ke folder, jadi jika terjadi perubahan didalam folder tidak perlu restart service untuk menampilkan perubahan
