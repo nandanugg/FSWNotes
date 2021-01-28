@@ -1,0 +1,19 @@
+Pertemuan 14
+
+1. Node.js
+
+2. Webserver
+-> hal yang bersifat terpusat dan berada di internet
+- awalnya menggunakan npm init.
+- and it create json, and appear package.json
+- install express with npm "npm install express" 
+(tanpa - , menginstal di folder tertentu saja dan menambah dependencies sehingga tau file apa saja yang digunakan)
+(terdapat -g, dimana jika secara global tidak akan terlist package tambahan di file json)
+- node modules tidak perlu di push, dan dapat ditambahkan file .gitignore(agar tidak terpush)
+- Jika mengclone dari repo file node.js, dilakukan npm install terlebih dahulu 
+(prosesnya adalah membaca package.json, dan npm install akan menginstal package yang digunakan di project node js)
+- dapat ditambahkan pada package.json, lalu discripts ditambahan "start" : "node index.js"
+- saat melakukan npm start, coding masuk ke ram, sehingga kodingan jika dirubah di terubah di web browser
+(solusi hentikan dlu npm start di terminal dan mulai lagi.)
+
+3. Template engine
