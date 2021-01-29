@@ -1,0 +1,16 @@
+node -> multifungsi, bisa digunakan untuk aplikasi destop, web, API,dll
+
+akan dipakai untuk webserver
+1. menjalankan perintah npm init (membuat folder kita menjadi npm module)
+2. install exspress dengan command "npm install express"
+
+note :
+- buat file .git ignore dan tulis didalamnya file apa saja file yg tidak ingin di push ke github
+- lakukan command "npm install" ketika kita mendownload coding node ini atau orang lain
+- pada file package.json :
+  "scripts": {
+    "start": "node index.js", // agar command untuk menjalankan tdk panjang dan bisa disingkat ke "start"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  - untuk menjalankan, lakukan npm start
+
