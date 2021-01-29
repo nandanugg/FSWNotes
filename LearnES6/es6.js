@@ -43,6 +43,7 @@ let stringNumber = "nama"
 stringNumber = Number(stringNumber)
 console.log(stringNumber);
 
+console.log(isNaN(2));
 if (isNaN(stringNumber)) {
     console.log('number bungg');
 }

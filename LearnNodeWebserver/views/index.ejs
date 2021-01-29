@@ -10,10 +10,24 @@
 
 <body>
     <h1>Welcome my friends!</h1>
-    <h3>This is variable from backend <%= data %>
-    </h3>
-    <a href="about">Go to about</a>
-    <script src="script.js"></script>
+    <%- include('header') %>
+        <!-- ejsesc -->
+        <h3>This is variable from backend <%= counter %> time
+        </h3> <!-- ejsout, berkaitan dengan logika -->
+        <a href="about">Go to about</a>
+        <% if (isMorning) { %>
+            <p>Good morning</p>
+            <% } else { %>
+                <p>Good night</p>
+                <% } %>
+
+                    <!-- ejseach -->
+                    <% names.forEach(name=>{ %>
+                        <p>
+                            <%= name %>
+                        </p>
+                        <% }) %>
+                            <script src="script.js"></script>
 </body>
 
 </html>
