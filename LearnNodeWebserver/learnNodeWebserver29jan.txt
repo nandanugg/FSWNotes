@@ -1,0 +1,39 @@
+Author : Faisal Juliandra (Kelas Pagi)
+Tanggal : Jumat, 29 Januari 2021
+
+Judul Materi : Learn Node Webserver
+Sub judul:
+1. EJS
+        menampilkan elemen yang dibuat dari backend
+Contoh:
+let counter = 1
+
+app.get('/', (req, res) => { // '/' adalah router route, parameter kedua req res diisi oleh express
+    counter++ //untuk menampilkan seberapa banyak halaman web diakses
+    res.render('index', {
+        counter: counter,
+        isMorning: false, //untuk menampilkan keadaan sesuai yang diinginkan menggunakan ejsif dan ejselse
+        names: ['Faisal', 'Laisaf', 'Juliandra'], //membuat array untuk ditampilkan dalam halaman web dengan looping menggunakan ejsarray
+    })
+})
+
+2. Metode .get untuk routing dan handle not found error
+        membuat routing ke halaman web yang diinginkan dengan ringkas dan menghandle apabila permintaan yang diminta klien mengenai url tidak dapat ditemukan
+Contoh:
+app.get('/:path', (req, res) => { //jangan lupa garis miring sebelum nama file ejs
+    res.render(req.params.path, {}, (err, html) => {
+        if (err) {
+            res.render('404') //jika error tampilkan page 404 not found
+        } else {
+            res.send(html) //jika tidak error maka tampilkan halaman yang dituju
+        }
+    })
+})
+
+3. Nodemon
+        mempermudah save dan restart terminal apabila mengubah yang ada di backend
+Contoh:
+Instal dahulu nodemon dengan mengetikan perintah npm install -g nodemon di terminal,
+kemudian tambahkan "scripts" di package.json dengan nama "dev": "nodemon index.js",
+kemudian untuk menjalankannya menggunakan perintah npm run dev
+atau menggunakan nodemon -L index.js
