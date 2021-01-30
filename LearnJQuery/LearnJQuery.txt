@@ -1,0 +1,133 @@
+Judul Materi : LearnJQuery
+
+Sub Judul:
+1.  Pengertian JQuery
+    JQuery adalah sebuah JavaScript library yang berperan untuk mempermudah dalam melakukan manipulasi DOM.
+    Sehingga yang sebelumnya menggunakan JavaScript membutuhkan syntax yang lebih panjang dengan menggunakan JQuery akan lebih singkat.
+
+    Contoh:
+    ==============================================
+
+    // Vanilla JavaScript
+
+    const buttonSend = document.querySelector('.btn-send')
+
+    buttonSend.onclick = () => {
+        console.log('Hello World')
+    }
+
+    // JQuery
+
+    const buttonSend = $('.btn-send')
+
+    buttonSend.click(() => {
+        console.log(''Hello World)
+    })
+
+    ==============================================
+
+2.  Setup JQuery
+    Untuk melakukan setup JQuery pada project, kita hanya perlu memasang script CDN JQuery di file HTML.
+    Setelah itu kita perlu memasang script untuk code JQuery kita.
+    Perlu diperhatikan dalam memasang script CDN harus sebelum script JQuery dikarenakan browser membaca file HTML secara prosedural.
+    Sehingga script CDN harus siap terlebih dahulu sebelum sebelum script yang lain.
+
+    index.HTML
+    ==============================================
+    ...
+    <body>
+        ...
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+
+    ==============================================
+
+3.  JQuery API
+    Untuk memanipulasi DOM, JQuery telah menyediakan banyak API yang dapat kita gunakan.
+
+    Beberapa contoh API dari JQuery yang bisa kita gunakan adalah sebagai berikut:
+    a.  append()
+        Metode ini digunakan untuk memasukkan konten sebagai child terakhir pada suatu element.
+
+        Contoh:
+        ==============================================
+
+        // JQuery
+
+        $( ".inner" ).append( "<p>Test</p>" )
+
+        // HTML sebelum
+        <h1>Heading</h1>
+        <div class="container">
+            <div class="inner">First</div>
+            <div class="inner">Second</div>
+        </div>
+
+        // HTML sesudah
+        <h1>Heading</h1>
+        <div class="container">
+            <div class="inner">
+                First
+                <p>Test</p>
+            </div>
+            <div class="inner">
+                Second
+                <p>Test</p>
+            </div>
+        </div>
+
+        ==============================================
+
+    b.  click()
+        Metode ini digunakan untuk mengikat event handler dengan sebuah 'click'.
+
+        Contoh:
+        ==============================================
+
+        // JQuery
+
+        const buttonSend = $('.btn-send')
+
+        buttonSend.click(() => {
+        console.log(''Hello World)
+        })
+
+        // HTML
+
+        ...
+        <body>
+            <button class="btn-send">Kirim</button>
+        </body
+        ...
+
+        ==============================================
+
+    c.  remove()
+        Method ini digunakan untuk menghapus element dari DOM.
+
+        Contoh:
+        ==============================================
+
+        // JQuery
+
+        $( ".first" ).remove();
+
+        // HTML sebelum
+
+        <h1>Heading</h1>
+        <div class="container">
+            <div class="first">First</div>
+            <div class="second">Second</div>
+        </div>
+
+        // HTML sesudah
+
+        <h1>Heading</h1>
+        <div class="container">
+            <div class="second">Second</div>
+        </div>
+
+        ==============================================
+
+    Untuk lebih lengkapnya dapat dilihat pada https://api.jquery.com

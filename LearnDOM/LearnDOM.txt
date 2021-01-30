@@ -1,0 +1,59 @@
+Judul Materi : LearnDOM
+
+Sub Judul :
+1.  Method getElementById()
+    Metode ini digunakan untuk memanipulasi sebuah element yang ada di DOM dengan menggunakan id yang ada di element.
+
+    Contoh:
+    ================================================
+
+    // HTML
+
+    <p id="paragraph">This is a paragraph</p>
+
+    // JavaScript
+
+    const paragraph = document.getElementById('paragraph')
+    console.log(paragraph)
+
+    ================================================
+
+2.  Method getElementByClassName()
+    Metode ini digunakan untuk memanipulasi sebuah element yang ada di DOM dengan menggunakan nama class yang ada di element.
+    Hasil yang akan di-return adalah semua element dengan nama class yang sama.
+
+    Contoh:
+    ================================================
+
+    // HTML
+    
+    <p class="paragraph">This is first paragraph</p>
+    <p class="paragraph">This is second paragraph</p>
+    <p class="paragraph">This is third paragraph</p>
+
+    // JavaScript
+
+    const paragraph = document.getElementsByClassName('paragraph')
+    console.log(paragraph)
+
+    ================================================
+
+3.  Method querySelectorAll()
+    Metode ini digunakan untuk me-return semua elemen di dokumen yang sesuai dengan selector CSS.
+
+    Contoh:
+    ================================================
+
+    // HTML
+
+    <h2 class="query-example">Heading</h2>
+    <p class="query-example">A paragraph</p>
+
+    // JavaScript
+
+    const queryAll = document.querySelectorAll('query-example')
+    for (i = 0; i < queryAll.length; i++) {
+        queryAll[i].style.backgroundColor = "red";
+    }
+
+    ================================================

@@ -1,0 +1,26 @@
+Judul Materi : LearnGit
+
+Sub Judul :
+1.  Inisiasi Repository Lokal
+    Untuk mengnisiasi repository lokal pada project dapat dilakukan dengan perintah pada terminal: 
+    
+    'git init'
+
+    Pastikan teminal sudah di direktori folder dari project.
+
+2.  Adding Files to Staging Area
+    Untuk memasukkan file ke staging area dapat dilakukan dengan perintah pada terminal:
+
+    'git add file_name'
+    (Menambahkan sebuah file ke staging area)
+
+    'git add.'
+    (Menambahkan semua file ke staging area)
+
+3.  Melakukan Commit
+
+    git commit -m "commit message"
+    (Melakukan commit ke semua file yang ada di staging area dengan pesan)
+
+    git commit -a -m "commit message"
+    (Melakukan commit ke semua file, entah itu dalam staging area atau tidak dan dengan pesan)

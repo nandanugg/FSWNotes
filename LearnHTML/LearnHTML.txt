@@ -1,0 +1,70 @@
+Judul Materi : LearnHTML
+
+Sub Judul :
+1.  Pengertian HTML
+    HTML (HyperText Markup Language) adalah bahasa markup yang digunakan untuk membangun sebuah halaman web.
+    Bahasa markup memberikan struktur pada sebuah dokumen teks.
+    Pada dokumen HTML, markup yang dilakukan adalah dengan memberikan tag dan attribute.
+
+    Contoh:
+    ================================================
+
+    // Elemen heading pada HTML dengan tag <h1></h1>
+
+    <h1>This is a heading</h1>
+
+    // Elemen HTML untuk menampilkan gambar dengan tag <img> dengan attribute
+
+    <img src="kitten.jpg" alt="A photo of a cute kitten.">
+
+    ================================================
+
+2.  Elemen HTML
+    Suatu elemen dari HTML terdiri dari berbagai komponen.
+    Komponen-komponen tersebut adalah start tag, end tag, attribute name, attribute value dan content.
+    
+
+    ================================================
+
+                    ___________________Element__________________
+                   |                                           | 
+                   |         Att. Value                        |
+                   |        |         |                        |
+    Start tag -->  <p class="paragraph">This is a paragraph.</p>  <--  End tag
+                      |____|            |__________________|
+                     Att. Name                  Content
+    
+    ================================================
+
+3.  HTML Basic Construction
+    Dokumen HTML memiliki kerangka elemen yang wajib ada agar halaman web dapat berjalan dengan baik.
+    
+    Berikut ini adalah elemen-elemen yang dimaksud:
+    a.  <!DOCTYPE html>
+        Tag ini mendefinisikan tipe dokumen yang saat ini dibuka.
+        Dalam hal ini, dokumen yang dibuka adalah dokumen HTML.
+
+    b.  <html>
+        Elemen yang mendefinisikan seluruh dokumen HTML (root element).
+
+    c.  <head>
+        Elemen ini berisi metadata dari halaman web.
+
+    d.  <body>
+        Elemen ini berisi konten-konten yang akan ditampilkan pada halaman browser.
+
+    Contoh:
+    ================================================
+
+    <!DOCTYPE html>
+    <html lang="en>
+    <head>
+        <title>Page Title</title
+    </head>
+    <body>
+        <h1>Heading</h1>
+        <p>Content</p>
+    </body>
+    </html>
+
+    ================================================

@@ -1,0 +1,37 @@
+Judul Materi : LearnErrors
+
+Sub Judul :
+1.  SyntaxError
+    SyntaxError muncul saat terdapat kesalahan penulisan syntax pada program.
+
+    Contoh:
+    ==============================================
+
+    const user = {
+        username = 'johnappleseed',
+        email: 'johnappleseed@icloud.com',
+    }
+
+    ==============================================
+
+2.  TypeError
+    TypeError adalah error yang terjadi saat value memiliki tipe data yang tidak sesuai dengan semestinya.
+
+    Contoh:
+    ==============================================
+
+    let number = 1
+    number()
+
+    ==============================================
+
+3.  ReferenceError
+    ReferenceError terjadi karena adanya nilai reference yang invalid atau saat program berusaha membaca variabel yang tidak ada (not exist).
+
+    Contoh:
+    ==============================================
+
+    let fullName = `${firstName} + ${lastName}`
+    console.log(fullName)
+
+    ==============================================

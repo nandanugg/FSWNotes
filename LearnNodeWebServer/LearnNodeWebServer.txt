@@ -1,0 +1,166 @@
+Judul Materi : LearnNodeWebServer
+
+Sub Judul :
+1.  Web Server Setup
+    Web server adalah suatu perangkat lunak yang berperan untuk menyimpan dan mengirim data atau konten yang dibutuhkan oleh sebuah halaman web.
+    Node.js dapat digunakan sebagai web server dengan menggunakan framework Express.js.
+    
+    Berikut ini adalah langkah-langkah untuk mempersiapkan web server dengan Express.js:
+    a.  Buat folder project web server.
+
+    b.  Pastikan di dalam sistem sudah terdapat npm dan node.js.
+
+    c.  Buka folder dengan menggunakan text editor.
+
+    d.  Buka terminal dengan lokasi folder project.
+
+    e.  Masukkan perintah 'npm init' pada terminal.
+
+    f.  Isi data package.
+
+    g.  Setelah selesai akan muncul file package.json.
+        File package.json berisi metadata dari project.
+        Selain itu file ini juga berisi informasi mengenai dependency dari project.
+
+    h.  Kemudian install Express.js dengan perintah 'npm install express' pada terminal.
+
+    i.  Setelah selesai akan muncul file package-lock.json dan folder node_modules.
+        Folder node_modules berisi library yang telah kita install dengan npm.
+        Lalu file package-lock.json berisi metadata dari library yang kita gunakan.
+
+    i.  Kemudian buat file baru dengan nama 'index.js'.
+        Pada file tersebut isi dengan code berikut:
+
+        index.js
+        ==============================================
+
+        const express = require('express')
+        const app = express()
+        const port = 3000
+
+        app.get('/', (req, res) => {
+        res.send('Hello World')
+        })
+
+        app.listen(port, () => {
+            console.log(`Example app listening at http://localhost:${port}`)
+        })
+
+        ==============================================
+
+        Function app akan menjalankan server dan menggunakan port 3000.
+        Kemudian app akan memberikan respon dengan 'Hello World' di route root.        
+
+    j.  Jika berhasil, web server bisa diakses melalui http://localhost:3000.
+
+2.  Routing
+    Routing digunakan untuk menentukan bagaimana app akan memberikan respon terhadap HTTP request.
+    
+    Untuk menerapkan routing pada app dapat dilakukan dengan cara berikut:
+    a.  Buat folder baru dengan nama route.
+    Lalu buat file baru dengan nama 'rootRoute.js'.
+
+    rootRoute.js
+    ==============================================
+
+    const express = require('express')
+    const app = express.Router()
+
+    app.get('/', (req, res) => {
+        res.send('Hello World')
+    })
+
+    module.exports = app
+
+    ==============================================
+
+    module.exports digunakan untuk meng-include-kan file JavaScript agar menjadi module yang dapat digunakan di file JavaScript lain.
+
+    index.js
+    ==============================================
+
+    const express = require('express')
+    const app = express()
+    const port = 3000
+
+    const rootRoute = require('./route/rootRoute.js')
+    app.use(rootRoute)
+
+    app.listen(port, () => {
+        console.log(`Example app listening at http://localhost:${port}`)
+    })
+
+    ==============================================
+
+3.  Views
+    Untuk menampilkan file asset (image), CSS dan JavaScript kita dapat menggunakan express.static().
+    File-file tersebut dapat kita simpan ke dalam folder dengan nama 'views'.
+
+    Pertama kita harus menginstall ejs dengan perintah terminal 'npm install ejs'.
+    ejs adalah sebuah template untuk meng-generate HTML dengan menggunakan JavaScript.
+
+    Buat file baru pada folder 'views' dengan nama index.ejs untuk template HTML dan style.css.
+
+    index.ejs
+    ==============================================
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LearnNodeWebServer</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Hello World</h1>
+    </body>
+    </html>
+
+    ==============================================
+
+    style.css
+    ==============================================
+
+    body {
+        background-color: antiquewhite;
+    }
+
+    h1 {
+        color: red;
+    }
+
+    ==============================================
+
+    index.js
+    ==============================================
+
+    const express = require('express')
+    const app = express()
+    const port = 3000
+
+    app.use(express.static('views'))
+    app.set('view engine', 'ejs')
+
+    const rootRoute = require('./route/rootRoute.js')
+    app.use(rootRoute)
+
+    app.listen(port, () => {
+        console.log(`Example app listening at http://localhost:${port}`)
+    })
+
+    ==============================================
+
+    rootRoute.js
+    ==============================================
+
+    const express = require('express')
+    const app = express.Router()
+
+    app.get('/', (req, res) => {
+        res.render('index')
+    })
+
+    module.exports = app
+
+    ==============================================

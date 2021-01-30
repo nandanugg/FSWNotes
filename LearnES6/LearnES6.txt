@@ -1,0 +1,119 @@
+Judul Materi : LearnES6
+
+Sub Judul :
+1.  Pengertian ES
+    ES (ECMAScript) adalah sebuah standardisasi pada bahasa pemrograman script seperti JavaScript, JScript dsb.
+    ECMA sendiri adalah European Computer Manufacturer's Association.
+    Bahasa pemrograman JavaScript salah satu implementasi dari ECMAScript yang paling populer.
+
+2.  Proses Desain ES6
+    Proses desain pada ES6 terfokus pada proposal awal yang berisi fitur-fitur baru.
+    Ide dari fitur-fitur baru tersebut berasal dari komunitas developer.
+    Panitia yang bertanggung jawab atas proposal tersebut adalah TC39 (Ecma Technical Committee 39).
+    Anggota dari TC39 terdiri dari beberapa perusahaan besar.
+
+    Proposal melewati beberapa tahap sebelum menjadi standard baru:
+    a.  Sketch
+        Deskripsi awal dari fitur yang akan dimasukkan ke dalam proposal awal.
+
+    b.  Proposal
+        Jika TC39 telah menyetujui bahwa fitur tersebut penting, fitur tersebut akan dinaikkan ke proposal resmi.
+        Meskipun begitu, hal ini tidak menjamin fitur tersebut akan menjadi stadard.
+    
+    c.  Implementation
+        Fitur yang ada di proposal resmi kemudian diimplementasikan ke JavaScript engine.
+        Implementasi dan feedback dari komunitas developer membantu dalam pengembangan proposal.
+
+    d.  Standard
+        Setelah proposal berkembang menjadi lebih baik dan diterima oleh TC39, fitur-fitur yang ada di proposal tersebut akan dimasukkan ke dalam standard ECMAScript.
+
+3.  Fitur Baru yang Ada di ES6
+    a.  Arrow Function
+        Arrow function digunakan untuk menulis function dengan cara yang lebih sederhana daripada penulisan function biasa.
+
+        Syntax:
+        ==============================================
+
+        let myFunction = (arg1, arg2, .... argN) => {
+            statement(s)
+        }
+
+        ==============================================
+
+        myFunction: nama dari function
+        arg1, arg2, ... argN: argumen / parameter dari function
+        statement(s): isi statement dari function        
+
+        Contoh:
+        ==============================================
+
+        // Function biasa
+        function addition(x, y) {
+            return x * y
+        }
+
+        // Arrow function
+        let addition = (x, y) => x * y
+
+        ==============================================
+    
+    b.  Default Parameter Values
+        Pada ES6, kita dapat memasukkan nilai parameter default pada parameter function.
+
+        Contoh:
+        ==============================================
+
+        function sum(x, y = 5) {
+            return x + y
+        }
+
+        console.log(sum(1, 6))  // 7
+        console.log(sum(4))     // 9
+
+        ==============================================
+
+    c.  Template Literals
+        Dengan menggunakan template literal, kita dapat memasukkan variabel ke dalam string dengan lebih mudah.
+
+        Contoh:
+        ==============================================
+
+        // Tanpa template literal
+        let firstName = 'John'
+        let lastName = 'Doe'
+
+        console.log('Mr. ' + firstName + ' ' + lastName)
+
+        // Menggunakan template literal
+        let firstName = 'John'
+        let lastName = 'Doe'
+
+        console.log(`Mr. ${firstName} ${lastName}`)
+
+        ==============================================
+
+    d.  Promise
+        Promise digunakan untuk menangani asynchronous task.
+
+        Contoh:
+        ==============================================
+
+        function requestDataFromInternet(url) {
+            return new Promise((resolve, reject) => {
+                if (url) {
+                    resolve(url)
+                } else {
+                    reject('No URL')
+                }
+            })
+        }
+
+        requestDataFromInternet('google.com')
+            .then((result) => {
+                console.log(result)             // google.com
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+
+        ==============================================

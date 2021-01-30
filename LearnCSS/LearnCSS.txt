@@ -1,0 +1,96 @@
+Judul Materi : LearnCSS
+
+Sub Judul :
+1.  Pengertian CSS
+    CSS (Cascading Style Sheets) adalah bahasa yang digunakan untuk mengatur bagaimana tampilan dari dokumen yang telah di-markup.
+    Jika HTML digunakan untuk memberikan struktur pada dokumen web, maka CSS memberikan 'style' pada dokumen tersebut (layout, warna, ukuran dsb.).
+    CSS bekerja dengan berinteraksi dengan elemen pada HTML.
+
+    Contoh:
+    ================================================
+
+    // Di bawah ini adalah contoh penggunaan CSS untuk menebalkan dan merubah warna font menjadi pink
+
+    // HTML
+
+    <p>This is a paragraph.</p>
+
+    // CSS
+
+    p { color: pink; font-weight:bold; }
+
+    ================================================
+
+2.  Metode Penerapan CSS pada HTML
+    Untuk menerapkan code CSS pada dokumen HTML, terdapat tiga metode yang bisa diterapkan.
+    
+    Berikut adalah metode-metode yang bisa digunakan:
+    a.  External CSS
+        Untuk menerapkan CSS secara eksternal, code CSS harus disimpan di file dengan ekstensi '.css'.
+        Kemudian pada dokumen '.html', file CSS tersebut harus hubungkan pada elemen <head> menggunakan tag <link>.
+        Metode ini adalah metode yang paling umum digunakan.
+
+        Contoh:
+        ================================================
+
+        <head>
+            ...
+            <link rel="stylesheet" href="syle.css">
+        </head>
+
+        ================================================
+
+    b.  Internal CSS
+        Penerapan CSS secara internal dilakukan dengan cara menuliskan langsung code CSS pada elemen <head> di dokumen HTML.
+
+        Contoh:
+        ================================================
+
+        <head>
+            ...
+            <style>
+                p { color: pink; font-weight:bold; }
+            </style>
+        </head>
+
+        ================================================
+
+    c.  Inline CSS
+        Penulisan code CSS yang ditulis langsung pada satu elemen pada dokumen HTML disebut dengan metode inline.
+
+        Contoh:
+        ================================================
+        
+        ...
+        <h1 style="font-size: 40px; color: violet;">This is a heading.</h1>
+        ...
+        
+        ================================================
+
+3.  Syntax
+    Syntax dari CSS terdiri dari tiga bagian yaitu selector, property dan value.
+
+    Syntax:
+    ================================================
+
+    selector { property: value }
+
+    ================================================
+
+    Selector merepresentasikan elemen dari HTML yang akan di-styling.
+    Setelah mendefinisikan selector, kita kemudian menuliskan property CSS dengan valuenya.
+
+    Contoh:
+    ================================================
+
+    h1 { color: blue }
+
+    h1, h2, h3, h4, h5, h6 { color: blue }
+
+    h1 {
+        color: blue;
+        font-family: arial, helvetica, "sans serif";
+        font-size: 150%;
+    }
+
+    ================================================

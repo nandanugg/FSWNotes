@@ -1,0 +1,94 @@
+Judul Materi : LearnJS
+
+Sub Judul :
+1.  Variables
+    Seperti bahasa pemrograman lain, JavaScript memiliki variabel.
+    Variabel pada JavaScript digunakan untuk menyimpan sebuah nilai atau data.
+
+    Kita dapat membayangkan variabel di dunia nyata sebagai ember.
+    Kita bebas menentukan isi dari ember tersebut, entah mau kita isi air, batu atau pasir.
+
+    Nilai pada variabel di JavaScript dapat kita ganti dengan nilai yang lain.
+    Pada JavaScript saat suatu variabel yang telah dideklarasi diganti nilainya, maka nilai itu dibuang.
+    Sehingga dapat menghemat RAM karena semakin banyak variabel yang kita buat akan semakin banyak pula RAM yang dibutuhkan.
+
+    Contoh:
+    ================================================
+
+    let pesan
+    pesan = 'Hello'
+    pesan = 'World'
+    console.log(pesan)  \\ 'World'
+
+    ================================================
+
+2.  Data Types
+    a.  String
+        String digunakan untuk menyimpan data berupa teks.
+        Data string harus menggunakan petik di awal dan akhir
+
+        Contoh:
+        ===============================================
+
+        let singleQuotes = 'Single Quotes'
+        let doubleQuotes = "Double Quotes"
+        let backtiks = `Backtiks`
+
+        ===============================================
+    
+    b.  Number
+        Number digunakan untuk menyimpan data berupa integer maupun float.
+
+        Contoh:
+        ===============================================
+
+        let number1 = 6
+        let number2 = 6.789
+        let number3 = 6e5   // 6 * 10^5
+
+        ===============================================
+
+    c.  Boolean
+        Tipe data ini merepresentasikan nilai logika kebenaran yaitu true atau false.
+
+        Contoh:
+        ===============================================
+
+        let isRaining = true
+        let isGoodDay = false
+
+        ===============================================
+
+    d.  undefined
+        Tipe data undefined merepresentasikan variabel yang tidak bernilai.
+
+        Contoh:
+        ===============================================
+
+        let name
+        console.log(name)   // undefined
+
+        ===============================================
+
+    e.  null
+        Tipe data ini merepresentasikan 'empty' atau 'unknown value'.
+
+3.  Object
+    Object pada JavaScript berbeda dengan object pada bahasa pemrograman lain.
+    Pada JavaScript, object adalah tipe data yang dapat digunakan untuk menyimpan sekumpulan data.
+
+    Contoh:
+    ===============================================
+
+    const student = {      // object name
+        name: 'Annie',      // key: value
+        class: 'X IPA 1'
+    }
+
+    // Accessing property
+    console.log(student.name)   // 'Annie'
+
+    ===============================================
+
+
+

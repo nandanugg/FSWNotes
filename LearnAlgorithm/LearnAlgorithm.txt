@@ -1,0 +1,208 @@
+Judul Materi : LearnAlgorithm
+
+Sub Judul :
+1.  Variable Types
+    Dalam bahasa pemrograman Javascript, variable digunakan untuk menyimpan sebuah nilai.
+    Sebuah variable harus dideklarasikan terlebih dahulu dengan keyword 'let'.
+
+    Contoh:
+    ================================================
+
+    let x;
+    x = 10;
+
+    let y = 20;
+
+    ================================================
+
+    Selain menggunakan keyword 'let', keyword 'var' juga dapat digunakan untuk deklarasi variable.
+    Namun yang membedakan dengan 'let' adalah setelah melakukan deklarasi dengan 'var',
+    variable dengan nama yang sama dapat dideklarasikan kembali dengan nama yang sama.
+    Sedangkan variable yang dideklarasikan dengan 'let' hanya dapat dideklarasikan sekali.
+
+    Contoh:
+    ================================================
+
+    var x = 20;
+    var x = 200;
+
+    // Contoh di bawah akan menghasilkan error
+
+    let y = 20;
+    let y = 200;
+
+    ================================================
+
+    Variable dengan nilai konstan harus dideklarasikan dengan menggunakan keyword 'const'.
+    Variable ini setelah dideklarasikan, nilainya tidak dapat diubah.
+
+    Contoh:
+    ================================================
+
+    const pi = 3.14;
+
+    // Contoh di bawah akan menghasilkan error
+
+    const kecepatanMinimum = 30;
+    kecepatanMinimum = 40;
+
+    ================================================
+
+2.  Loops
+    Loops digunakan untuk mengeksekusi suatu kumpulan code sebanyak n kali.
+    Di mana n akan didefinisikan terlebih dahulu dalam code.
+
+    a.  for
+        Melakukan loops pada suatu kumpulan code.
+
+        Contoh:
+        ================================================
+
+        for ( let index = 0; index < 5; index++) {
+            console.log(index);
+        };
+
+        //  Output
+        /*
+            0
+            1
+            2
+            3
+            4
+        */
+
+        ================================================
+    
+    b.  for/in
+        Melakukan loops pada setiap property yang ada di suatu object.
+
+        Contoh:
+        ================================================
+
+        let person = {
+            firstName: 'John',
+            lastName: 'Doe',
+            age: 25,
+        };
+
+        for (let property in person) {
+            console.log(person[property]) 
+        }
+
+        //  Output
+        /*
+            John
+            Doe
+            25
+        */
+
+        ================================================
+
+    c.  for/of
+        Melakukan loops pada setiap value yang ada di suatu iterable object.
+
+        Contoh:
+        ================================================
+
+        let total = 0;
+        let priceList = [5000, 6000, 9000];
+
+        for (let index = 0; index < priceList.length; index++) {
+            const element = priceList[index];
+            console.log('Price List =', element);
+            total += element;
+        }
+
+        console.log('Total Price =', total);
+
+        //  Output
+        /*
+            Price List = 5000
+            Price List = 6000
+            Price List = 9000
+            Total Price = 20000
+        */
+
+        ================================================
+
+    d.  while
+        Melakukan loops pada suatu kumpulan code selama suatu kodisi bernilai True.
+
+        Contoh:
+        ================================================
+
+        let totalWhile = 0;
+        let priceList = [5000, 6000, 9000];
+
+        let index = 0;
+        while (index < priceList.length) {
+            const element = priceList[index];
+            console.log('Price List =', element);
+            totalWhile += element;
+            index++;
+        };
+
+        console.log('Total Price =', totalWhile);
+
+        //  Output
+        /*
+            Price List = 5000
+            Price List = 6000
+            Price List = 9000
+            Total Price = 20000
+        */
+
+        ================================================
+
+    e.  do/while
+        Melakukan loops pada suatu kumpulan code selama suatu kondisi bernilai True.
+
+        Contoh:
+        ================================================
+
+        let totalWhile = 0;
+        let priceList = [5000, 6000, 9000];
+
+        let index = 0;
+        do {
+            const element = priceList[index];
+            console.log('Price List =', element);
+            totalWhile += element;
+            index++;
+        }
+        while (index < priceList.length);
+
+        console.log('Total Price =', totalWhile);
+
+        //  Output
+        /*
+            Price List = 5000
+            Price List = 6000
+            Price List = 9000
+            Total Price = 20000
+        */
+
+        ================================================
+
+3.  Functions
+    Functions adalah sebuah kumpulan code yang memiliki suatu fungsi dan bisa digunakan berulang kali.
+    
+    Contoh:
+    ================================================
+
+    let firstName = 'John';
+    let lastName = 'Doe';
+
+    function combineName(firstName, lastName) {
+        const fullName = firstName + ' ' + lastName
+        return fullName
+    }
+
+    console.log(combineName(firstName, lastName))
+
+    //  Output
+    /*
+        John Doe
+    */
+
+    ================================================
