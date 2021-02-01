@@ -1,0 +1,53 @@
+Database : gudang penyimpanan data
+
+database server : memberi pelayanan digital kebutuhan manusia. biasanya disediakan 
+oleh cloud server. contoh AWs, GCP, Azure, etc
+
+- ketika server diinstall mySQL maka hanya menjadi database server. contoh:disdikacpil
+- ketika install node dan ekspress akan menjadi static website server. conth: perusahaan profile
+- ketika diinstall ketiganya maka akanmenjadi dynamic yg bisa ditambah dan dikurangi oleh orang lain
+
+postgree adalah aplikasi untuk membuat database server
+
+data noSQl tidak konsisten/berantakan. tapi fleksibel
+data SQLeew
+
+untuk masuk postgress
+
+diterminal ketik
+psql
+
+jika tulisan FATAl ketik
+sudo -u postgres psql
+
+
+untuk buat role
+create role ilyasmahfud superuser login password '123123123';
+create database ilyasmahfud;
+ctrl+D untuk quit
+
+lalu untuk masuk posgres ketik 
+psql
+
+lalu untuk keluar ketikquit atau \q 
+
+melihat listdatabase dalam postgre 
+\l 
+
+untuk membuat databsae ketik
+CREATE DATABASE test_siang (nama database) 
+//upper case hanya untuk membeedakan mana sintak dan mana value
+//upper case hanya habbit atau tidak wajiab
+//capslock untuk sintak , tapi tetep bisa jika tidak capslok
+//memberi nama kolom atau database gunakan snakecase atau dengan underscore
+//diakhir setiap statement ditutup dengan titik koma
+
+cara pindah2 database
+\c test_siang (nama database) 
+cara kedua
+diterminal ketik
+psql test_siang (nama database)
+
+menghapus permanen yg tidak bisa di backup dan di restore
+DROP DATABASE test_siang;
+
