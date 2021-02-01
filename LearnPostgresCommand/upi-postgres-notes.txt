@@ -1,0 +1,80 @@
+LearnPostgresCommand
+
+1. Apa itu Database?
+
+Database adalah sebuah sistem yang berfungsi untuk mengumpulkan file, tabel, 
+atau arsip yang terhubung dan disimpan dalam berbagai aplikasi komputer
+
+Relational Database (SQL) adalah database yang mengorganisir data berdasarkan model hubungan data. 
+Umumnya, relational database menggunakan Structured Query Language (SQL) sebagai bahasa 
+pemrograman. Contoh dari aplikasi Relational Database adalah PostgreSQL.
+
+Non-Relational Database (NoSQL) dibuat dengan tujuan khusus untuk model data spesifik dan 
+memiliki skema fleksibel untuk membuat aplikasi modern. 
+Database NoSQL dikenal secara luas karena kemudahan pengembangan, fungsionalitas, 
+dan kinerja dalam berbagai skala.
+
+2. Perintah dasar PostgreSQL
+
+Untuk masuk ke dalam PostgreSQL client, ketikkan perintah berikut:
+
+psql 
+
+Untuk keluar dari psql, ketikkan perintah berikut:
+
+\q
+
+Untuk melihat database apa saja yang ada di PostgreSQL, ketikkan perintah berikut:
+
+\l
+
+Untuk membuat sebuah database baru, ketikkan perintah berikut:
+
+CREATE DATABASE <nama database>;
+
+Untuk berpindah ke database lain, ketikkan perintah berikut:
+
+\c <nama database>
+
+Untuk menghapus sebuah database, ketikkan perintah berikut:
+
+DROP DATABASE <nama database>;
+
+Untuk membuat sebuah table, ketikkan perintah berikut:
+
+CREATE TABLE <nama table> (
+    <nama kolom1> <tipe data>,
+    <nama kolomN> <tipe data>
+);
+
+Untuk melihat table yang ada pada database tertentu, ketikkan perintah berikut:
+
+\d
+
+Untuk menghapus table, ketikkan perintah berikut:
+
+DROP TABLE <nama table>;
+
+3. Database Schema
+
+Pada PostgreSQL, schema atau skema adalah sebuah namespace atau wadah yang menyimpan
+database object seperti table, view, index, data type, function, stored procedure, dan operator.
+
+Sebuah database dapat memiliki satu atau lebih skema dan setiap skema hanya bisa dimiliki oleh
+satu buah database.
+
+Kenapa kita perlu database skema?
+- Skema membuat kita bisa mengorganisir database object ke dalam sebuah grup agar lebih mudah di manage
+- Skema membuat banyak user dapat mengakses sebuah database tanpa saling mengganggu satu sama lain
+
+Untuk melihat skema yang sedang digunakan, ketikkan perintah berikut:
+
+SELECT current_schema();
+
+Untuk membuat sebuah skema, ketikkan perintah berikut:
+
+CREATE SCHEMA <nama skema>;
+
+Untuk menghapus sebuah skema, ketikkan perintah berikut:
+
+DROP SCHEMA <nama skema>;
