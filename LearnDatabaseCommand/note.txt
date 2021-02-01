@@ -1,0 +1,34 @@
+Pertemuan 16
+
+1. Pengantar database
+Database dlu disebut VPS (Virtual Private server), sekarang disebut VM (Virtual Machine).
+Komputer juga merupakan database, namun hanya developer stage.
+
+Setiap server diinstall di dalamnya bergantung kegunaan:
+1. Server database: Hanya diinstall posgreSQL
+2. Static website database: Diinstall posgreSQL, dan node.js
+3. Dynamic website database: Diinstall postgreSQL, node.js, serta express
+
+Database client app dibuat untuk connect ke database.
+Data dari SQL merupakan tabel, dan NoSQL merupakan object.
+
+Dengan NoSQL dapat menghindari NULL. Mengapa menhindari NULL? karena NULL juga memakan storage(1 bit)
+Kelemahan NoSQL data object menjadi tidak konsisten. contoh: MonggoDB.
+Biasanya NoSQL dibuat di perusahaan baru, yang masih blm tahu data apa saja yang harus disimpan.
+
+2. postgreSQL
+postgreSQL berjalan di port 5432.
+perintah dijalankan dengan UPPERCASE, untuk memisahkan statement/syntax(CREATE DATABASE), dan value(test_pagi)
+
+menjalankan:
+start database: psql 
+start database with name_database : psql name_database 
+quit : \q 
+help: \? 
+check list database: \l
+change database: \c
+delete database: DROP DATABASE name_database
+
+search:"table management in postgreSQL"
+        "PostgreSQL relation tutorial" in youtube
+        "Database schema"
