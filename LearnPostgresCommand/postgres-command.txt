@@ -1,0 +1,31 @@
+coba perintah berikut untuk masuk ke postgree di terminal
+	psql
+jika muncul pesan eror seperti berikut
+psql: error: FATAL:  role "yanuar" does not exist
+
+coba masukkan perintah berikut di terminal
+sudo -u postgres psql
+
+membuat role berdasarkan nama user
+create role yanuar superuser login password '123123123';
+
+CamelCase
+Snake_case
+
+** Jangan lupa pakai ; dibelakang setiap perintah **
+
+membuat database
+CREATE DATABASE yanuar;
+
+perintah untuk keluar dari postgre
+quit	atau	\q
+
+menampilkan list database
+\l
+
+untuk pindah/menggunakan database
+\c nama_database
+
+untuk menghapus database
+DROP DATABASE nama_database;
+

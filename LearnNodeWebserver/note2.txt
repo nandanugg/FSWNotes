@@ -1,0 +1,16 @@
+menginstal nodemon untuk restart otomatis running project jika terjadi perubahan
+$npm install -g nodemon
+
+
+untuk melakukan route otomatis melalui param yang di inputkan di address bar pada browser
+app.get('/:path', (req, res) => {
+    res.render(req.params.path, {}, (err, html) => {
+        if (err) {
+            res.render('404')
+        } else {
+            res.send(html)
+        }
+    })
+})
+
+https://forms.gle/RFHLq49nxNzv36R49 
