@@ -1,0 +1,32 @@
+Judul Materi : Learn Postgres Command
+
+dibagian ini, kita akan mempelajari beberapa command dasar pada
+PostgreSQL. 
+
+sebelumnya mari kita berkenalan mengenai Database.
+
+1. Database
+Database adalah sebuah pangkalan data, dimana kita bisa memanajemen,
+atau mengorganisir kumpulan data
+
+2. PostgreSQL
+postgreSQL adalah salah satu database management system app
+yang menggunakan bahasa SQL. 
+
+3. Command dasar pada PostgreSQL
+
+apabila sudah menginstall postgreSQL app nya
+kemudian buka terminal anda dan coba command dasar dibawah :
+
+1. psql -------> untuk masuk ke psql client
+2. \q -------> keluar dari psql client
+3. help or \h  -------> buat liat list command yg bisa digunakan
+4. \? -------> buat liat list command yg bisa digunakan
+
+
+5. \l -------> cek database yang pernah kita buat
+6. CREATE DATABASE nama_db; -------> perintah membuat database baru
+7. DROP DATABASE nama_db; -------> perintah menghapus database
+8. \c -------> cara berpindah ke database lain
+9. psql nama_db -------> cara menuju ke database yang diinginkan pada saat
+                        pertama kali mengaktifkan PostgreSQL
