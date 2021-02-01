@@ -1,0 +1,29 @@
+Author : Faisal Juliandra (Kelas Pagi)
+Tanggal : Senin, 1 Februari 2021
+
+Judul Materi : Learn Postgres Command
+Sub judul:
+1. Database
+        Database adalah kumpulan data yang disimpan secara sistematis dalam DBMS (Database Management System) atau di dalam komputer yang dapat diolah atau dimanipulasi yang dapat dimanfaatkan untuk menghasilkan informasi.
+
+2. SQL dan NOSQL
+        Perbedaan database sql dan nosql yaitu database sql menggunakan database relasional yang menggunakan tabel sedangkan database nosql merupakan database yang tidak membutuhkan relasi dan tidak memiliki relasi untuk setiap tabel.
+        Kelemahan nosql yaitu data tidak konsisten
+
+3. Postgresql
+        Merupakan database management system (DBMS) yang menggunakan SQL.
+        postgres secara default jalan di port 5432
+Command dalam postgresql:
+- untuk masuk ke postgres ketik psql
+- keluar ketik quit atau \q
+- untuk mau tau perintah apa aja yg bisa dimasukkin ketik \?
+- untuk clear ketik ctrl l
+- untuk ngecek database apa aja yang ada di postgres kita ketik \l
+- untuk bikin database ketik CREATE DATABASE test_pagi; test_pagi itu adalah value, CREATE DATABASE itu syntax tapi harus kapital atau uppercase biar bisa bedain syntax dan value
+- diakhir perintah pake ; semicolon
+- cara pindah pindah database ketik \c nama_database contoh \c test_pagi
+- kalau mau connect langsung ke database yg dimau ketik psql nama_database contoh psql test_pagi
+- penamaan kolom atau database pakai snake case atau pake underscore _ sebagai ganti spasi
+- untuk menghapus database ketik DROP DATABASE nama_database; contoh DROP DATABASE test_pagi;
+- untuk masukin role baru ketik CREATE ROLE namarole;
+- untuk liat role yang ada ketik \du
