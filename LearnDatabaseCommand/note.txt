@@ -32,3 +32,11 @@ delete database: DROP DATABASE name_database
 search:"table management in postgreSQL"
         "PostgreSQL relation tutorial" in youtube
         "Database schema"
+
+3. PGAdmin
+Add new server seperti memberi ruang pada pgadmin di local
+Di tab connection, hostname : 127.0.0.1
+right click di salah satu database, and choose query tool
+
+search : "ERD"
+        "Database schema"
