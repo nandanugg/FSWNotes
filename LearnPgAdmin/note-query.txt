@@ -1,0 +1,138 @@
+Buka pgAdmin buat tabel
+
+host : local host atau jika wsl 127.0.0.1
+save, jika tidak bisa
+masukan username linux
+
+
+buka test>schemas>public>table
+
+klik kanan>querytools
+
+command
+- - kueri buat tabel
+CREATE TABLE, user(
+	id INT ,
+		first_name VARCHAR (50),
+		last_name VARCHAT (50),
+		gender VARCHAT (7),
+- - 		//char, spasi tidak akan terbaca
+- - 		//varchat spasi terbaca -> bisa kita limit
+- - 		//text, semua karakter terbaca
+		date_of_birth TIMESTAMP
+- - 		//date, menyimpan tanggal
+- - 		//time, menyimpan jam
+- - 		//timestamp, menyimpan tanggal dan jam
+- - 		//timestampz, menyimpan waktu dalam UTC(waktu london)
+);
+
+- - query edit data type
+ALTER TABLE users
+ALTER COLUMN gender TYPE VARCHAR (1);
+
+untuk menjalankan blok commandnya lalu klik run atau f5
+untuk menkomen ctrl+/
+untuk menguncoment shift+/
+
+
+- - query edit column
+ALTE TABLE users
+RENAME COLUMN date_of_birth TO date_birth;
+
+- - query nambah column
+ALTER TABLE users
+ADD COLUMN full_name VARCHAR(100);
+
+- - query detele column
+ALTER TABLE users
+DROP COLUMN full_name;
+
+- - kueri edit, tambah, delete jadi satu. 
+syaratnya disetiap baris dikasih koma. titik koma baru yg terakhir
+
+ALTER TABLE users
+ALTER COLUMN gender TYPE VARCHAR (1),
+RENAME COLUMN date_of_birth TO date_birth,
+ADD COLUMN full_name VARCHAR(100),
+DROP COLUMN full_name;
+
+- - delete table
+DROP TABLE users;
+
+- - kueri buat table dengan constraint (penahan)
+CREATE TABLE, user(
+	id BIGSERIAL PRIMARY KEY ,
+	// PRIMARY KEY, untuk pembeda data satu dg yg lain
+		first_name VARCHAR (50) NOT NULL UNIQUE,
+		// NOT NULL biar ngisinya tidak kosong
+		// UNIQUE biar tidak samadengan siian yg lain
+		last_name VARCHAT (50),
+		gender VARCHAT (7),
+		date_of_birth TIMESTAMP
+);
+
+- - edit constraint
+ALTER TABLE users
+ALTER COLUMN gender DROP NOT NULL;
+
+- -  memasukkan data
+INSERT INTO users (first_name, last_name, gender, date_of_birth)
+VALUES ('ilyas', 'Mahfud', 'male', '2000-08-25 20:31:15' );
+
+- - melihat data
+SELECT * FROM users;
+
+- -  memasukkan data banyak
+INSERT INTO users (first_name, last_name, gender, date_of_birth)
+VALUES ('ilyas', 'Mahfud', 'male', '2000-08-25 20:31:15' ),
+('ilyas', 'Mahfud', 'male', '2000-08-25 20:31:15' ),
+('ilyas', 'Mahfud', 'male', '2000-08-25 20:31:15' ),
+('ilyas', 'Mahfud', 'male', '2000-08-25 20:31:15' ),
+('ilyas', 'Mahfud', 'male', '2000-08-25 20:31:15' );
+
+- - melihat beberapa columnaja
+SELECT first_name, gender FROM users;
+
+- - melihat beberapa columnaja dari primary key tertentu
+SELECT first_name, gender FROM users
+WHERE id 123;
+
+- - edit data
+UPDATE users
+SET
+last_name = 'margaret'
+WHERE id = 1; 
+// tanpa WHERE maka semua kolom last_nameakan terubah
+
+- - delete data
+DELETE FROM users
+WHERE id 123;
+
+- - create table dengan relasi ke table user
+CREATE TABLE pets(
+	id BIGSERIAL PRIMARY KEY,
+	name VARCHAR  (50) NOR NULL,
+	user_id BIGSERIAL,
+	FOREIGN KEY(user_id) REFERENCE users(id)
+)
+
+- - memasukkandata dengan relasi
+INSERT INTO pets (name ,user_id)
+VALUES ('ning', 3);
+
+- - menggabungkan
+Select * FROM pets
+JOIN users On users.id = pets.user_id
+
+- - menggabungkan beberapapa aja
+Select pets.name, users.first_name FROM pets
+JOIN users On users.id = pets.user_id
+
+- - membuat alias
+Select pets.name AS nama_hewan, users.first_name AS nama_pemilik FROM pets
+JOIN users On users.id = pets.user_id
+
+Select pets.name nama_hewan, users.first_name nama_pemilik FROM pets
+JOIN users On users.id = pets.user_id
+
+
