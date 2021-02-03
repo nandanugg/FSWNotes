@@ -1,0 +1,55 @@
+table news{
+   id int [PK]
+   title varchar(225) [not null]
+   date timestamp [not null]
+   content text [not null]
+   publishers_id int [ref: > publishers.id]
+  categories_id int [ref: > categories.id]
+  comments_id int [ref: > comments.id]
+}
+
+table photos{
+    id int [PK]
+    url varchar(255) [not null]
+    news_id int [ref: > news.id]
+}
+
+table users{
+  id int [PK]
+  username varchar(255) [not null]
+  photo varchar(255)
+}
+
+
+table publishers{
+  id int [PK]
+  name varchar(255) [not null]
+   photo varchar(255)
+   verified boolean 
+}
+
+table comments{
+  id int [PK]
+  news_id int [ref: > news.id]
+  user_id int [ref: > users.id]
+  comment varchar(255) [not null]
+  
+}
+
+table likes{
+  id int [PK]
+    news_id int [ref: > news.id]
+  user_id int [ref: > users.id]
+}
+
+
+table categories{
+  id int [PK]
+  name varchar(255) [not null]
+}
+
+table likecomments{
+  id int [PK]
+  users_id int [ref: > users.id]
+  comments_id int [ref: > comments.id]
+}

@@ -1,3 +1,9 @@
+Untuk start service postgre dengan perintah
+sudo service postgresql start
+
+atau coba perintah berikut (WSL) biar ngga harus nulis perintah diatas setiap habis restart laptop
+sudo update-rc.d postgresql defaults 
+
 coba perintah berikut untuk masuk ke postgree di terminal
 	psql
 jika muncul pesan eror seperti berikut
@@ -29,3 +35,104 @@ untuk pindah/menggunakan database
 untuk menghapus database
 DROP DATABASE nama_database;
 
+membuat table
+CREATE TABLE users (
+	id INT,
+	first_name VARCHAR(50),
+	last_name VARCHAR(50),
+	gender VARCHAR(7),
+	date_of_birth TIMESTAMP
+)
+
+melakukan edit data type
+ALTER TABLE users
+ALTER COLUMN gender TYPE VARCHAR(1);
+
+melakukan edit nama column
+ALTER TABLE users
+RENAME COLUMN date_of_birth TO date_birth;
+
+melakukan tambah column
+ALTER TABLE users
+ADD COLUMN full_name VARCHAR(100);
+
+melakukan hapus column
+ALTER TABLE users
+DROP COLUMN full_name;
+
+atau bisa juga langsung semuanya
+ALTER TABLE users
+ALTER COLUMN gender TYPE VARCHAR(1),
+RENAME COLUMN date_of_birth TO date_birth,
+ADD COLUMN full_name VARCHAR(100),
+DROP COLUMN full_name;
+
+menghapus table
+DROP TABLE users;
+
+menambah constraint
+CREATE TABLE users (
+	id BIGINT PRIMARY KEY,
+	first_name VARCHAR(50) NOT NULL UNIQUE,
+	last_name VARCHAR(50) NOT NULL,
+	gender VARCHAR(7) NOT NULL,
+	date_of_birth TIMESTAMP
+)
+
+edit constraint
+ALTER TABLE users
+ALTER COLUMN gender DROP NOT NULL;
+
+input data ke table
+INSERT INTO users(id, first_name, last_name, gender, date_of_birth)
+VALUES ('1','yanuar','candra','Male','1999-01-24 20:31:15');
+
+liat data yg sudah diinput
+SELECT * FROM users;
+
+input data singkat
+INSERT INTO users
+VALUES (123,'aji','candra');
+
+input data banyak cara singkat
+INSERT INTO users
+VALUES (124,'candra','candra'),
+(125,'alex','candra'),
+(126,'brazo','candra');
+
+liat data cuma beberapa column
+SELECT first_name, gender FROM users;
+
+edit data
+UPDATE users
+SET
+last_name = 'Margaret'
+Where id = 1;
+
+delete data
+DELETE FROM users
+WHERE id = 123;
+
+membuat tabel dengan relasi ke tabel user
+CREATE TABLE pets (
+	id BIGSERIAL PRIMARY KEY,
+	name VARCHAR(50) NOT NULL,
+	user_id BIGSERIAL,
+	FOREIGN KEY(user_id) REFERENCES users(id)
+)
+
+masukkan data dengan relasi
+INSERT INTO pets (name, user_id)
+VALUES('ming', 1);
+
+SELECT * FROM pets
+JOIN users ON users.id = pets.user_id;
+
+SELECT pets.name, users.first_name FROM pets
+JOIN users ON users.id = pets.user_id;
+
+SELECT pets.name AS nama_hewan, users.first_name AS nama_pemilik FROM pets
+JOIN users ON users.id = pets.user_id;
+
+SELECT pets.name nama_hewan, users.first_name nama_pemilik FROM pets
+JOIN users ON users.id = pets.user_id;
