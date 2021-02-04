@@ -1,59 +1,78 @@
-difference between var and let is
-var can be write without var and just variable name
-e.g. c = 30
-let cant be initiate more than 1 times, will take
-syntaxerror -> cant be declare more than 1
-let safer than var 
-remember const is stand for constant and cant be
-change, if we first define const variable like
+Author: Muhammad Abiyyu Ramadhan
+Date: 20 January 2021
+Topic: Algorithm
+
+
+
+1. Variable types 
+Ada tiga cara dalam inisiasi variable yaitu dengan var, let dan const. Perbedaan antara var dan let adalah var dapat ditulis tanpa var, contohnya:
+c = 30;
+let tidak bisa diinisiasi lebih dari satu kali dan akan menyebabkan SyntaxError: cant be declare more than 1
+let a = 3;
+let a = 3; -> the result would be SyntaxError
+Penggunaan let lebih aman daripada var
+Inisiasi dengan const tidak akan bisa merubah value dari variable tersebut. Const is stand for constant. Apabila kita define const tanpa value, maka ini yang terjadi:
 const bi; -> then will be error
-loop -> iteration 
-while loop will run until condition is false
-usually to find data of array and filter
-to input something like rating in seller of 
-ecommerce should have input it in string because
-when using int conversion seems complicated
-for of to display item 1 by 1
-word + s/es -> to ez spot the detail of difference
-we definitely not console log every problem
-instead we save a data to variable and using 
-similar with print format with back tick `
-to split the file for example js in vscode we can
-use split right
-for example we want to define new variable = old
-variable. then the concept is returning value from
-old variable to new variable
-funtion is like above but just a bit complicated
-function call - function execute - function use
-will find where is this functionname(parameter)
-and if the function is called then will be input
-to parameter so function can process as function
+
+
+
+2. Looping
+Loop adalah pengulangan, bisa menggunakan while maupun for. 
+While loop akan terus run sampai kondisi tidak lagi benar. 
+const impostor = [false, false, true, false];
+let looptimes = 0;
+while (looptimes < impostor.length) {
+    looptimes++;
+    const item = impostor[looptimes];
+    if (item) {
+        console.log(`Impostor is found, its user number ${looptimes + 1}`);
+    }
+}
+Biasanya loop digunakan untuk mencari data dari array dan filter untuk input sesuatu seperti rating seller dari suatu ecommerce dan menampilkan input berupa string, karena jika menggunakan conversion integer lebih rumit.
+Penggunaan for of digunakan untuk menampilkan item 1 by 1 karena kita pastinya tidak mungkin console log setiap problem.
+Kita bisa save data ke variable dan menggunakan template literal (`)
+const temperatures = [32, 33, 35, 32];
+for (const temperature of temperatures) {
+    console.log(`the temperature is ${temperature}`)
+}
+
+
+
+3. Function
+Function mirip seperti loop tetapi lebih kompleks. 
+Cara kerjanya adalah function call - function execute - function use
+function can process as function
 rule
--> addDollarSign(200) -> calling function
--> will be $200 as function rule we define before
-const will be write only if we sure we dont want
-to change the value of variable
-arrow function is not function, its value 
-like string
-function can be have more than 1 parameter
-synchronous and asynchrounous is very different
-when synchronous is waiting code to be executed
-in order
-asynchronous is not waiting instead will be executed
-as needed
-for example in last code will be execute after
-3000 ms so when we call function to get value
-we cant because the function get delayed so 
-get undefined
-method is like siblings of property
-remember property have value
-method is function that inside object  
-when knowing method, in js every value is object
-when using string there are method that we can be
-modified object/value from variable, store many 
-function in one object()
-learn how to use something like callback or method
-because its really important no need to make
-use method when needed
-tomorrow will be implement js to website
+function combineString(first, second) {
+    return `${first}, ${second}`;
+}
+console.log("combineString()", combineString("hello", "iam here"));
+
+
+
+4. Arrow Function
+Arrow function bukanlah function tetapi adalah value seperti string. 
+Function dapat memiliki lebih dari 1 parameter.
+Synchronous dan Asynchronous berbeda dari cara kerja. 
+Jika synchronous menunggu code untuk di eksekusi sesuai order. Asynchronous tidak menunggu, akan mengeksekusi sesuai yang dibutuhkan.
+Contohnya jika code terakhir akan dieksekusi setelah 3 detik maka ketika kita call function tersebut, kita akan mendapat undefined karena delay.
+function getMessage() {
+    setTimeout(() => {
+        return "this is the message from getMessage()"
+    }, 3000)
+    console.log("inside getMessage()", "getMessage")
+}
+console.log("outside getMessage()", getMessage());
+
+
+
+5. Method 
+Method sama seperti saudara dari property which is mempunyai value.
+Method adalah function didalam object. Setiap value adalah object.
+Ketika menggunakan string, ada method yang bisa kita gunakan untuk memodifikasi object/variable dan menyimpan banyak function dalam satu object.
+Belajar cara menggunakan callback/method karena sangat penting dalam penggunaannya.
 to practice more -> javascript project ideas
+// array have many method
+let friends = ['Near', 'Mello', 'L', 'Kira'];
+console.log(".join()", friends.join());
+console.log(".includes()", friends.includes('L'));

@@ -1,0 +1,35 @@
+Author: Muhammad Abiyyu Ramadhan
+Date: 13 January 2021
+Topic: Git
+
+
+
+1. Software gui for git
+When pushing to github make sure to commit, and refresh github.
+software gui = to check what branch is as visual
+e.g. gitkraken = commit is where branch is where
+e.g. sourcetree 
+
+
+
+2. Git flow with github
+git pull 
+git branch development
+git checkout development
+git fetch
+git pull -> to update changes in github
+git fetch -> to update changes from github
+Before delete branch in local we must delete it first in github. To delete in github:
+git push -d branch name
+There are master and origin, origin still on remote or not on local directory
+Git makes new branch local automatically when checkout branch origin which is github.
+git fetch one way -> is there are any update new in github or not?
+git fetch prune two way -> update two remote and git tag like versioning makes commit of branches to give for ex tag 1.1.2
+Tag is for tagging each version
+git tag usually do in branch master last commit -> git tag v.1.1.2
+To push tag in github -> git push --tags (tag hotfix, feature add for example)
+to delete git push:
+branch -> -D, if feature just -> -d
+git push -u origin branch_name
+
+

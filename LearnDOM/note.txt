@@ -1,34 +1,31 @@
-.md ->
-to check -> open preview
-for image you can ![text](link)
-to install live server -> npm install -g live-server
-write live-server
-the difference between live server extention and
-npm is in npm there are display we may be need like
-GET/favicon~
-click listener -> special for javascript
-getElementsByClassName -> collection, means its array
-so when its array, we can indexing like array[0]
-getElementsByClassName('class') -> class name matter
-to get the value -> input.value
-if make a script html, declaration must be place 
-first, then logic, and parameter
-we can also get and set the value
+Author: Muhammad Abiyyu Ramadhan
+Date: 21 January 2021
+Topic: DOM
+
+
+1. Markdown
+File pada markdown adalah .md, untuk cek di vscode bisa gunakan open preview.
+Untuk menyisipkan image bisa gunakan ![text](link)
+Untuk install live server -> npm install -g live-server, kemudian ketik write live-server di terminal.
+Perbedaan dengan extention live server adalah pada npm terdapat tampilan yang mungkin dibutuhkan seperti GET/favicon~.
+to display code we want:
+```
+function (){ 
+
+}
+```
+
+
+
+2. DOM
+Pada javascript click listener merupakan fitur penting.
+getElementsByClassName akan memanggil collection berdasarkan class, yang berarti array. Jadi ketika ingin mendapatkan value pertama gunakan index seperti array[0].
+Untuk mendapatkan value menggunakan input.value
+Jika membuat script html, declaration harus ditempatkan pertama kali kemudian logic dan parameter.
+Kita juga bisa mendapatkan dan menset value seperti:
 button onclick = () => {
    console.log('button pressed', input.value);
    input.value =""
 } 
-if we doesnt include index[] will not works ->
-uncaught typeerror
-alway sremember getElementBy is array that we can
-always loop
-instead we can loop this if there are 2 p
-id will go reference to element
-if there are 2 element with 2 same id, it will 
-reference to first id
-id is more specific than class
-tomorrow -> oop js 2 days 
-using jquery 2 days
-using node js 2 days
-database, postgresql, implement nodejs to postgresql
-ci/cd, assessment
+Apabila kita tidak memasukkan index maka akan mendapatkan typeerror. Selalu ingat kalo getElementBy adalah array yang bisa selalu kita loop. Kita bisa looping misalnya apabila lebih dari 2 p.
+Id akan merefer ke elemen dan apabila ada 2 elemen dengan 2 id yang sama, akan tetap merefer ke id pertama. Cara kerja Id lebih spesifik daripada class.

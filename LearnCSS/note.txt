@@ -1,82 +1,69 @@
+Author: Muhammad Abiyyu Ramadhan
+Date: 18 January 2021
+Topic: CSS
+
+
+1. CSS
 row span -> row | column span -> column
-to form several file to one like merge center
-make repository is needed and must to prevent some 
-dangerous unpreventable 
-git active is really must need as developer
-css manage layout web
-browser reads our html file
-first reads doctype then html then head so forth
-browser will interprets html and do with css
-interpret to dom tree while load css 
+Untuk menyimpan beberapa file jadi satu seperti merge center, maka perlu untuk membuat repostiroty untuk mencegah hal yang tidak diinginkan. Git active is a must as developer.
+CSS digunakan untuk memanage layout pada web, browser membaca file html dan css kita dengan menginterpretasi dom tree.
 dom family tree = 
-html 
-head: meta, link, title
-body:
-form: input, p
-div: button, a
-img
-span
-css -> selector{attributes}
-ex: p, li{
-text-decoration(attribute): underline(value);}
-if typing wrong attribute -> browser will skip
-how to know attribute supports by browser?
-caniuse.com -> to check browser compatibility
-the at rule -> way to tell browser how behave with
-CSS
-for xhtml -> to security but slower than usual html
-at rule nested rules -> to link html to another html
-and styling in more than 1 html
-how font family works?
-to change our font, for example first font is not in
-our pc then check next if there are and so on 
-@font-face -> to add customize font to our html
-but first download it first or have a file at least
-or download it at fonts.google.com
-@media print -> to change format for example html
-for responsive website -> @media only screen
-to grouping width of device if width is something
-in css -> whitespace is important: could be work/not
-in website
-margin = distance like maybe for 12 px
-margin like land in each for example h1, p
-and the distance can be greater with padding
-distance between item is called margin
-margin and padding usually combined together
-as default browser give margin
-and several color define each margin, padding, border
-input padding as default: top, right, bottom, left
--> clockwise in css
-we just can color padding and never can color margin
-only can color 
-border can be color too with solid argument
-div -> tag without function, division to divide 
-each element in html tag in body
-. -> in css means class
-id css usually use in js cause js only can reference
-1 id in 1 element, we will use a lot in class
-.footer -> enter to shortcut in vscore with <div>
+a. html,head: meta, link, title
+b. body:
+c. form: input, p
+d. div: button, a
+e. img
+f. span
+g. css -> selector{attributes}
+Apabila menulis attribute yang salah maka browser bakal skip. 
+Bagaimana mengetahui suatu attribute disupport oleh browser? bisa cek di caniuse.com
+XHTML merupakan security tetapi lebih lambat daripada html pada umumnya
+at rule nested rules -> untuk melink html ke html yang lain dan styling di lebih dari satu html
+Bagaimana font family bekerja? bakal melihat dari font pertama, apabila tidak ada maka selanjutnya.
+@font-face -> untuk menambahkan customizefont pada html, dengan download di fonts.google.com
+@media print -> untuk mengganti format seperti html responsive website -> untuk mengelompokkan width of device 
+Pada CSS whitespace bisa penting karena berpengaruh pada bisa/tidaknya di website
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+2. CSS Styling
+Margin = jarak seperti 12 px, margin ibaratnya seperti tanah dan jarak bisa lebih besar dari padding.
+Margin dan padding biasanya dikombinasikan secara bersamaan. 
+Secara default browser akan memberikan margin dan beberapa warna untuk mendefinisikan setiap margin, padding, border
+Penginputan paddin secara default: top, right, bottom, left. Sesuai jarum jam
+Kita bisa memberikan warna pada padding tetapi tidak bisa memberikan warna pada margin.
+Border juga bisa diberikan warna dengan solid argument.
+div adalah tag tanpa function yang berperan untuk membagi beberapa elemen di html tag di body
+. -> di css berarti class. Id biasanya digunakan di javascript karena bisa mereferkan 1 id dalam 1 elemen. Kita bakalan lebih sering gunakan class
+Shortcut untuk membuat div tag html yang berisi class didalamnya -> .footer, footer bakal jadi class di dalam tag div
+Untuk selain div bisa gunakan seperti pada p tag -> p.footer-text
+.footer -> enter to shortcut in vscode with <div>
 p.footer-text -> for p
-p>a.footer-link+p.footer-explanation
-keyword for shortcut emmet html
-in input should have at least padding to get room
-to styling in input :
-input[type="text"]{padding: 7px;}
-pseudoclass for animation
-hover -> fly in the air change the color
-pseudo element for paragraph
-hover is usually use in daily engineer life
-to neat our website -> using bootstrap framework
-bootstrap is collection of css and we just use that
-using cdn -> disadvantage is cant use it when not
-connect in internet
-how to use css:
-first download in getbootstrap.com
-extract file from zip
-copy bootstrap.css to file you want to 
--> in our case /LearnCSS 
-then @import 'bootstrap.css' to see what happen
-we will get through grid more often in column & row
-related class -> relate news
-col in css is width which
-one element can have two class
+Untuk membuat tag a yang ada class didalam p tag -> p>a.footer-link
+Untuk menggabungkan keduanya -> p>a.footer-link+p.footer-explanation
+Keyword untuk shortcut lain cek pada shortcut emmet html
+Pada input disarankan untuk memiliki padding untuk memberikan ruang styling pada input
+pseudoclass untuk animation = hover, biasa digunakan di engineer life sehari hari
+.paragraph::first-letter{
+    font-size: 50pt;
+}
+
+
+
+3. Bootstrap
+Untuk membuat website kita lebih neat, menggunakan bootstrap framework
+Bootstrap adalah koleksi dari css dan kita bisa gunakan itu. 
+Penggunaan dengan cdn memiliki kelemahan seperti tidak bisa mengakses ketika tidak punya koneksi internet.
+Bagaimana menggunakan CSS? 
+a. first download in getbootstrap.com
+b. extract file from zip
+c. copy bootstrap.css to file you want to 
+d. then @import 'bootstrap.css' to see what happen
+Kita akan sering menggunakan grid dengan column dan row
+col di css adalah width yang bisa memiliki 2 kelas pada satu elemen
+<div class="related col">
+        <h4>Let's just play some easy</h4>
+</div>
