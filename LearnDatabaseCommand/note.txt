@@ -40,3 +40,7 @@ right click di salah satu database, and choose query tool
 
 search : "ERD"
         "Database schema"
+
+4. ERD/Database schema
+-> database architecture
+dbdiagram.io dapat dibuat untuk membuat database schema
