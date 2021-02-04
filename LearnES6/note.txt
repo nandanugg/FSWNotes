@@ -1,0 +1,83 @@
+Author: Muhammad Abiyyu Ramadhan
+Date: 27 January 2021
+Topic: ES6
+
+
+
+1. ES6
+ES pada javascript berarti version. 
+Sebelum diimplentasi dan mengupdate version ecma bertanggung jawab untuk melihat proposal yang ada dan menentukan.
+Kita tidak bisa mengetahui apa yang baru dari feature tersebut tanpa proposal.
+Untuk langsung mengetahui hasil dari codingan javascript tanpa test di node kita bisa menggunakan extention quokka.
+Apabila ada number > 3 dan ingin cek apakah yang diinput adalah integer bisa gunakan isInteger().
+Di java untuk mengecek number yang memiliki koma bisa gunakan float atau double.
+Javascript tidak memiliki banyak method yang mendukung float.
+console.log(Number.isInteger(10));
+console.log(Number.isInteger(10.5));
+console.log(typeof 10.5);
+
+
+
+2. API
+API singkatan dari application programming interface.
+Ketika seseorang ingin membuat website/aplikasi dan membutuhkan aplikasi lain yang bisa mendukung seperti geolocation api yang bertanggung jawab dalam lokasi, bluetooth api pada bluetooth.
+File sistem API mirip seperti directory pada google drive.
+Untuk menggunakan API seperti contoh kita gunakan pada thecatapi.com yang mengambil gambar kucing via API. 
+Pertama adalah liat dokumentasi kemudian liat codingan dan routes dan gunakan API. Ada case ketika membutuhkan extra aplikasi seperti library untuk membantu menggunakan API.
+Firebase berasal dari google untuk membantu developer membuat aplikasi.
+Library seperti koleksi dari codingan, jadi bisa disebut framework. Tetapi framework bisa bukan library.
+const img = document.querySelector('#image')
+fetch('https://api.thecatapi.com/v1/images/search?limit=5&page=10&order=Desc', {
+    headers: {
+        'x-api-key': '9ec43792-01ee-4da0-a018-c71e727746c1'
+    }
+}
+
+
+
+3. Promise
+Promise adalah class yang punya 2 parameter yang mana adalah resolve dan reject yang merupakan anonymous function.
+Promise mempunyai 2 method dengan parameter pertama adalah anonymous/arrow function dan apapun yang kita masukkan pada resolve function maka akan menjadi output dari function.
+Promise termasuk class yang didalamnya adalah function, didalamnya lagi ada method. 
+Pada .then ketika kita set timeout didalam promise maka akan mendapatkan balasan berupa output. 
+Mirip seperti ketika menggunakan node dengan settimeout tetapi pada saat itu nilai yang kita dapatkan undefined karena delay.
+Dengan menggunakan resolve kita tidak perlu khawatir dengan synchronous.
+Dengan menggunakan reject apabila tidak mendapatkan hasil harus mengembalikan alasan.
+Perlu diingat dengan menggunakan Promise maka apapun yang terjadi akan mengembalikan hasil entah itu berupa resolve maupun reject.
+Unhandled Promise Rejection Warning akan dieksekusi ketika ada 2 active resolve dan reject in return. Disarankan digunakan ketika tidak ada condtition
+Ez to know = Selalu ingat struktur, lupakan tentang gimana filosofi dari promise. Learn how to use.
+Didalam Promise adalah contractor, and for now the analogies you can say that it is Class that have Function inside.
+Fetch adalah API dari browser yang bisa dihubungkan dan hanya bisa dibuka di browser
+First programmer is always copy paste things, always remember this.
+res is array that inside it is url and res[0] is accessing index.
+Anything inside res is result of cat api, and forget the rest.
+function getDataPromise(url) {
+    return new Promise((resolve, reject) => {
+        if (url) {
+            resolve(url)
+        } else {
+            reject("nothing url here")
+        }
+        // // reject('this is error')
+        // resolve('this is the data from url ' + url)
+    })
+}
+
+getDataPromise().then((result) => {
+    console.log(result);
+}).catch((err) => {
+    console.error(err);
+})
+const img = document.querySelector('#image')
+fetch('https://api.thecatapi.com/v1/images/search?limit=5&page=10&order=Desc', {
+    headers: {
+        'x-api-key': '9ec43792-01ee-4da0-a018-c71e727746c1'
+    }
+}).then((result) => {
+    result.json().then(res => { // most important
+        console.log(res);
+        const catImg = res[0].url
+        img.src = catImg
+        console.log(catImg)
+    })
+})
