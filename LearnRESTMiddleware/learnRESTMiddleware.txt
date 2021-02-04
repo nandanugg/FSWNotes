@@ -1,0 +1,46 @@
+fungsi api yaitu regulator pengambilan data dari aplikasi ke database
+
+api (application programming interface) adalah kumpulan aturan yang memungkinkan dua atau lebih program untuk berkomunikasi satu sama lain.
+API dibuat di server untuk kemudian dapat memungkinkan client untuk dapat berkomunikasi dengannya.
+
+RESTful api bertindak sebagai jembatan antara database dengan client
+
+http methods:
+get mengambil
+post mengirim
+put menaruh atau mengganti semua
+patch mengganti sebagian
+delete hapus
+
+headers : memberikan sisipan informasi tambahan
+body : sebuah hal yang memungkinkan client memasukkan data ke api
+
+http status codes
+http.cat
+
+coding
+npm init di folder
+kemudian kalo udah npm install express
+kemudian tambahkan "start" dan "dev" di package.json
+buat index.js
+kemudian db.js
+lalu export db di index.js
+kalau sudah save lalu jalankan npm run dev di terminal
+setelah itu copy link localhost ke postman
+
+app.post('/', (req, res) => {
+    console.log(req.body);
+    res.send('ok')
+}) // nanti di ganti ke yg bawah, ini untuk coba aja
+
+buat di postman ganti ke post kemudian body kemudian raw kemudian isi
+
+app.use(express.json())
+
+app.post('/', (req, res) => {
+    db.push(req.body);
+    res.send(req.body)
+})
+
+
+Handle error api
