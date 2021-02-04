@@ -1,0 +1,44 @@
+Pertemuan 19
+
+1. REST, API
+-> REST (Representation State Transfer)
+transfer keadaan antara device dan database
+
+API (Aplication Programming Interface) sendiri dapat menjadi melimit data suatu user untuk membatasi melihat data orang lain, sehingga hanya dapat melihat datany sendiri.
+API merupakan regulator. 
+
+Jika hanya device dan database, ibaratnya memberikan file excel kepada orang
+sehingga dapat melihat seluruh isi database. 
+Dan peran API dapat menjadi regulator untuk membatasi akses data tiap akun.
+
+Terdapat programatic yang dibuat dengan kode
+API merupakan kumpulan auran yang memungkinkan dua atau lebih program untuk berkomunikasi satu sama lain. 
+API dibuat di server untuk memungkinan client(web) untuk memina data.
+
+Dua hal yang berhubungan dengan dengan Request dan Response.
+Request dibangun dengan :
+    1. path / endpoint, merupakan route yang dapat berisi parameter (dimulai dari ?, dan jika lebih dari 1 dengan &), sehingga 
+    2. method
+    3. body
+    4. head
+
+request API dapat dicoba dengan POSTMAN,
+API memiliki karakerisik yang biasanya .JSON, dan object.
+
+2. HTTP methods
+-> merupakan method yang diinput ketika request
+Terdapat:
+    GET = meminta data/Read data
+    POST = Mengirim data/insert data
+    PUT or PATCH = PUT mengganti semua data, PATCH mengganti satu per satu
+    DELETE = menghapus data
+
+* header :
+-> header merupakan sisipan inforamsi, seperti user-agent(OS kita), atau authorize code.
+
+* body
+-> bagian dari request yang menyimpan info yang dikirimkan. Body digunakan POST, PUT/PATCH, DELETE.
+
+* HTTPS status code
+-> dapat dilihat di http.cat
+
