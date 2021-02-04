@@ -1,0 +1,13 @@
+Author: Muhammad Abiyyu Ramadhan
+Date: 21 January 2021
+Topic: Error
+
+
+
+1. Error
+SyntaxError: unexpected token 'function' adalah tipe error pada penulisan.
+Untuk melihat apakah ada error kita bisa lihat di vscode ada bracket yang berwarna atau bisa di bagian bawah kiri vscode.
+it can be on vscode that move your mouse and look 
+TypeError: callback must be a function adalah tipe error yang melakukan operasi dengan function yang salah.
+Typescript adalah framework yang dibuat karena permasalahan untuk memaintain typeerror, jadi developers tidak salah memasukkan input.
+Referenceerror: not defined merupakan error yang tidak terdefinisikan sebelumnya sehingga waktu mau refer akan menyebabkan error.
