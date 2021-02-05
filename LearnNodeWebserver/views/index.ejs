@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To My API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <%- include('header')  %><!--ejsesc--> 
+    <h1>What is this??? <%= counter %> times </h1> <!-- ejsout -->
+    <a href="about">right here</a>
+    <script src="script.js"></script>
+    <% if (isMorning) { %> <!-- ejsif-->
+        <p>GoodMorning</p>
+         <% } else { %>
+            <p>GoodNight</p> <!--ejselse-->
+            <% } %>
+            <% names.forEach(name => { %>
+             <p>
+                 <%= name %>
+             </p>
+            <% }) %>
+            <!--ejseach-->
+</body>
+</html>

@@ -1,0 +1,35 @@
+Author: Muhammad Abiyyu Ramadhan
+Date: 29 January 2021
+Topic: Node Web Server p2
+
+
+
+1. Routing Web Server
+Apapun yang kita input pada /:path maka akan masuk ke paramter, contohnya localhost:3000/asdasd bakal keisi sesuai respons error.
+Kita juga bisa melihat di terminal pesan error nya seperti apa.
+res.render(404) menampilkan 404 file dan res.send(html) menampilkan html file.
+Kita bisa menggunakan ejs sebagai route index, misalnya ingin mengetahui berapa kali kunjungan website.
+
+let counter = 1
+
+app.get('/', (req, res) => {
+  counter++
+  res.render('index', {counter: counter, 
+    isMorning: true,
+    names: ['Katlyn', 'Maegan', 'providenci']
+  })
+})
+
+
+
+2. Setup Nodemon 
+Nodemon adalah extention yang mempermudah supaya tidak restarting node secara terus menerus.
+How to install?
+a. npm js nodemon
+b. npm install -g nodemon
+c. add new script in json package dev: nodemon index.js
+d. to run it's not npm dev -> check npm --help
+e. to run is npm run dev
+When nodemon app crashed -> kill all node 
+Then run it again npm run dev
+

@@ -1,0 +1,60 @@
+Author: Muhammad Abiyyu Ramadhan
+Date: 28 January 2021
+Topic: Node Web Server
+
+
+
+1. Set Up Node Express
+Node adalah javascript runtime yang bisa digunakan untuk membuat web, api, dekstop dll.
+Web server ibaratnya pusat data.
+How to setup express dan npm?
+a. npm init
+b. npm install express
+c. check at package.json, it's our summary of our package
+d. to start node? npm start
+Express js membantu kita untuk membuat webserver lebih mudah.
+Npm stands for Node Package Manager, full link: npmjs.com
+Ketika menginstall npm, didalamnya ada express. Ibaratnya npm js untuk menampilkan starting point dan express js secara in depth.
+Ketika install library, -g vs --save?
+-g untuk menginstal secara global. --save untuk node version 6 kebawah.
+Package json bisa kita liat untuk melacak package apa saja yang kita install so far.
+Ketika menginstalnpm tidak menggunakan -g maka yang kita install akan ada di folder.
+Penggunaan -g akan menggunakan root folder maka bisa kita gunakan dimana saja.
+Kekurangan ketika tidak menginstal dengan npm install express =  package yang kita install tidak akan terlist di dependencies json.
+for more info, look keywords -> in npmjs/package/express
+Ketika kita clone dari repository, kita harus npm install terlebih dulu karena kita membutuhkan itu seperti node_modules.
+Pada property json, object nya menggunakan "".
+require() memungkinkan global function yang akan mengambil package yang kita instal.
+Bingung cara gunainnya? liat documentation dan baca di script secara singkat dengan ngetik di teriminal.
+
+
+
+
+2. .get() .listen() method
+app yang sudah dibuat akan menjalankan method seperti get, listen.
+app.get() memungkinkan untuk server request pada route.
+Browser menggunakan method get sehingga req dan res parameter akan diisi otomatis oleh express.
+Liat documentation lagi bagaimana request response bekerja dan bagaimana menulisnya.
+Ketika mengakses npm start maka akan otomatis save di ram.
+Ketika mengganti code kita dan save maka kita perlu untuk restart kembali dengan ctrl c and npm start again
+
+app.get('/', (req, res) => {
+  counter++
+  res.render('index', {counter: counter, 
+    isMorning: true,
+    names: ['Katlyn', 'Maegan', 'providenci']
+  })
+})
+
+
+
+3. Using port 
+Port sebagai pintu pada setiap computer, tidak semua network port terpake.
+Kita menggunakan port pada browser untuk mengakses seperti localhost yang berarti di pc kita.
+Kita hanya menggunakan anonymous function ketika listen app have request.
+Module system berperan untuk mengukur res dan req.
+ejs sebagai template engine seperti ejsout.
+
+app.use(express.static('views'))
+app.set('view engine', 'ejs')
+
