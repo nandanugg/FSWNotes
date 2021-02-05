@@ -1,0 +1,30 @@
+Author: Muhammad Abiyyu Ramadhan
+Date: 25 January 2021
+Topic: Jquery
+
+
+
+1. Jquery
+Open jquery.com
+Jquery adalah framework from javascript
+Download jquery -> plugin 
+Use jquery with cdn (content delivery network)
+Server that shared all around the world.
+Menggunakan cdn memudahkan akses pada semua orang di berbagai negara, akan diakses pada negara terdekat.
+Pick google cdn copy paste 3.x snippet in /body tag.
+Ketika membuat script js maka harus dibawah tag script jquery agar tidak membuat bingung browser.
+Selector jquery sering digunakan dan bekerja seperti dom yaitu array ketika kita spesifik call seperti index seperti [0].
+val() akan memungkinkan mendapatkan elemen baru setelah comment
+Penggunaan jquery umumnya lebih memudahkan dibandingkan dengan dom.
+
+const commentInputJq = $('#comment-input')
+const submitBtnJq = $('.submit-btn')
+const commentsJq = $('.comments')
+submitBtnJq.click(() => {
+    const input = commentInputJq.val()
+    const p = $('<p></p>')
+    // console.log(commentInputJq.val());
+    p.html(input)
+    commentsJq.append(p)
+    commentInputJq.val("")
+})
