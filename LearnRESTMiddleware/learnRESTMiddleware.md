@@ -1,7 +1,7 @@
 # Nama Developer : Faisal Juliandra
 ## Kelas : FSW Pagi
 ### 21 Januari 2021
-# Learn Database Schema
+# Learn REST Middleware
 ## 1. API
 API (application programming interface) adalah kumpulan aturan yang memungkinkan dua atau lebih program untuk berkomunikasi satu sama lain.
 API dibuat di server untuk kemudian dapat memungkinkan client untuk dapat berkomunikasi dengannya.
@@ -47,7 +47,7 @@ app.get('/error/', (req, res) => {
     inierror
 })
 
-// method get
+// method get atau read
 app.get('/item/', (req, res) => {
     res.send(db)
 })
@@ -56,13 +56,13 @@ app.get('/item/:index', (req, res) => {
     res.send(db[req.params.index])
 })
 
-// method post
+// method post atau create
 app.post('/item/', (req, res) => {
     db.push(req.body);
     res.send(req.body)
 })
 
-// method put
+// method put atau update
 app.put('/item/:index', (req, res) => {
     const index = req.params.index
     // membuat peringatan error apabila memasukkan perintah yang tidak sesuai
