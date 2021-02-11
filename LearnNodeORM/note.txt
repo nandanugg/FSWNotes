@@ -1,0 +1,37 @@
+Pertemuan 
+
+cli = command line 
+
+1. Asyncronous:
+-> untuk mengakali blocking, sehingga process tidak terhambat
+
+2. ORM
+-> digunakan adapter untuk menggunakan hubungan antara node dan sql. 
+Adapter yang terkenal adalah Knex, dan Sequalize
+ORM  atau adapter yang digunakan Sequelize akan membantu membuat query DBMS contoh : pg, mysql2.
+
+Sequalize merupakan suau package atau modul ORM yang dapat memetakan(mapping) setiap baris data di dalam suatu
+table database yang nantinya akan direpresentasikan sebagai objek di dalam NodeJS.
+
+    Fitur ORM:
+    1. Migration 
+    -> dapat lebih mudah melakukan perubahan di perubahan yang banyak. Dapat mendrop, create, dll
+
+    2. Model
+    -> memberi model atau percontohan kepada ORM, agar bekerja dengan baik
+
+    3. Seeder
+    -> membuat data dummy, atau data sembarang yang bersifat sementara. Hal ini dapat digunakan untuk menguji aplikasi
+    dengan data dummy tersebut.
+
+3. Setup Sequalize
+-> 
+1. npm init -y , npm install sequelize, sequelize init, npm install pg //sequelize-> untuk melihat list command
+2. diatur config.json setelah install Sequalize
+3. sequelize db:create  
+4. sequelize model:create --name Users --attributes username:string,password:string
+
+
+
+
+Model view controller

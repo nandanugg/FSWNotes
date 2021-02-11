@@ -36,5 +36,25 @@ app.delete('/item/:index', (req, res) => {
     db.splice()
     res.send(deletedItem)
 })
+//login feature with loop
+app.post('/auth', (req, res) => {
+    const username = req.body.username
+    const password = req.body.password
+    let dbId = db.length - 1
+    // console.log(username, password);
+    console.log(dbId);
+    while (username.length > 0) {
+        if (db[dbId].username == username && db[dbId].password == password) {
+            res.send(`Hello ${username}, you will be redirect to home`)
+            break
+        } else {
+            dbId -= 1
+            if (dbId < 0) {
+                res.send('Your username & password are incorrect')
+            }
+        }
+    }
+    res.send('Please input your username')
+})
 
 module.exports = app
