@@ -1,0 +1,32 @@
+judul materi : Learn NoteAPIWithSequelize
+
+sebenarnya materi ini merupakan materi lanjutan dari
+Learn Node ORM.
+
+disini kita mengulas lebih detail terkait konsep
+ORM serta membuat CRUD dan mengujinya di postman
+
+1. belajar konsep ORM
+disini kita belajar cara yang lebih mudah bekerja
+dengan database. sebelumnya kita harus membuat kodingan dan
+juga bekerja di database client secara terpisah.
+
+nah dengan mengimplementasikan ORM kita bisa melakukan
+kedua hal tersebut di lingkungan bhs.pemrograman nya saja
+dengan kata lain kita tidak perlu bekerja di database client lagi
+seperti pgadmin jika menggunakan postgresql
+
+2. setup ORM
+tentunya sebelum mengimplementasikan cara ini,
+perlu untuk melakukan settingan awal. yang sudah dijelaskan
+pada materi Learn Node ORM.
+
+3. mengenal migration, model, dan seeder
+ketiga hal tersebut merupakan fitur dari ORM
+kita akan bekerja dengan 3 hal tersebut untuk
+melakukan pekerjaan CRUD pada database
+
+4. CRUD pada postman
+setelah kita melakukan migration, model, dan seeder.
+kemudian kita buat sebuah rute untuk CRUD dan mengujinya
+di postman.
