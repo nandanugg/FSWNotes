@@ -1,0 +1,60 @@
+Judul Materi : Learn Node ORM (Object Relational Mapping)
+
+1. belajar konsep Synchronous dan Asynchronous
+2. belajar konsep ORM
+
+jika ingin memahami konsep ORM, bisa kunjungi link dibawah
+https://medium.com/codelabs-unikom/mengenal-orm-library-817dab73433b
+
+===========================================
+3. Persiapan biar bisa masukkin perintah "sequelize ..." di terminal, cukup lakukan sekali aja :
+npm install -g sequelize-cli
+
+4. npm init -y
+mengisialisasi project nodejs kita
+
+5. instal modul sequalize
+npm install sequelize
+
+6. inisialisasi sequelize
+sequalize init
+
+nah setelah kita melakukan langkah-langkah diatas
+maka di folder projek kita akan muncul beberapa folder
+baru :
+
+a. node_modules, package.json, dan package-lock.json
+folder tersebut merupakan hasil dari proses inisialisasi 
+projek kita yaitu npm init -y
+
+b. folder config, migrations, models, dan seeders
+folder tersebut merupakan hasil dari inisialisasi sequelize
+
+jika tidak ingin menjalankan perintah nya satu per satu
+pakelah shorthand nya :
+
+npm init -y && npm install squelize && sequelize init
+
+
+oke sudah sampai sini, kemudian install dulu
+pg nya atau adapter aslinya. sebelum bisa
+mengimplementasikan sequelize nya
+
+npm install pg
+
+==============================================
+setelah itu, lakukan konfigurasi di folder config
+masukkan informasi mengenai database yg ingin kita 
+hubungkan.
+
+setelah itu ketikkan perintah
+sequelize db:create 
+
+itu untuk membuat database baru 
+jika databasenya belum ada.
+
+setelah itu, untuk membuat model
+sequelize model:create --name namaTable --attribute firstName:string
+
+Untuk membuat seed
+sequelize seed:create --name namaSeed
