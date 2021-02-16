@@ -14,7 +14,7 @@ sequelize db:migrate
 ```
 ## 2. View
 View merupakan hal-hal yang ditampilkan secara interface, kita bisa melihatnya secara langsung melalui tampilan html. Tampilan yang kita liat merupakan representasi dari database yang dikerjakan backend dibalik layar.
-```
+```html
 <body>
   <h1>Articles</h1>
   <!-- ejseach-->
@@ -31,7 +31,7 @@ View merupakan hal-hal yang ditampilkan secara interface, kita bisa melihatnya s
 ```
 ## 3. Controller
 Controller merupakan sebagai hal yang biasanya berisi logic dari backend berupa response yang nantinya akan menghubungkan sesuai dengan request dari user. 
-```
+```js
 async index(req, res) {
     const articles = await Articles.findAll({})
     res.render('index', { articles })
