@@ -1,0 +1,27 @@
+Judul Materi: Learn Authentication
+
+1. review konsep MRC
+
+jadi, kita kan punya models yang merepresentasikan struktur
+tabel di dalam database kita, untuk mengimplementasikan MRC kita butuh
+sebuah controller untuk menghandle fungsi-fungsi atau request dari route
+dan datanya akan dikirim ke models. route berfungsi untuk menerima data dari
+user(browser atau postman) dan mengirim data ke controller
+
+2. Authentication dan Authorization
+
+intinya yang saya pahami, Authentication fungsinya untuk membatasi siapa saja
+yang berhak mengakses database di sistem kita.
+
+sementara Authorization membatasi apa saja hal-hal yang bisa kita akses.
+
+kedua fitur tersebut hadir untuk keperluan keamanan data.
+
+3. konsep kerja Authentication
+
+misalnya user melakukan regis pada sebuah website dengan memasukkan username
+dan password. sebelum datanya dikirim ke database, data password dienkripsi
+terlebih dahulu agar tidak seorangpun bisa mengetahui password user tersebut.
+setelah datanya dienkripsi, barulah data passwordnya dikirim ke database tapi dalam
+bentuk data yang sudah terenkripsi, setelah itu data username nya juga dimasukkan
+ke database. dengan proses enkripsi ini, data jadi lebih aman.
