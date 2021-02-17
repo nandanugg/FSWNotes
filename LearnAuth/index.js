@@ -4,6 +4,7 @@ const app = express()
 
 app.use(express.json())
 app.use('/', require('./routes/authRoute'))
+app.use('/article', require('./routes/articleRoute'))
 
 app.use(function (error, req, res, next) {
     res.send(error)
