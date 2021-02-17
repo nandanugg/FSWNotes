@@ -61,4 +61,5 @@ HTTP status code, terdiri dari:
 - 4xx = proses tidak berhasil dari user
 - 5xx = proses tidak berhasil dari server
 <br>
-> selengkapnya ada di [http cat](https://http.cat/)
+
+selengkapnya ada di [http cat](https://http.cat/)
