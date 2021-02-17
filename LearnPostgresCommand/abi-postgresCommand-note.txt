@@ -1,0 +1,25 @@
+Author: Muhammad Abiyyu Ramadhan
+Date: 1 February 2021
+Topic: PostgresCommand
+
+1. Database
+Database adalah pusat dari data, tempat untuk menyimpan data. 
+
+
+2. SQL vs NoSQL
+Sql adalah database yang berisi tabel sedangkan noSQL bisa saja bukan tabel.
+
+3. Postgresql
+Postgresql adalah database app yang memungkinkan kita untuk membuat database server.
+Command:
+- untuk connect = psql 
+- untuk exit = \q
+- untuk help = \h
+- untuk cek database = \l
+- untuk pindah antar database = \c
+- untuk liat role = \du
+- semua perintah query diakhiri dengan ;
+- untuk membuat database = CREATE DATABASE
+- untuk menghapus database = DROP DATABASE
+- untuk membuat table = CREATE TABLE 
+- untuk menghapus database = DROP TABLE 
