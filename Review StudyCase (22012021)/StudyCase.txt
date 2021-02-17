@@ -1,0 +1,74 @@
+Judul Materi : LearnDOM (StudyCase)
+
+1. Reverse String
+Soal : Mengubah susunan sebuah string dengan memutarbalikkan susunan katanya
+Jawaban : 
+const word = "Make me a sandwich!"
+function reverseString(words) {
+    let splitString = words.split("") // Memisahkan setiap huruf menjadi array
+    let reverseArray = splitString.reverse(); // Membalikkan urutan array
+    let joinArray = reverseArray.join(""); // Menggabungkan array
+    return joinArray;
+}
+console.log(reverseString(words))
+
+2. Palindrome
+Soal : Mengidentifikasi kata yang dibalik sama dengan kata aslinya.
+Jawaban :
+const words = [
+  "Civic",
+  "Brad",
+  "Kayak",
+  "Kitchen",
+  "Level",
+  "Madam",
+  "Working",
+  "Mom",
+  "Will",
+  "Noon",
+  "Racecar",
+].map(v => v.toLowerCase()); // Membuat seluruh huruf kecil
+
+function filterPalindromes(list) {
+  return words.filter((word) => {
+    for(var i = 0; i < word.length / 2; i++) {
+      if(word[i] !== word[word.length - 1 - i])
+        return false;
+    }
+    return true;
+  });
+}
+
+console.log('result', filterPalindromes(words));
+
+3. Convert variable to date
+Soal : mengubah variabel yang memiliki value number menjadi string dan dalam format tanggal.
+Jawaban :
+const date = 10
+const month = 1
+const year = 2021
+
+function dateConv(date) {
+    if (date === 1 || 21 || 31) {
+        console.log(date + 'st');
+    } if (date === 2) {
+        console.log(date + 'nd');
+    } if (date === 3) {
+        console.log(date + 'rd');
+    } else {
+        console.log(date + 'th');
+    }
+    return output
+}
+
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+let monthConv = months[0]
+
+function dateMonthYear(date, monthConv, year) {
+    const output = `${date}th ${monthConv} of ${year}`
+    return output
+}
+let tanggal = dateMonthYear(date, monthConv, year)
+console.log(tanggal);
+
+Author : Faisal

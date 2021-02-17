@@ -1,0 +1,76 @@
+Judul Materi : Learn Postgres Command
+Sub judul:
+1. Database
+- Data yang terdapat dalam internet harus disimpan dalam database.
+- Database adalah tempat untuk menyimpan data secara sistematis dalam DBMS (Database Management 
+System) atau di dalam komputer yang dapat diolah atau dimanipulasi yang dapat dimanfaatkan 
+untuk menghasilkan informasi.
+
+2. SQL dan NOSQL
+Perbedaan database sql dan nosql yaitu 
+- Database sql menggunakan database relasional yang menggunakan tabel.
+- Database nosql merupakan database yang tidak membutuhkan relasi dan tidak memiliki relasi 
+untuk setiap tabel. Kelemahan nosql yaitu data dapat menjadi tidak konsisten
+
+3. Postgresql
+- PostgresSQL merupakan salah satu aplikasi database atau database management system (DBMS) 
+yang menggunakan SQL.
+- Postgres secara default jalan pada port 5432.
+- DB client dalam postgres adalah terminal dan pgAdmin.
+Command dalam postgresql:
+- psql = masuk ke postgres
+- quit atau \q = keluar
+- \? = informasi perintah yang dapat dimasukkan
+- ctrl+l = clear
+- \l = memeriksa database yang tersedia di postgres
+- Cara untuk membuat database =
+CREATE DATABASE test_pagi; 
+Keterangan :
+test_pagi adalah value atau nama database, 
+CREATE DATABASE adalah syntax. Biasakan menggunakan harus kapital atau uppercase supaya
+dapat membedakan syntax dan value.
+- \c nama_database = cara berpindah database. Contoh \c test_pagi
+- psql nama_database = connect dan langsung masuk ke database yang diinginkan. 
+Contoh psql test_pagi
+- DROP DATABASE nama_database = menghapus database. Contoh DROP DATABASE test_pagi.
+- CREATE ROLE namarole = memasukkan role baru.
+- \du = menampilkan role yang sudah terdaftar
+- \d nama_tabel = melihat tabel 
+
+Beberapa cara dasar implementasi database baik membuat, membaca, menghapus, dan mengedit
+1. Menambahkan kolom functioning dengan tipe data boolean
+ALTER TABLE pg_equipment ADD COLUMN functioning bool;
+
+2. Set nilai default true untuk tabel pg_equipment kolom functioning
+ALTER TABLE pg_equipment ALTER COLUMN functioning SET DEFAULT 'true';
+
+3. Membuat nilai tabel pg_equipment kolom functioning menjadi not NULL
+ALTER TABLE pg_equipment ALTER COLUMN functioning SET NOT NULL;
+
+4. Rename tabel pg_equipment kolom functioning menjadi working_order
+ALTER TABLE pg_equipment RENAME COLUMN functioning TO working_order;
+
+5. Menghapus kolom working_order pada tabel pg_equipment
+ALTER TABLE pg_equipment DROP COLUMN working_order;
+
+6. Rename tabel pg_equipment menjadi playground_equip
+ALTER TABLE pg_equipment RENAME TO playground_equip;
+
+7. Menghapus tabel playground_equip
+DROP TABLE playground_equip;
+
+8. Menghapus tabel jika terdapat tabel dengan nama playground_equip
+DROP TABLE IF EXISTS playground_equip;
+
+9. Import database from file .sql
+\i /home/chania/Documents/SynrgyAcademy/Learn/PostgresSQL/person-car.sql;
+
+10. Query select all dari tabel car
+SELECT * FROM car;
+
+Note =
+- Diakhir setiap perintah menggunakan ; semicolon.
+- Penamaan tabel menggunakan kata jamak.
+- Penamaan kolom atau database pakai snake case atau pake underscore _ sebagai ganti spasi.
+
+---Author: Faisal, Yanuar, dan Chania---

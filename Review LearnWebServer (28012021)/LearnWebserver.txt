@@ -1,0 +1,46 @@
+Judul Materi : Learn Node Webserver
+Sub judul:
+1. Node JS
+Node JS merupakan runtime javascript untuk menjalankan pada sisi server yang digunakan untuk mengeksekusi script dari javascript sebelum ditampilkan ke web.
+
+2. Express
+Express merupakan library yang membantu developer dalam membuat web server.
+Inisiasi awal pada terminal:
+npm init // Membuat sebuah npm modul
+npm install express // Menginstall atau mendownload library dari express, saat instalasi selesai muncul dependencies dalam file package.json.
+.gitignore // Dimasukkan node-modules dan package-lock.json agar file tersebut tidak ikut tercommit saat melakukan git push.
+npm install // Menginstall package dependencies yang sebelumnya sudah ada, hal ini juga berlaku ketika kita mengclone repository milik orang lain.
+
+3. Inisiasi awal
+const express = require('express') // Mengakses folder express pada folder node-modules.
+const app = express() // Memanggil fungsi express.
+const port = 3000 // Port yang digunakan untuk membedakan yang didengarkan/dilayani.
+
+4. Method .get dan .listen
+.get digunakan untuk mengambil route yang diinginkan.
+.listen digunakan untuk mendengar.
+Contoh:
+app.get('/', (req, res) => {  // '/' adalah router route, kedua parameter req res diisi oleh express.
+    res.send('Hello Babang!') //apapun yg dimasukkan dalam res.send akan terkirim ke web dengan cara restart npm start.
+})
+
+app.listen(port, () => { // Port adalah sebuah pintu yang ada di setiap komputer, tanpa port browser tidak dapat mengakses express kita.
+    console.log(`Example app listening at http://localhost:${port}`) // localhost merupakan domain yang ada di komputer kita sendiri.
+})
+
+5. View Engine atau template Engine
+View engine digunakan untuk membuat file template statis dalam web. Kemudian developer dapat melakukan perubahan ekstensi dari html ke ejs.
+Static dapat melakukan akses secara langsung ke folder, sehingga jika terjadi perubahan didalam folder tidak perlu restart service untuk menampilkan perubahan.
+
+Cara set:
+app.use(express.static('views'))
+app.set('view engine', 'ejs')
+
+6. Menjalankan Project
+Untuk menjalankan project, dapat menambahkan perintah pada file package.json.
+Contoh :
+"scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+},
+Sehingga pada terminal, kita dapat langsung mengetikkan perintah npm start

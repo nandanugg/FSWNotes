@@ -1,0 +1,133 @@
+Judul Materi : LearnES6
+Sub judul:
+1. ES6
+ES6 (ECMAScript 6) merupakan standar bahasa pemrograman Javascript yang di standarisasi oleh ECMA International. JavaScript ditemukan oleh Brendan Eich pada tahun 1995, dan menjadi standar ECMA pada tahun 1997. ES6 atau ES 2015 merupakan update dari ES5 yang menambahkan fitur variable seperti let dan const, kemudian arrowFunction, dan lainnya.
+Dimulai dari :
+Tahun 1997 yaitu ES1
+Tahun 1998 yaitu ES2
+Tahun 1999 yaitu ES3
+Tahun 2009 yaitu ES5
+Tahun 2015 yaitu ES6 / ES 2015
+kemudian dilanjutkan dengan nama ES 2016, ES 2017, ES 2018, ES 2019, dan terbaru yaitu ES 2020.
+
+Contoh:
+---Jenis Variabel---
+let namaDepan = "Faisal"
+let namaBelakang = "Juliandra"
+
+const pi = 3.14
+
+---Arrow Function---
+let arrowFunction = () => {
+    return "this is an arrow function"
+}
+console.log('arrowFunction():', arrowFunction());
+
+---Default Parameter Values---
+contoh penggunaannya adalah untuk prefix name Mr, Ms, dan Mrs dalam proses pengisian biodata.
+function getName(firstName, lastName, prefix = "Mr. ") { // Prefix adalah default parameter.
+    return `${prefix} ${firstName} ${lastName}`
+}
+console.log(getName("Faisal", "Juliandra", "Mr. "));
+
+---Javascript Handling Number---
+const numbers = [4, 9, 16, 25, 29];
+function myFunction(value) {
+    return value > 18
+}
+
+- find() method
+const findResult = numbers.find((value) => {
+    return value > 8
+});
+console.log(findResult);
+
+- findIndex() method
+const findIndexResult = numbers.findIndex(myFunction);
+console.log(findIndexResult);
+
+- minimum & maximum number
+var minInteger = Number.MIN_SAFE_INTEGER;
+console.log(minInteger);
+
+var maxInteger = Number.MAX_SAFE_INTEGER
+console.log(maxInteger);
+
+---Checking Type of Number---
+console.log(Number.isInteger(10));
+console.log(Number.isInteger(10.5));
+console.log(typeof 10.5);
+
+---Convert String to Number---
+let number = 5
+let stringNumber = "nama"
+stringNumber = Number(stringNumber)
+console.log(stringNumber);
+
+if (isNaN(stringNumber)) {
+    console.log('masukkan karakter aritmatik'); // Bukan number
+}
+
+---Infinity---
+let infinity = 10 / 0
+console.log(infinity);
+
+if (isFinite(infinity)) {
+    console.log('Aritmatikanya normal'); // Bukan infinite
+}
+
+2. Promise
+Promise memiliki fungsi yang mirip dengan callback, namun callback harus menampilkan hasil dan harus mencarikan perintah yang diberikan. Sedangkan promise memiliki fungsi yang sama dengan callback, tetapi dapat ditepati atau tidak ditepati.
+Contoh:
+function getDataFromInternet(url) {
+    return new Promise((resolve, reject) => {
+        if (url) {
+            // menepati janji
+            resolve(url)
+        } else {
+            // menolak janji
+            reject("URL nya nggak ada guis")
+        }
+        // Jika menggunakan 2, maka yang dieksekusi adalah bagian diatas
+    })
+}
+
+getDataFromInternet('youtube.com') // Jika parameter dihilangkan, maka akan masuk catch
+    .then(result => {
+        // apapun yang dimasukkan di fungsi resolve() akan muncul disini
+        console.log(result);
+    })
+
+    .catch(err => {
+        // apapun yang dimasukkan di fungsi reject() akan muncul disini
+        console.log(err);
+    })
+
+3. Framework dan Library
+Library merupakan kumpulan kodingan.
+Framework merupakan kerangka kerja.
+Framework = Library
+Library != framework
+
+4. API
+API merupakan sebuah interface yang digunakan ketika aplikasi yang dibuat membutuhkan hal-hal yang berasal dari eksternal yang bisa berasal dari codingan, library, atau route.
+day.js.org => Codingan
+thecatapi.com => Route
+Contoh:
+// Memanipulasi DOM HTML dengan mengambil id menggunakan method querySelector.
+const img = document.querySelector('#image') 
+// Mengambil data dari internet dan memunculkannya ke website kita.
+fetch('https://api.thecatapi.com/v1/images/search?limit=5&page=10&order=Desc', { // URL API dari web API.
+    headers: {
+        'x-api-key': 'b40ac33e-6286-4977-8415-d30b20fb439f' // Nomor API didapatkan dari API setelah melakukan registrasi.
+    }
+})
+    .then(result => {
+        result.json()
+            .then(res => {
+                // res[0] mengakses array index 0 dan kemudian mengambil url.
+                const catImg = res[0].url 
+                // .src memanggil atau menambahkan hasil dari akses array.
+                img.src = catImg
+            })
+    })

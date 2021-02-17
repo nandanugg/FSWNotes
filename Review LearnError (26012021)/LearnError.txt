@@ -1,0 +1,31 @@
+Judul Materi : Learn Flowchart dan Learn Error
+Sub judul:
+1. Flowchart dengan whiteboard coding
+Materi ini membahas mengenai impementasi proses pengembangan suatu web page dari pre-action, action, sampai post-action ke dalam flowchart menggunakan whiteboard coding.
+
+2. Syntax Error
+Syntax error dapat terjadi adanya salah penulisan seperti kurangnya tanda kurung, koma, dan lain sebagainya.
+Contoh:
+const biodata = {
+    name = "Faisal", // Terjadi syntax error karena seharusnya : tetapi yang dimasukkan yaitu =
+    age: 21,
+    address: "Purwakarta",
+} // Syntax error akan terjadi jika tanda kurungnya dihapus
+
+3. Type Error
+Type Error terjadi ketika developer salah memasukkan variable, dimana function meminta variable tetapi yang dimasukkan adalah string atau yang lainnya.
+Contoh:
+setTimeout(null, 100);
+getName()
+
+4. Reference Error
+Reference Error terjadi ketika :
+- Salah memakai function 
+- Salah pengetikan dalam memanggil nama variable 
+- Nama variabel belum terdefinisi
+- Ketika kita berhubungan dengan data dari internet yang terkadang ada dan tidak.
+- Memasukkan alamat web yg salah
+- Terjadi gangguan koneksi
+Contoh:
+const pet = dataDariInternet 
+console.log(pet); // Reference error, variabel dataDariInternet belum terdefinisikan

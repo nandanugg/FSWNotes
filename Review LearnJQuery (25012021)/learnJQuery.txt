@@ -1,0 +1,127 @@
+Judul Materi : LearnAlgorithm & LearnJQuery
+Sub judul:
+1. Group task 1 LearnAlgorithm
+Soal : Membuat function untuk menambahkan 2 nomor sebagai argumen dan menjumlahkannya
+/**
+ * Create a function that takes two numbers as arguments and return their sum.
+ *
+ * addition(3, 2) ➞ 5
+ * addition(-3, -6) ➞ -9
+ * addition(7, 3) ➞ 10
+ *
+ * Don't forget to return the result.
+ */
+
+Jawaban:
+function addition(a, b) { // Deklarasi nama fungsi addition dengan parameter angka a dan b
+    return a + b; // Mengembalikan nilai a tambah b. 
+// Penulisan langsung dalam return hanya dapat dilakukan jika fungsi memiliki 1 statement
+}
+// Menampilkan hasilnya
+console.log(addition(3,2));
+console.log(addition(-3,-6));
+console.log(addition(7,3));
+
+2. Group task 2 LearnAlgorithm
+Soal : Membuat function untuk mengubah umur dari satuan tahun ke hari
+
+/**
+ * Create a function that takes the age and return the age in days.
+ *
+ * calcAge(65) ➞ 23725
+ * calcAge(0) ➞ 0
+ * calcAge(20) ➞ 7300
+ *
+ * Use 365 days as the length of a year for this challenge.
+ */
+
+Jawaban :
+function calcAge (age) {
+    return age * 365;
+}
+console.log(calcAge(65));
+console.log(calcAge(0));
+console.log(calcAge(20));
+
+console.log(calcAge(65) + ` ` + `days`) // Apabila mau menambahkan kata days setelah hasil
+
+3. Group task 3 LearnAlgorithm
+Soal : Membuat function yang menjumlahkan 2 nomor kemudian memverifikasi apakah benar hasil penjumlahan tersebut kurang dari 100
+
+/**
+ * Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false.
+ *
+ * lessThan100(22, 15) ➞ true
+ * // 22 + 15 = 37
+ *
+ * lessThan100(83, 34) ➞ false
+ * // 83 + 34 = 117
+ *
+ * lessThan100(3, 77) ➞ true
+ */
+
+Jawaban :
+function lessThan100(a, b) {
+    if (a + b < 100) { // Jika a ditambah b kurang dari 100
+        return true; // Mengembalikan nilai true
+    } else { // Selain itu (a ditambah b lebih dari sama dengan 100)
+        return false; // Mengembalikan nilai false
+    }
+}
+
+console.log(lessThan100(22, 15));
+console.log(lessThan100(83, 34));
+console.log(lessThan100(3, 77));
+
+4. Group task 4 LearnAlgorithm
+Soal : membuat function yang mendeteksi jumlah kata yang diinginkan terdapat dalam suatu string
+
+/**
+ * Create a function to return the amount of potatoes there are in a string.
+ *
+ * potatoes("potato") ➞ 1
+ *
+ * potatoes("potatopotato") ➞ 2
+ *
+ * potatoes("potatoapple") ➞ 1
+ */
+
+Jawaban :
+// Keyword search in google : detect word occurence in javascript
+
+const words ="potatoapplepotato potato potato potato potato" // Memasukkan string
+// Memisahkan setiap string dengan kata potato dan menghitung panjangnya dengan dikurangi 1
+const splittedWord  = words.split("potato").length-1
+console.log(splittedWord);
+
+5. JQuery
+JQuery adalah framework (kerangka kerja) javascript. JQuery memiliki fungsi untuk meringkas kode yang biasanya sangat panjang ketika menggunakan vanilla js.
+Cara menggunakan JQuery :
+    - CDN server untuk ditambahkan ke script html yang terletak di atas tag penutup body
+    - Menambahkan file javascript yang kita buat sendiri dibawah script dari CDN server
+Contoh:
+//vanilla js (cara biasa)
+const commentInput = document.querySelector('#comment-input')
+const submitBtn = document.querySelector(".submit-btn") 
+const comments = document.querySelector('.comments')
+submitBtn.onclick = () => {
+    const input = commentInput.value // digunakan untuk mengambil value yang ada di dalam elemen
+    const p = document.createElement('p') // membuat element atau tag baru
+    p.innerHTML = input // Mengisi tag p dengan input yang didapatkan dari comment
+    comments.appendChild(p) // Memberikan "anak" atau element baru
+    commentInput.value = "" // Mengosongkan kembali field text
+}
+
+//JQuery
+const commentInputJq = $('#comment-input') // Meringkas kode dengan jquery
+const submitBtnJq = $('.submit-btn') 
+const commentsJq = $('.comments')
+submitBtnJq.click(() => {
+    const input = commentInputJq.val() // digunakan untuk mengambil value yang ada di dalam elemen
+    const p = $('<p></p>') // memiliki fungsi yang sama seperti method createElement pada javascript
+    p.html(input) // memiliki fungsi yang sama dengan innerHTML
+    commentsJq.append(p) // memiliki fungsi yang sama dengan appendChild
+    commentInputJq.val("") // digunakan untuk hilangin value dari input yang dimasukan
+})
+
+Author : Faisal dan Chania

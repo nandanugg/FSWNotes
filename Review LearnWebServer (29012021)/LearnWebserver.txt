@@ -1,0 +1,39 @@
+Judul Materi : Melanjutkan Learn Node Webserver
+Sub judul:
+1. EJS
+EJS dapat digunakan untuk menampilkan elemen yang dibuat dari backend.
+Contoh:
+// Dalam file root route
+let counter = 1
+// Menampilkan dalam file index
+<%= counter %>
+
+app.get('/', (req, res) => {
+    counter++ // Digunakan untuk menampilkan seberapa banyak halaman web diakses.
+    res.render('index', {
+        counter: counter,
+        isMorning: false, // Cara menampilkan sesuai dengan keadaan menggunakan ejsif dan ejselse.
+        names: ['Faisal', 'Laisaf', 'Juliandra'], // Membuat array untuk ditampilkan dalam halaman web dengan looping menggunakan ejsarray.
+    })
+})
+
+2. Metode .get untuk routing dan handle not found error
+Bagian ini digunakan untuk membuat routing ke halaman web yang diinginkan secara ringkas dan menghandle apabila permintaan yang diminta klien mengenai url tidak dapat ditemukan.
+Contoh:
+app.get('/:path', (req, res) => {
+    res.render(req.params.path, {}, (err, html) => {
+        if (err) {
+            res.render('404') // Jika error tidak ditemukan, maka akan menampilkan page 404 not found.
+        } else {
+            res.send(html) // Jika ditemukan, maka akan menampilkan halaman yang dituju.
+        }
+    })
+})
+
+3. Nodemon
+Nodemon digunakan mempermudah save dan restart terminal apabila mengubah yang ada di backend.
+Contoh:
+Instal dahulu nodemon dengan mengetikan perintah npm install -g nodemon di terminal,
+kemudian tambahkan "scripts" di package.json dengan nama "dev": "nodemon index.js",
+kemudian untuk menjalankannya menggunakan perintah npm run dev
+atau menggunakan nodemon -L index.js

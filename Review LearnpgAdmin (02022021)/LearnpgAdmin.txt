@@ -1,0 +1,138 @@
+Judul Materi : Learn PGAdmin
+Sub judul:
+1. Setup PGAdmin
+Cara untuk menghubungkan pgAdmin dengan postgresql yang kita miliki
+- Buka postgresql di terminal dengan memasukkan psql atau jika belum bisa sudo service 
+postgresql start dan kemudian psql.
+- Setelah create database di terminal.
+- Buka pgAdmin dan masukkan password.
+- Membuat server baru dengan cara klik kanan pada server, kemudian create, dan pilih server.
+- Isikan name kemudian berpindah ke tab connection.
+- Pada tab connection masukan host name/address dengan localhost atau 127.0.0.1
+- Kemudian isi username dan password role postgresql yang sudah dibuat.
+- Lalu save.
+
+2. Memasukan query dalam PGAdmin
+Dalam pgAdmin untuk memasukkan query perlu membuka query tool yang ada pada database yang 
+sudah dibuat
+Caranya:
+- Klik dropdown yang ada pada database yang hendak diberikan query.
+- Klik kanan pada schemas, pilih query tool, maka kita dapat memasukkan query yang akan
+dijalankan.
+
+3. Query
+Query merupakan perintah perintah dalam database
+Contoh:
+-- query create table
+CREATE TABLE users (
+	id INT, -- INT adalah integer atau number
+	first_name VARCHAR(50),
+	last_name VARCHAR(50),
+	gender VARCHAR(6),
+	date_of_birth TIMESTAMP, -- TIMESTAMP memiliki nilai default dari UTC
+);
+Note =
+- Setelah create table atau menjalankan query lain, perlu melakukan refresh.
+
+-- query edit datatype column
+ALTER TABLE users
+ALTER COLUMN id TYPE VARCHAR(12);
+
+-- query hapus column
+ALTER TABLE users
+DROP COLUMN date_of_birth;
+
+-- query add column
+ALTER TABLE users
+ADD COLUMN full_name VARCHAR(100);
+
+-- query rename column
+ALTER TABLE users
+ADD COLUMN full_name TO full_name_edited;
+
+-- query edit, hapus, dan tambah column secara bersamaan
+ALTER TABLE users
+ALTER COLUMN id TYPE VARCHAR(12),
+DROP COLUMN date_of_birth,
+ADD COLUMN full_name VARCHAR(100);
+
+-- hapus table
+DROP TABLE users;
+
+4. Create Table with Constraint
+Contoh:
+-- create table with constraint
+CREATE TABLE users (
+	id BIGSERIAL PRIMARY KEY,
+	first_name VARCHAR(50) NOT NULL UNIQUE,
+	last_name VARCHAR(50) NOT NULL,
+	gender VARCHAR(6) NOT NULL,
+	date_of_birth TIMESTAMP
+);
+
+-- edit constraint agar not null ga aktif
+ALTER TABLE users
+ALTER COLUMN gender DROP NOT NULL;
+
+
+5. Insert data, get data, edit data, dan delete data
+-- insert data
+INSERT INTO users (first_name, last_name, gender, date_of_birth)
+VALUES ('Nanda', 'Nugraha', 'Male', '1999-01-31')
+
+-- get seluruh data
+SELECT * FROM users;
+
+-- insert data without column name
+INSERT INTO users
+VALUES (123, 'Agus', 'Nugraha', 'Male', '1999-01-31');
+
+-- edit data
+UPDATE users
+SET
+date_of_birth = '1999-01-31 23:30:21'
+WHERE id = 1;
+-- where digunakan untuk mengedit id yang diinginkan
+
+-- delete data
+DELETE FROM users
+WHERE id = 123;
+
+6. Relation
+Membuat relation antar tabel yaitu relation one to many
+Contoh:
+CREATE TABLE pets (
+	id BIGSERIAL PRIMARY KEY,
+	name VARCHAR(50) NOT NULL,
+	user_id BIGSERIAL,
+-- 	foreign key tidak bisa merefensikan table yang belum ada
+	FOREIGN KEY (user_id) REFERENCES users(id)
+-- 	untuk menghapus pets ketika usernya dihapus juga
+-- 	FOREIGN KEY (user_id) REFERENCES users(id) ON UPDATE DELETE;
+);
+
+-- memasukkan data dengan nama kolom
+INSERT INTO pets (name, user_id)
+VAlUES ('ming', 1)
+
+-- mengambil seluruh data dari tabel pets
+SELECT * FROM pets;
+
+-- mengambil seluruh data dari tabel pets dimana pets yang dimiliki oleh user id dengan 
+menggabungkan tabel user dan pets
+SELECT * FROM pets
+JOIN users ON users.id = pets.user_id;
+
+-- mengambil data nama pets dan first name pemilik dengan menggabungkan tabel user dan pets
+SELECT pets.name, users.first_name FROM pets
+JOIN users ON users.id = pets.user_id;
+
+-- mengambil data nama pets kemudian memberikan alias hewan dan first name pemilik kemudian 
+memberikan alias pemilik dengan menggabungkan tabel user dan pets
+SELECT pets.name AS hewan, users.first_name AS pemilik FROM pets
+JOIN users ON users.id = pets.user_id;
+-- atau
+SELECT pets.name hewan, users.first_name pemilik FROM pets
+JOIN users ON users.id = pets.user_id;
+
+---Author: Faisal dan Chania---

@@ -1,0 +1,35 @@
+---Live Server---
+Live server digunakan untuk melihat perubahan yang dilakukan, langsung terlihat dalam browser.
+Cara install live server pada terminal :
+nvm install -g live-server
+
+---Method---
+1. Method .getElementsByClassName
+Method ini digunakan untuk mengambil elemen yang terdapat dalam file HTML dengan nama kelas yang diinginkan.
+Contoh:
+const button = document.getElementsByClassName('button')[0]
+Catatan Kode:
+const = variabel konstan yang tidak dapat diubah kembali
+button = nama variabel
+document = object
+.getElementsByClassName = Method
+() = nama elemen atau class atau id
+
+2. Method .getElementById
+Method ini digunakan untuk mengambil elemen yang terdapat pada HTML dengan id yang mana hanya dapat mengambil satu elemen di setiap id.
+Contoh:
+const inputId = document.getElementById('input-id')
+
+3. Method .querySelector
+Method ini digunakan untuk mengambil elemen yang menggunakan elemen, id, atau class.
+Contoh:
+const buttonQuery = document.querySelector('button') //queryselector bisa ambil id atau class
+
+4. Method .querySelectorAll
+Method ini digunakan untuk mengambil seluruh elemen yang menggunakan elemen, id, atau class.
+const pQueryAll = document.querySelectorAll('p')
+
+5. .onclick
+.onclick merupakan listener yang dapat membuat perintah apabila mengklik elemen.
+
+Author : Faisal
