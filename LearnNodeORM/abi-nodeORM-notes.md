@@ -1,7 +1,7 @@
 # Nama Developer: Abi
 # Kelas: FSW Pagi
 ## 11 Februari 2021
-# Learn MVC
+# Learn Node ORM
 ## 1. Asynchronous Javascript
 Node js adalah single threaded yang memungkinkan code dijalankan secara asynchronous, yaitu tidak menunggu urutan. Penggunaan secara asynchronous memungkinkan node untuk berjalan dengan 1 core yang mana ini cost effective.
 ```js
