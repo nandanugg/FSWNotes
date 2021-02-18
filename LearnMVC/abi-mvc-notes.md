@@ -37,3 +37,4 @@ async index(req, res) {
     res.render('index', { articles })
   }
 ```
+Perlu diingat di MVC ada batasan bahwa kita tidak bisa mengaplikasikan CRUD dengan http method selain get dan post dalam satu rute.
