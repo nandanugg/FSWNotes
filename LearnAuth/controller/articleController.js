@@ -1,35 +1,10 @@
 const { Articles } = require('../models')
-const { nanoid } = require('nanoid')
-const app = require('../routes/authRoute')
+const BaseController = require('./baseController')
 
-function get(query) {
-    return Articles.findAll({
-        where: query
-    })
+class ArticleController extends BaseController {
+    constructor() {
+        super(Articles)
+    }
 }
 
-function add(data) {
-    return Articles.create({
-        id: nanoid(),
-        ...data
-    })
-}
-
-function edit(id, data) {
-    return Articles.update(data, {
-        where: { id }
-    })
-}
-
-function remove(query) {
-    return Articles.destroy({
-        where: { id }
-    })
-}
-
-module.exports = {
-    get,
-    add,
-    edit,
-    remove
-}
+module.exports = ArticleController
