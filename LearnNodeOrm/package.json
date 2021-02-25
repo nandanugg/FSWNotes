@@ -1,7 +1,6 @@
 {
   "name": "LearnNodeOrm",
   "version": "1.0.0",
-  "description": "",
   "main": "LearnAsync.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "pg": "^8.5.1",
     "sequelize": "^6.5.0"
-  }
+  },
+  "description": ""
 }
